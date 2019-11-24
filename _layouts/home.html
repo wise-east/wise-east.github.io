@@ -11,7 +11,7 @@ layout: default
 {%- if site.posts.size > 0 -%}
 <ul class="posts">
 	<li>
-		<h1 id="posts-label">Research / Past Work</h1>
+		<h1 id="posts-label">Research / Projects</h1>
 	</li>
 
 	{%- for post in site.posts -%}
@@ -21,11 +21,11 @@ layout: default
 			<h2 class="post-title">{{ post.title | escape }}</h2>
 		</a>
 		<div class="post-meta">
-			<ul class="post-categories">
+			<!-- <ul class="post-categories">
 				{%- for tag in post.categories -%}
 				<li>{{ tag }}</li>
 				{%- endfor -%}
-			</ul>
+			</ul> -->
 			<div class="post-date"><i class="icon-calendar"></i>{{ post.date | date: date_format }}</div>
 		</div>
 		<div class="post">
@@ -52,11 +52,11 @@ layout: default
 			<h2 class="post-title">{{ post.title | escape }}</h2>
 		</a>
 		<div class="post-meta">
-			<ul class="post-categories">
+			<!-- <ul class="post-categories">
 				{%- for tag in post.categories -%}
 				<li>{{ tag }}</li>
 				{%- endfor -%}
-			</ul>
+			</ul> -->
 			<div class="post-date"><i class="icon-calendar"></i>{{ post.date | date: date_format }}</div>
 		</div>
 		<div class="post">
