@@ -1,9 +1,9 @@
----
+<!-- ---
 layout: post
 title:  "Automatic Fast Food Press Release Generation "
 date:   2019-11-05 16:59:36 +0530
 ---
 
-As a quick, fun side project, I trained a GPT-2 model to automatically generate fast food press releases. It was inspired by a podcast called My Brother & My Brother & Me, in which the hosts made fun of a food press release by Pizza Hut, claiming that it wasn't written by humans but by AI. This is not state-of-the-art (I couldn't train the largest GPT-2 model that's avialable), but it should come close to it. The model was based off of the implementation by HuggingFace's [Transformers package](https://huggingface.co/transformers/index.html){:target="_blank"}, and it was trained with food-related news scraped from multiple websites, such as [chewboom.com](https://chewboom.com){:target="_blank"}. 
+As a quick, fun side project, I trained a GPT-2 model to automatically generate fast food press releases. It was inspired by a podcast called My Brother My Brother & Me, in which the hosts made fun of a food press release by Pizza Hut, claiming that it wasn't written by humans but by AI. This is not state-of-the-art (it doesn't use the largest GPT-2 model that's avialable), but it should come close to it. The model was based off of the implementation by HuggingFace's [Transformers package](https://huggingface.co/transformers/index.html){:target="_blank"}, and it was trained with food-related news scraped from multiple websites, such as [chewboom.com](https://chewboom.com){:target="_blank"}. 
 
-The site is not scalable and it may take a while to get your article as it is currently hosted on a machine with only CPU support. A demo can be found [here](http://ffpr.isi.edu){:target="_blank"}. 
+The site is not scalable yet and it may take a while to get your article as it is currently hosted on a machine with only CPU support. A demo can be found [here](http://ffpr.isi.edu){:target="_blank"}.  -->

@@ -1,0 +1,6 @@
+<!-- ---
+layout: post
+title:  "SPOLIN-powered \"Yes, and\" bot "
+date:   2019-04-03 16:59:36 +0530
+---
+ -->
