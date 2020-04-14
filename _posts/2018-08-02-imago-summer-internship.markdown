@@ -4,4 +4,4 @@ title:  "Summer Internship 2018 @ Imago.ai"
 date:   2018-08-02 16:59:36 +0530
 ---
 
-I've had a great opportunity to work as an artificial intelligence researher at Imago.ai for the summer of 2018. I worked on a natural language processing task, specifically machine comprehension and question and answering. Our team used a BiDAF model augmented with self-attention capacities, trained with the SQuAD and MSMARCO datasets. A demo of my work can be found <a href="http://bidaf.imago.ai/" target="_blank" > here.</a> 
+I've had a great opportunity to work as an artificial intelligence researcher at Imago.ai for the summer of 2018. I worked on building a question and answering that could be used to automatically answer customer's questions. Our team used a BiDAF model augmented with self-attention capacities, trained with the SQuAD and MSMARCO datasets. A demo of our work can be found <a href="http://bidaf.imago.ai/" target="_blank" > here.</a> 

@@ -1,73 +1,180 @@
 ---
-layout: default
+title: Justin Cho
 ---
-
-{%- if page.title -%}
-<h1 class="page-heading">{{ page.title }}</h1>
-{%- endif -%}
-
-{{ content }}
-
-{%- if site.posts.size > 0 -%}
-<ul class="posts">
-	<li>
-		<h1 id="posts-label">Research / Projects</h1>
-	</li>
-
-	{%- for post in site.posts -%}
-	<li>
-		{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-		<a class="post-link" href="{{ post.url | relative_url }}">
-			<h2 class="post-title">{{ post.title | escape }}</h2>
-		</a>
-		<div class="post-meta">
-			<!-- <ul class="post-categories">
-				{%- for tag in post.categories -%}
-				<li>{{ tag }}</li>
-				{%- endfor -%}
-			</ul> -->
-			<div class="post-date"><i class="icon-calendar"></i>{{ post.date | date: date_format }}</div>
-		</div>
-		<div class="post">
-			{%- if site.show_excerpts -%}
-			{{ post.excerpt }}
-			{%- endif -%}
-		</div>
-	</li>
-	{%- endfor -%}
-</ul>
-
-{%- endif -%}
-
-{%- if site.recreation.size > 0 -%}
-<ul class="posts">
-	<li>
-		<h1 id="posts-label">Everything else</h1>
-	</li>
-
-	{%- for post in site.recreation -%}
-	<li>
-		{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-		<a class="post-link" href="{{ post.url | relative_url }}">
-			<h2 class="post-title">{{ post.title | escape }}</h2>
-		</a>
-		<div class="post-meta">
-			<!-- <ul class="post-categories">
-				{%- for tag in post.categories -%}
-				<li>{{ tag }}</li>
-				{%- endfor -%}
-			</ul> -->
-			<div class="post-date"><i class="icon-calendar"></i>{{ post.date | date: date_format }}</div>
-		</div>
-		<div class="post">
-			{%- if site.show_excerpts -%}
-			{{ post.excerpt }}
-			{%- endif -%}
-		</div>
-	</li>
-	{%- endfor -%}
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{%- include head.html -%}
+</head>
 
 
-{%- endif -%}
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+<body>
+	<main class="container" id="top">
+		<section class="about">
+			<div class="portfolio-img-wrapper">
+				<a href="/">
+					<img class="portfolio-img" src="{{ '/assets/portfolio.png' | relative_url }}" alt="{{ site.plainwhite.name }}">
+				</a>
+			</div>
+
+			<!-- <h1 class="name">{{ site.plainwhite.name }} </h1> -->
+			<p class="tagline">{{ site.plainwhite.tagline }}</p>
+
+			<div class="affiliation-wrapper">
+				{% for affil in site.plainwhite.affiliations %}
+				<div class="affiliation">
+					<a target="_blank" href="{{ affil.link}}">{{ affil.name}}</a>
+				</div>
+				{% endfor %}
+			</div>
+			<ul class="social">
+				<a href="https://github.com/{{ site.plainwhite.social_links.github }}" target="_blank"><li><i class="icon-github-circled"></i></li></a>
+				<a href="https://www.linkedin.com/{{ site.plainwhite.social_links.linkedIn }}" target="_blank"><li><i class="icon-linkedin-squared"></i></li></a>
+				<a href="https://twitter.com/{{site.plainwhite.social_links.twitter}}" target="_blank"><li><i class="icon-twitter-squared"></i></li></a>
+			</ul>
+		</section>
+		<section class="content">
+			<div class="intro">
+
+				<h1> Justin Cho 조현동 </h1>
+
+				<p> <a href="mailto:jcho@isi.edu">email</a> / <a href="{{ '/assets/justin_cho_cv.pdf' | absolute_url }}" target="_blank">resume</a> / <a href="{{ '/blog.html' | absolute_url}}">blog</a></p>
+				<div class="intro-text">
+					I'm working at the University of Southern California's Information Sciences Institute as a Programmer Analyst and I will be starting my PhD program in Computer Science at USC starting this Fall 2020. I work with <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a>. 
+				</div>
+
+				<div class="intro-text">
+					My research interest is in natural language processing, specifically in natural language generation. Ultimately, I want to contribute to developing intelligent systems, like the virtual assistant in <a href="https://en.wikipedia.org/wiki/Her_(film)"> Her </a> or the incredible <a href="https://interstellarfilm.fandom.com/wiki/TARS"> TARS </a> in Interstellar. 
+				</div>
+			</div>	
+
+			<div id="research">
+				
+			</div>
+
+			<div id="research">
+				<h3> Research </h3>
+
+				<div class="research-item">
+					<div class="pull-left thumbnail-wrapper">
+						<img src="{{ '/assets/yesand_example.png' | absolute_url }}" alt="spolin-thumbnail" class="thumbnail">
+					</div>
+
+					<div class="description">
+						<div class="paper-title"> 
+							Grounding Conversations with Improvised Dialogues 
+						</div>
+						<div class="authors">
+							<strong>	Hyundong J. Cho</strong>, <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a>. ACL2020. 
+							<!-- <a href=""> [paper] </a>  -->
+							<!-- <a href=""> [project page] </a>  -->
+							<a href="https://spolin.isi.edu" target="_blank"> [demo]</a>
+						</div>
+
+						<div class="excerpt">
+							Open-domain dialogue systems overlook an important phenomena that makes conversations engaging: grounding. We collect "Yes, and" type dialogue pairs from improv podcast and existing dialogue corpora to create the SPOLIN dataset. Human evaluation shows that models fine-tuned with SPOLIN generate more engaging results. 
+						</div>
+					</div>
+
+				</div>
+
+				<div class="research-item">
+
+					<div class="pull-left thumbnail-wrapper">
+						<img src="{{ '/assets/sigdial2020.png' | absolute_url }}" alt="sigdial2020-thumbnail" class="thumbnail">
+					</div>
+
+					<div class="description">
+						<div class="paper-title"> 
+							Agenda Pushing in Non-collaborative Dialogue 
+						</div>
+						<div class="authors">
+							<strong>	Hyundong J. Cho</strong>, <a href="https://steel.isi.edu/members/gbartlet/" target="_blank"> Genevieve Bartlett</a>. Under review for SIGDIAL2020.
+						</div>
+
+						<div class="excerpt">
+							It is challenging to build an automatic anti-phishing dialogue system because of the unique trade-offs involved in phishing interactions. We propose that a hybrid approach of FSTs and a neural open-domain dialogue system is an effective approach for anti-phishing and provide the Puppeteer framework as an example. 
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div id="blog-list">
+				<h3> Blog Posts	</h3>
+
+				
+				{%- if site.posts -%}
+					{%- for page in site.posts -%}
+						<a class="post-link" href="{{ page.url | relative_url }}">
+							<div class="small-title">{{ page.title }}</div>
+						</a>
+						
+						<div class="post-date">{{ page.date | date: date_format}} </div>
+
+						{%- if site.show_excerpts -%}
+						{{ page.excerpt }}
+						{%- endif -%}
+					{%- endfor -%}
+				{%- endif -%}
+
+				{%- if site.recreation -%}
+					{%- for page in site.recreation -%}
+						<a class="post-link" href="{{ page.url | relative_url }}">
+							<div class="small-title">{{ page.title }}</div>
+						</a>
+						<div class="post-date">{{ page.date | date: date_format}} </div>
+
+						{%- if site.show_excerpts -%}
+						{{ page.excerpt }}
+						{%- endif -%}
+					{%- endfor -%}
+				{%- endif -%}
+
+
+			</div>
+
+
+			<div id="Misc.">
+				<h3> Misc. </h3>
+
+				<ul>
+					<li>
+						Before starting my PhD at USC, I worked at ISI as a programmer analyst for a year. Before that, I graduated from Hong Kong University of Science and Technology with a degree in Computer Science. 
+					</li>
+
+					<li>
+						I have been very fortunate to have lived in many different countries: Moscow, Russia; Oslo, Norway; Vienna, Austria; Abu Dhabi, UAE; Hong Kong; Seoul, South Korea; Los Angeles, California. I look forward to living in new places and experiencing different cultures! 
+					</li>
+
+				</ul>
+			</div>
+
+
+			
+		</section>
+
+
+	</main>
+
+	<div class="footer">
+		Last updated: April 2020. <a href="#top"> Back to top </a>
+	</div>
+
+
+	{%- if site.plainwhite.analytics_id -%}
+	<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.plainwhite.analytics_id }}"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', '{{ site.plainwhite.analytics_id }}');
+	</script>
+	{%- endif -%}
+</body>
+</html>
+
 

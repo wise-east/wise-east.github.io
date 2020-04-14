@@ -6,7 +6,7 @@ $linkColor: #0A59B0;
 $mobileW: 768px;
 $smallMobileW: 480px;
 $bigScreenW: 1600px;
-$leftWidth: 220px;
+$leftWidth: 250px;
 
 *,*:before,*:after {
 	box-sizing: border-box;
@@ -16,7 +16,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
 	line-height: 1.2em;
-	margin: 0;
+	margin: 20px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -26,10 +26,11 @@ img, embed, object, video {
 }
 
 a {
-	color: #000;
+	text-decoration: none;
 	transition: color 0.3s;
 	&:hover {
 		color: $linkColor;
+		text-decoration: underline;
 	}
 }
 
@@ -68,8 +69,9 @@ main {
 	}
 	.about {
 		display: flex;
-		height: 100vh;
-		padding-bottom: 15vh;
+		// height: 100vh;
+		margin-top: 2vh; 
+		// padding-bottom: 15vh;
 		@media screen and (max-width: $mobileW) {
 			height: auto;	
 			padding: 10vh 0;
@@ -81,28 +83,28 @@ main {
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
-		h2 {
-			font-size: 22px;
+		h1 {
+			// font-size: 22px;
 			margin-top: 25px;
-			margin-bottom: 0;
+			margin-bottom: 15px;
 			color: #222222;
-			font-weight: normal;
 		}
 		.tagline {
 			font-size: 15px;
 			margin-top: 10px;
 			margin-bottom: 0px;
-			color: #aaa;
+			color: rgb(10, 10, 10);
 			padding-bottom: 0;
 		}
 		.affiliation {
 			margin-top: 0px;
 			padding: 0px;
 			font-size: 12px;
+			text-align: center;
 			a {
 				text-decoration: none;
 				transition: border-bottom 0.4s;
-				color: #aaa;
+				color: rgb(105, 105, 105);
 				&:hover {
 					color: $linkColor;
 				}
