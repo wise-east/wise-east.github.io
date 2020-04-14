@@ -21,8 +21,22 @@
 	margin-top: 25px;
 }
 
+.content{
+	@media screen and (max-width: $mobileW){
+		margin: 0 10px; 
+	}
+}
+
 .content > div {
-	margin-left: 70px;
+
+	@media screen and (max-width: $mobileW){
+		margin-left: 0px; 
+		padding: 0px 20px; 
+	}
+
+	@media screen and (min-width: $mobileW + 1){
+		margin-left: 70px;
+	}
 }
 
 .content > div > div{
