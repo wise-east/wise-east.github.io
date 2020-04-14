@@ -75,8 +75,12 @@
 
 	.post-date{
 		margin-top: 0px; 
-		margin-bottom: 20px; 
+		margin-bottom: 5px; 
 		padding: 0; 
+	}
+
+	.excerpt{
+		color: rgb(61, 61, 61); 
 	}
 
 
@@ -94,11 +98,12 @@
 	padding: 20px; 
 }
 
-.blog-caption{
+.post .blog-caption{
 	text-align: center;
 	max-width: 50%; 
 	margin-right: auto; 
 	margin-left: auto; 
+	font-size: 1em; 
 }
 
 .back-button{

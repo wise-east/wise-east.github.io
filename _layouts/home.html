@@ -41,7 +41,7 @@ title: Justin Cho
 
 				<p> <a href="mailto:jcho@isi.edu">email</a> / <a href="{{ '/assets/justin_cho_cv.pdf' | absolute_url }}" target="_blank">resume</a> / <a href="{{ '/blog.html' | absolute_url}}">blog</a></p>
 				<div class="intro-text">
-					I'm working at the University of Southern California's Information Sciences Institute as a Programmer Analyst and I will be starting my PhD program in Computer Science at USC starting this Fall 2020. I work with <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a>. 
+					I'm working at the University of Southern California's (USC) Information Sciences Institute (ISI) as a Programmer Analyst and I will be starting my PhD program in Computer Science at USC starting this Fall 2020. I work with <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a>. 
 				</div>
 
 				<div class="intro-text">
@@ -73,7 +73,7 @@ title: Justin Cho
 						</div>
 
 						<div class="excerpt">
-							Open-domain dialogue systems overlook an important phenomena that makes conversations engaging: grounding. We collect "Yes, and" type dialogue pairs from improv podcast and existing dialogue corpora to create the SPOLIN dataset. Human evaluation shows that models fine-tuned with SPOLIN generate more engaging results. 
+							Open-domain dialogue systems overlook an important phenomena that makes conversations engaging: grounding. We collect "Yes, and" type dialogue pairs from an improv podcast and existing dialogue corpora to create the Spontaneanation Pairs Of Learnable ImprovisatioN (SPOLIN) dataset. Human evaluation shows that models fine-tuned with SPOLIN generate more engaging results. 
 						</div>
 					</div>
 
@@ -114,9 +114,11 @@ title: Justin Cho
 						
 						<div class="post-date">{{ page.date | date: date_format}} </div>
 
-						{%- if site.show_excerpts -%}
-						{{ page.excerpt }}
-						{%- endif -%}
+						<div class="excerpt">
+							{%- if site.show_excerpts -%}
+							{{ page.excerpt }}
+							{%- endif -%}
+						</div>
 					{%- endfor -%}
 				{%- endif -%}
 
@@ -127,9 +129,11 @@ title: Justin Cho
 						</a>
 						<div class="post-date">{{ page.date | date: date_format}} </div>
 
+						<div class="excerpt">
 						{%- if site.show_excerpts -%}
 						{{ page.excerpt }}
 						{%- endif -%}
+						</div>
 					{%- endfor -%}
 				{%- endif -%}
 
