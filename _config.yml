@@ -8,7 +8,6 @@ show_excerpts: true # set to true to show excerpts on the homepage
 collections: 
   recreation: 
     output: true
-    permalink: pretty
   research:
     output: true
     permalink: /:name
