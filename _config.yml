@@ -8,6 +8,10 @@ show_excerpts: true # set to true to show excerpts on the homepage
 collections: 
   recreation: 
     output: true
+    permalink: pretty
+  research:
+    output: true
+    permalink: /:name
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this

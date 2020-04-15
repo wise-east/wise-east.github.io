@@ -1,4 +1,176 @@
 ---
 layout: research-page
 title: SPOLIN 
+description: Project page for SPOLIN corpus
+tagline: Grounding Conversations with Improvised Dialogues
+conference: ACL2020
 ---
+
+<div class="title">
+
+
+
+</div>
+
+
+<main class="container">
+    <div class="jumbotron heading">
+        <h1>
+            <span class="title-font">{{ page.title }}</span>: {{page.tagline}} ({{page.conference}})
+        </h1>
+
+        <a class="btn btn-lg" style="background-color: #a32121; color: white;" href="#" role="button">Paper »</a>
+        <a class="btn btn-lg btn-info" href="https://github.com/wise-east/spolin" role="button">Dataset »</a>
+        <a class="btn btn-lg btn-secondary" href="https://spolin.isi.edu/" target="_blank" role="button">Demo »</a>
+
+    </div>
+
+    <div>
+        <h4> <span class="title-font">SPOLIN</span>: a collection of improvised dialogue for engaging output</h4>
+
+        <div>
+            <p>
+                Effective dialogue involves grounding, the process of collecting mutual knowledge and assumptions that is essential for communication between people. Modern dialogue systems are not explicitly trained to build common ground, and therefore overlook an important aspect of communication. Improvisational theater (improv) intrinsically contains a high proportion of dialogue focused on building common ground, and make use of the "Yes, and" principle, a strong grounding speech act, to establish coherence and an actionable objective reality.
+
+            </p>
+
+            <p>
+                We collect a corpus of more than 23,000 "Yes, and" turns, transcribing them from improv dialogues and extracting them from larger, but more sparsely populated movie script dialogue corpora, via a bootstrapped classifier. We fine-tune chit-chat dialogue systems with our corpus to encourage more grounded, relevant conversation and confirm these findings with human evaluations.
+            </p>
+
+        </div>
+    </div>
+
+    <div id="intro">
+        <h2> "Yes, and..." </h2>
+
+        <div class="yesand-example-wrapper row justify-content-center">
+            <div class="col-sm-8 col-md-5 col-lg-3">
+                <img src="{{ '/assets/yesand_example.png' | absolute_url }}" alt="Yes-and examples" >
+            </div>
+            
+            <div class="col-md-7 col-lg-8">
+                <p>
+                    The <a href="https://en.wikipedia.org/wiki/Yes,_and..." target="_blank">yes-and principle</a> is a rule-of-thumb of improvisational theatre that suggests that a participant should accept the reality of what the other participant has said (“Yes”) and expand or refine that reality with additional information(“and”). It does not require the response to explicitly contain the phrase "Yes, and". Below are some examples: 
+                </p>	
+
+                <p>
+                    Explicit (top) and implicit (bottom) examples of yes-ands in the <span id="dataset"> SPOLIN</span> corpus. The text underlined in green reflects acceptance of the context established in the prompt ("yes") and the text underlined in orange initiates a new relevant contribution to the dialogue ("and").
+                </p>
+            </div>
+
+            <!-- <div class="col-md-12 row yesand-example">
+
+                <p> Choose the "Yes, and" response to the following prompt: </p>
+                <div class='col-md-12'>
+                    Prompt
+                </div>
+
+                <div class='col-md-3'>
+                    option
+                </div>
+                <div class='col-md-3'>
+                    option
+                </div>                    
+                <div class='col-md-3'>
+                    option
+                </div>                    
+                <div class='col-md-3'>
+                    option
+                </div>
+
+            </div> -->
+        </div>
+    </div>
+
+    <div id="examples">
+
+        <div>
+            <h4> </h4>
+        </div>
+
+        <div id="demo">
+            <h2> Demo </h2>
+            <div> Chat with SpolinBot, a <a href="https://github.com/microsoft/DialoGPT">DialoGPT</a> model fine-tuned with the SPOLIN corpus to generate "Yes, and" responses. For the full demo, visit <a href="https://spolin.isi.edu"> spolin.isi.edu</a>. </div>
+
+            <div class="demo-wrapper">
+                <iframe id="iframe" src="https://spolin.isi.edu/dev/" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="about">
+
+
+        <div id="paper">
+            <h2> Paper </h2>
+
+            <div class="img-wrapper">
+                <a href="">
+                    <img class="img-fluid" src="{{ '/assets/paper-preview.png' | absolute_url }}" alt="paper-preview">
+                    <div class="img-overlay">
+                        <button class="btn btn-info">Read our paper»</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="vspacing">
+                If our work inspires you, please cite us: 
+            </div>
+
+            <div class='citation-wrapper'>
+                <pre class="citation">
+@inproceedings{cho2020spolin,
+    title={Grounding Conversations with Improvised Dialogues},
+    author={Cho, Hyundong and May, Jonathan},
+    booktitle ={Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},
+    year={2020}
+}                    </pre>
+            </div>
+
+        </div>
+
+        <div id="authors">
+            <h2> Authors </h2>
+
+            <div class="vspacing">
+                We are researchers at the <a href="https://isi.edu">Information Science Institute</a>, a research organization of the <a href="https://viterbischool.usc.edu/"> University of Southern California Vitberi School of Engineering </a>. 
+            </div>
+
+            <div class="row justify-content-center" style="margin: 0 auto;">
+                <div class="card headshot box-shadow">
+                    <img class="card-img-top" src="{{ '/assets/portfolio.png' | absolute_url }}" alt="justin">
+                    <div class="card-body">
+                        <p class="card-text"><a href="../">Justin Cho</a></p>
+                    </div>
+                </div>
+                <div class="card headshot box-shadow">
+                    <img class="card-img-top" src="{{ '/assets/jon-profile.png' | absolute_url }}" alt="jon">
+                    <div class="card-body">
+                        <p class="card-text"><a href="https://www.isi.edu/~jonmay/">Jonathan May</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="contact">
+            <h2> Contact </h2>
+
+            <div>
+                If you have any questions about the dataset, feel free to <a href="mailto:spolin@isi.edu">email</a> us or raise an issue on the <a href="">Github</a> page. 
+            </div>
+        </div>
+
+        <div class="row justify-content-center" style="padding-bottom: 50px; padding-top: 20px;">
+            <div class="col-md-4 col-lg-3 thumb d-flex align-items-center">
+                <a href="https://isi.edu" target="_blank" class="thumbnail">
+                    <img class="img-fluid" src="{{ '/assets/usc_isi.png' | absolute_url }}" alt="usc-isi">
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</main>
