@@ -16,17 +16,18 @@ conference: ACL2020
 <main class="container">
     <div class="jumbotron heading">
         <h1>
-            <span class="title-font">{{ page.title }}</span>: {{page.tagline}} ({{page.conference}})
+            <!-- <span class="title-font">{{ page.title }}</span>:  -->
+            {{page.tagline}} ({{page.conference}})
         </h1>
 
         <a class="btn btn-lg" style="background-color: #a32121; color: white;" href="#" role="button">Paper »</a>
-        <a class="btn btn-lg btn-info" href="https://github.com/wise-east/spolin" role="button">Dataset »</a>
+        <a class="btn btn-lg btn-info" href="https://github.com/wise-east/spolin" target="_blank" role="button">Dataset »</a>
         <a class="btn btn-lg btn-secondary" href="https://spolin.isi.edu/" target="_blank" role="button">Demo »</a>
 
     </div>
 
-    <div>
-        <h4> <span class="title-font">SPOLIN</span>: a collection of improvised dialogue for engaging output</h4>
+    <div id="about">
+        <h3> <span class="title-font">SPOLIN</span>: a collection of improvised "Yes, and" dialogue turns</h4>
 
         <div>
             <p>
@@ -35,18 +36,18 @@ conference: ACL2020
             </p>
 
             <p>
-                We collect a corpus of more than 23,000 "Yes, and" turns, transcribing them from improv dialogues and extracting them from larger, but more sparsely populated movie script dialogue corpora, via a bootstrapped classifier. We fine-tune chit-chat dialogue systems with our corpus to encourage more grounded, relevant conversation and confirm these findings with human evaluations.
+                We collect a corpus of more than 68,000 "Yes, and" turns, transcribing them from improv dialogues and extracting them from larger, but more sparsely populated movie script dialogue corpora and subtitles corpora, via a bootstrapped classifier. We fine-tune chit-chat dialogue systems with our corpus to encourage more grounded, relevant conversation and confirm these findings with human evaluations. 
             </p>
 
         </div>
     </div>
 
     <div id="intro">
-        <h2> "Yes, and..." </h2>
+        <h3> What is a "Yes, and..."? </h3>
 
         <div class="yesand-example-wrapper row justify-content-center">
             <div class="col-sm-8 col-md-5 col-lg-3">
-                <img src="{{ '/assets/yesand_example.png' | absolute_url }}" alt="Yes-and examples" >
+                <img src="{{ '/assets/yesand_example2.png' | absolute_url }}" alt="Yes-and examples" >
             </div>
             
             <div class="col-md-7 col-lg-8">
@@ -55,7 +56,7 @@ conference: ACL2020
                 </p>	
 
                 <p>
-                    Explicit (top) and implicit (bottom) examples of yes-ands in the <span id="dataset"> SPOLIN</span> corpus. The text underlined in green reflects acceptance of the context established in the prompt ("yes") and the text underlined in orange initiates a new relevant contribution to the dialogue ("and").
+                    Explicit (top) and implicit (bottom) examples of yes-ands in the <span id="dataset"> SPOLIN</span> corpus. The text highlighted in light blue reflects acceptance of the context established in the prompt ("yes") and the text highlighted in orange initiates a new relevant contribution to the dialogue ("and").
                 </p>
             </div>
 
@@ -90,8 +91,8 @@ conference: ACL2020
         </div>
 
         <div id="demo">
-            <h2> Demo </h2>
-            <div> Chat with SpolinBot, a <a href="https://github.com/microsoft/DialoGPT">DialoGPT</a> model fine-tuned with the SPOLIN corpus to generate "Yes, and" responses. For the full demo, visit <a href="https://spolin.isi.edu"> spolin.isi.edu</a>. </div>
+            <h3> Demo </h3>
+            <div> Chat with SpolinBot, a <a href="https://github.com/microsoft/DialoGPT" target="_blank">DialoGPT</a> model fine-tuned with the latest SPOLIN corpus to generate "Yes, and" responses. Each response from the bot contains five options to choose from, which are ordered based on maximum mutual information (MMI) scoring. For the full demo, visit <a href="https://spolin.isi.edu" target="_blank"> spolin.isi.edu</a>. </div>
 
             <div class="demo-wrapper">
                 <iframe id="iframe" src="https://spolin.isi.edu/" frameborder="0" scrolling="no"></iframe>
@@ -100,11 +101,11 @@ conference: ACL2020
 
     </div>
 
-    <div id="about">
+    <div id="info">
 
 
         <div id="paper">
-            <h2> Paper </h2>
+            <h3> Paper </h3>
 
             <div class="img-wrapper">
                 <a href="">
@@ -132,23 +133,23 @@ conference: ACL2020
         </div>
 
         <div id="authors">
-            <h2> Authors </h2>
+            <h3> Authors </h3>
 
-            <div class="vspacing">
-                We are researchers at the <a href="https://isi.edu">Information Science Institute</a>, a research organization of the <a href="https://viterbischool.usc.edu/"> University of Southern California Vitberi School of Engineering </a>. 
+            <div class="vspacing"> 
+                We are researchers at the <a href="https://isi.edu" target="_blank">Information Science Institute</a>, a research organization of the <a href="https://viterbischool.usc.edu/" target="_blank"> University of Southern California Vitberi School of Engineering </a>. 
             </div>
 
             <div class="row justify-content-center" style="margin: 0 auto;">
                 <div class="card headshot box-shadow">
                     <img class="card-img-top" src="{{ '/assets/portfolio.png' | absolute_url }}" alt="justin">
                     <div class="card-body">
-                        <p class="card-text"><a href="../">Justin Cho</a></p>
+                        <p class="card-text"><a href="../" target="_blank">Justin Cho</a></p>
                     </div>
                 </div>
                 <div class="card headshot box-shadow">
                     <img class="card-img-top" src="{{ '/assets/jon-profile.png' | absolute_url }}" alt="jon">
                     <div class="card-body">
-                        <p class="card-text"><a href="https://www.isi.edu/~jonmay/">Jonathan May</a></p>
+                        <p class="card-text"><a href="https://www.isi.edu/~jonmay/" target="_blank">Jonathan May</a></p>
                     </div>
                 </div>
             </div>
@@ -156,7 +157,7 @@ conference: ACL2020
         </div>
 
         <div id="disclaimer">
-            <h2>Disclaimer</h2>
+            <h3>Disclaimer</h3>
 
             <div>
                 This material is based on research sponsored by the AFRL and DARPA under agreement number FA8650-18-C-7878. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of the AFRL, DARPA, or the U.S. Government. 
@@ -165,10 +166,10 @@ conference: ACL2020
         </div>
 
         <div id="contact">
-            <h2> Contact </h2>
+            <h3> Contact </h3>
 
             <div>
-                If you have any questions about the dataset, feel free to <a href="mailto:spolin@isi.edu">email</a> us or raise an issue on the <a href="">Github</a> page. 
+                If you have any questions about the dataset, feel free to <a href="mailto:spolin@isi.edu">email</a> us or raise an issue on the <a href="https://github.com/wise-east/spolin" target="_blank">Github</a> page. 
             </div>
         </div>
 
