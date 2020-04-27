@@ -74,7 +74,7 @@ main {
 		// padding-bottom: 15vh;
 		@media screen and (max-width: $mobileW) {
 			height: auto;	
-			padding: 10vh 0;
+			padding: 5vh 0;
 		}
 		@media screen and (min-width: $mobileW + 1) {
 			position: fixed;
@@ -161,7 +161,7 @@ main {
 
 .post-title {
 	line-height: 1.2em;
-	font-size: 28px;
+	// font-size: 28px;
 }
 .posts, .post-container {
 	list-style-type: none;
@@ -202,7 +202,7 @@ main {
 	border-bottom: 1px solid #eee;
 	font-size: 15px;
 	color: #777;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	letter-spacing: 0.5px;
 	padding-bottom: 10px;
 	font-weight: normal;

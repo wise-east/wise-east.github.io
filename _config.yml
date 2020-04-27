@@ -1,13 +1,14 @@
-title: Justin Cho
+title: Justin Cho's Website
 author: Justin Cho 
 email: jcho@isi.edu 
 description: > # this means to ignore newlines until "show_exerpts:"
-  Welcome to Justin Cho's personal website! You can find a summary of my research endeavors and a link to my blog post here. 
+  Welcome to Hyundong Justin Cho's personal website! I am a prospective PhD student at USC who is passionate about research in natural language processing. You can find a summary of my research endeavors and a link to my blog post here. 
 show_excerpts: true # set to true to show excerpts on the homepage
 
 collections: 
   recreation: 
     output: true
+    sort_by: date
   research:
     output: true
     permalink: /:name
@@ -26,6 +27,8 @@ plainwhite:
       link: https://www.ust.hk/home 
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
+  disqus_shortname: justin-cho
+
 
   # generate social links in footer
   social_links:

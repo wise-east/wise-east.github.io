@@ -24,7 +24,7 @@
 			<li>
 				{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 				<a class="post-link" href="{{ post.url | relative_url }}">
-					<h2 class="post-title">{{ post.title | escape }}</h2>
+					<h3 class="post-title">{{ post.title | escape }}</h3>
 				</a>
 				<div class="post-meta">
 					<!-- <ul class="post-categories">
@@ -48,14 +48,14 @@
 		{%- if site.recreation.size > 0 -%}
 		<ul class="posts">
 			<li>
-				<h1 id="posts-label">Everything else</h1>
+				<h1 id="posts-label">Miscellaneous</h1>
 			</li>
 		
-			{%- for post in site.recreation -%}
+			{%- for post in site.recreation reversed-%}
 			<li>
 				{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 				<a class="post-link" href="{{ post.url | relative_url }}">
-					<h2 class="post-title">{{ post.title | escape }}</h2>
+					<h3 class="post-title">{{ post.title | escape }}</h3>
 				</a>
 				<div class="post-meta">
 					<!-- <ul class="post-categories">

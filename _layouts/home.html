@@ -45,7 +45,7 @@ title: Justin Cho
 				</div>
 
 				<div class="intro-text">
-					My research interest is in natural language processing, specifically in natural language generation. Ultimately, I want to contribute to developing intelligent systems that we can interface with using only dialogue, like Samantha in <a href="https://en.wikipedia.org/wiki/Her_(film)"> Her </a> and <a href="https://interstellarfilm.fandom.com/wiki/TARS"> TARS </a> in Interstellar. 
+					My research interest is in natural language processing, specifically in natural language generation. Recently, I have been working on open-domain dialogue generation with inspiration from improv. Ultimately, I want to contribute to developing intelligent systems that we can interface with using only dialogue, like Samantha in <a href="https://en.wikipedia.org/wiki/Her_(film)"> Her </a> and <a href="https://interstellarfilm.fandom.com/wiki/TARS"> TARS </a> in Interstellar. I have previously worked on text generation with structured data, fake news detection, and question answering. 
 				</div>
 			</div>	
 
@@ -105,9 +105,23 @@ title: Justin Cho
 			<div id="blog-list">
 				<h3> Blog Posts	</h3>
 
-				
+				{%- if site.recreation -%}
+					{%- for page in site.recreation reversed limit:2 -%}
+						<a class="post-link" href="{{ page.url | relative_url }}">
+							<div class="small-title">{{ page.title }}</div>
+						</a>
+						<div class="post-date">{{ page.date | date: date_format}} </div>
+
+						<div class="excerpt">
+							{%- if site.show_excerpts -%}
+							{{ page.excerpt }}
+							{%- endif -%}
+						</div>
+					{%- endfor -%}
+				{%- endif -%}
+
 				{%- if site.posts -%}
-					{%- for page in site.posts -%}
+					{%- for page in site.posts limit:2 -%}
 						<a class="post-link" href="{{ page.url | relative_url }}">
 							<div class="small-title">{{ page.title }}</div>
 						</a>
@@ -122,21 +136,6 @@ title: Justin Cho
 					{%- endfor -%}
 				{%- endif -%}
 
-				{%- if site.recreation -%}
-					{%- for page in site.recreation -%}
-						<a class="post-link" href="{{ page.url | relative_url }}">
-							<div class="small-title">{{ page.title }}</div>
-						</a>
-						<div class="post-date">{{ page.date | date: date_format}} </div>
-
-						<div class="excerpt">
-						{%- if site.show_excerpts -%}
-						{{ page.excerpt }}
-						{%- endif -%}
-						</div>
-					{%- endfor -%}
-				{%- endif -%}
-
 
 			</div>
 
@@ -146,11 +145,23 @@ title: Justin Cho
 
 				<ul>
 					<li>
+						My pronouns are he, him, his.
+					</li>
+					
+					<li>
 						Before starting my PhD at USC, I worked at ISI as a programmer analyst for a year. Before that, I graduated from Hong Kong University of Science and Technology with a degree in Computer Science. 
 					</li>
 
 					<li>
 						I have been very fortunate to have lived in many different countries: Moscow, Russia; Oslo, Norway; Vienna, Austria; Abu Dhabi, UAE; Hong Kong; Seoul, South Korea; Los Angeles, California. I look forward to living in new places and experiencing different cultures! 
+					</li>
+
+					<li>
+						I love playing football and I am a huge fan of FC Barcelona. Visca el Barça!
+					</li>
+
+					<li>
+						I am a citizen of South Korea and the US. I speak/write fluent English and Korean.
 					</li>
 
 				</ul>
