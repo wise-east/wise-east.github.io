@@ -15,9 +15,15 @@ div.heading{
 }
 
 
-iframe{
+#spolinbot-demo{
     height: 500px;
     width: 100%; 
+}
+
+@media (max-width: 1200px){
+    #spolinbot-demo{
+        height: 600px; 
+    }
 }
 
 .vspacing{
@@ -32,6 +38,14 @@ iframe{
 .thumbnail:hover{
     cursor: default; 
 }
+
+@media (max-width: 500px){
+
+    .thumb{
+        width: 300px !important; 
+    }
+}
+
 
 #info{
     > div{
@@ -130,4 +144,118 @@ iframe{
         margin: 0.4rem;
         box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05); 
     }
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.example-gallery {
+    position: relative; 
+    margin-right: auto; 
+    margin-left: auto; 
+    width: 450px; 
+}
+
+.example-caption{
+    text-align: center;
+    color: grey; 
+}
+
+
+@media (max-width: 1200px){
+    .example-gallery{
+        width: 480px; 
+    }
+}
+
+@media (max-width: 700px){
+    .example-gallery{
+        width: 400px; 
+    }
+}
+  
+/* Hide the images by default */
+.mySlides {
+    display: none;
+
+    img{
+        margin-left: auto; 
+        margin-right: auto; 
+    }
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+    cursor: pointer;
+}
+
+
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 300px;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 3px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.prev{
+    left: -40px; 
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: -40px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(145, 145, 145, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
 }
