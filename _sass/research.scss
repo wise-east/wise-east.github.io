@@ -177,6 +177,7 @@ div.heading{
     display: none;
 
     img{
+        margin-top: 20px; 
         margin-left: auto; 
         margin-right: auto; 
     }
@@ -207,12 +208,12 @@ div.heading{
 }
 
 .prev{
-    left: -40px; 
+    left: -45px; 
 }
 
 /* Position the "next button" to the right */
 .next {
-    right: -40px;
+    right: -45px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
