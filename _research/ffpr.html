@@ -1,0 +1,182 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title> AI wanna munch! </title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.js" integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+
+<style type="text/css">
+
+	#instruction{
+		margin-top: 20px;
+		text-align: center;
+	}
+
+	#title-input{
+		margin-top: 20px;
+		width: 100%;
+		border: none;
+		border-bottom: solid 2px #3498db;
+		font-size: 4vw; 
+	}
+
+	.submit-button{
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 20px;
+	}
+
+	.loader {
+	  border: 16px solid #f3f3f3; /* Light grey */
+	  border-top: 16px solid #3498db; /* Blue */
+	  border-radius: 50%;
+	  width: 120px;
+	  height: 120px;
+	  animation: spin 1s linear infinite;
+	}
+
+	@keyframes spin {
+	  0% { transform: rotate(0deg); }
+	  100% { transform: rotate(360deg); }
+	}
+
+	.opaque{
+		opacity: 0.2;
+	}
+
+	.notopaque{
+		opacity: 1.0;
+	}
+
+	.article{
+		text-align: justify;
+	}
+
+	.heading{
+		margin-top: 20px;
+		text-align: center
+	}
+
+	.title{
+		margin-top: 30px;
+	}
+
+	.date{
+		opacity: 0.5;
+	}
+
+	.paragraph{
+		margin-bottom: 15px;
+	}
+
+
+</style>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="row justify-content-center content">
+
+			<div class="col-lg-6 text-center">
+
+				<h2 id="instruction"> AI Wanna Munch! </h2>
+				<h5 id="detail"> Type in any title suitable for a fast food press release and artificial intelligence will automatically generate the article for you! </h5>
+			</div>
+
+			<div class="col-12 text-center">
+				<input type="text" name="title" id="title-input" placeholder="Your title goes here...">
+				<input type="submit" id="sendbutton" value="Munch away!" class='submit-button btn btn-primary'></input>
+			</div>
+
+		</div>
+
+		<div class="row justify-content-center">
+			<div id="loader"></div>
+		</div>
+
+			<div class="row justify-content-center">
+
+				<div class="col-12 title">
+					<h3 id="title"></h3>
+					<div class='date'></div>
+				</div>
+
+				<div class="col-12 article">
+				</div>
+
+			</div>
+	</div>
+</body>
+<!-- 
+<script type="text/javascript" charset="utf-8">
+    var socket = io();
+    socket.on('connect', function() {
+        socket.emit('my event', {data: 'I\'m connected!'});
+    });
+</script> -->
+
+<script type="text/javascript">
+
+	// $(".submit-button").click(function(){
+	// 	$(".content").addClass("opaque")
+	// 	$("#loader").addClass("loader")
+	// });
+
+	$(document).ready(function(){
+
+		var socket = io.connect('http://spolin.isi.edu/ffpr_sockets/')
+		// var socket = io.connect('http://ffpr.isi.edu:8080')
+		// var socket = io.connect('http://127.0.0.1:5000')
+
+
+		socket.on('connect', function(){
+			console.log('Backend successfully connected!'); 
+		});
+
+		socket.on('message', function(msg){
+
+			if (msg == 'complete'){
+				console.log("Generation completed.")
+				$("#sendbutton").prop("disabled", false); 
+			}
+			else {
+				let splits = msg.split("\n")
+				$(".article").html(""); 
+				for (let i = 0; i < splits.length; i++){
+					paragraph = $("<div class='paragraph'>").html(splits[i])
+					$(".article").append(paragraph)
+				}
+			}
+
+		})
+
+		$("#sendbutton").on('click', function() {
+
+			$(this).prop("disabled", true); 
+			let title = $("#title-input").val()
+			socket.send(title);
+            console.log("Sent title: ", title)
+			$("#title-input").val('');
+			if (title == ''){
+				title = 'No title'
+			}
+			$("#title").html(title)
+
+			let today = new Date()
+			var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+			console.log(date)
+			date_div = $(".date").html(date)
+		}); 
+
+	});
+
+</script>
+
+</html>
