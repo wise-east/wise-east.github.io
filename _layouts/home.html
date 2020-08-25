@@ -39,13 +39,13 @@ title: Justin Cho
 		<section class="content">
 			<div class="intro">
 
-				<p> <a href="mailto:jcho@isi.edu">email</a> / <a href="{{ '/assets/justin_cho_cv.pdf' | absolute_url }}" target="_blank">resume</a> / <a href="{{ '/blog.html' | absolute_url}}">blog</a></p>
+				<p> <a href="mailto:jcho@isi.edu">email</a> / <a href="{{ '/assets/cv.pdf' | absolute_url }}" target="_blank">resume</a> / <a href="{{ '/blog.html' | absolute_url}}">blog</a></p>
 				<div class="intro-text">
-					I'm a Programmer Analyst at the University of Southern California's (USC) Information Sciences Institute (ISI). I am excited to start my PhD program in Computer Science at USC starting this fall. I mainly work with <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a>. 
+					I am a first year PhD student in Computer Science at the University of Southern California's (USC) Information Sciences Institute (ISI). I mainly work with <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a>. Prior to my PhD program, I worked at ISI as a programmer analyst and graduated from HKUST witha Bachelor's in Computer Science. 
 				</div>
 
 				<div class="intro-text">
-					My research interest is in natural language processing, specifically in natural language generation. Recently, I have been working on open-domain dialogue generation with inspiration from improv. Ultimately, I want to contribute to developing intelligent systems that we can interface with using only dialogue, like Samantha in <a href="https://en.wikipedia.org/wiki/Her_(film)"> Her </a> and <a href="https://interstellarfilm.fandom.com/wiki/TARS"> TARS </a> in Interstellar. I have previously worked on text generation with structured data, fake news detection, and question answering. 
+					My research interest is in natural language processing (NLP), specifically in natural language generation. Recently, I have been working on open-domain dialogue generation with inspiration from improvisational theatre. Ultimately, I want to contribute to developing intelligent systems that we can interface with using only dialogue, like Samantha in <a href="https://en.wikipedia.org/wiki/Her_(film)"> Her </a> and <a href="https://interstellarfilm.fandom.com/wiki/TARS"> TARS </a> in Interstellar. I have previously worked on text generation with structured data, fake news detection, and question answering. 
 				</div>
 			</div>	
 
@@ -54,7 +54,10 @@ title: Justin Cho
 				<div>
 					<ul>
 						<li>
-							2020 Summer: I will be working at <a href="https://www.stitchfix.com/">Stitch Fix</a> as a data science intern in merch product development. 
+							2020 Fall: I am starting my first semester as a PhD student at USC!
+						</li>
+						<li>
+							2020 Summer: I will be working at <a href="https://www.stitchfix.com/" target="_blank">Stitch Fix</a> as a data science intern in the merch product development team!
 						</li>
 						<li>
 							2020 April: My paper with <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a> has been accepted to ACL2020! I will be presenting virtually at the conference.
@@ -81,6 +84,12 @@ title: Justin Cho
 							<a href="https://arxiv.org/abs/2004.09544" target="_blank"> [paper] </a> 
 							<a href="{{ '/spolin' | absolute_url }}"> [project page] </a> 
 							<a href="https://spolin.isi.edu" target="_blank"> [demo]</a>
+						</div>
+						<div class="press">
+							Press: 
+								<a href="https://www.sciencedaily.com/releases/2020/07/200715095502.htm" target="_blank">Science Daily</a>, 
+								<a href="https://viterbischool.usc.edu/news/2020/07/move-over-siri-usc-viterbi-researchers-develop-improv-based-chatbot/">USC Viterbi</a>, 
+								<a href="https://techwithgajesh.com/spolinbot-the-new-avatar-of-chatbots/">Tech With Gajesh</a>
 						</div>
 
 						<div class="excerpt">
@@ -118,10 +127,11 @@ title: Justin Cho
 
 				{%- if site.recreation -%}
 					{%- for page in site.recreation reversed limit:2 -%}
-						<a class="post-link" href="{{ page.url | relative_url }}">
-							<div class="small-title">{{ page.title }}</div>
-						</a>
-						<div class="post-date">{{ page.date | date: date_format}} </div>
+						<div class="small-title">
+							<a class="post-link" href="{{ page.url | relative_url }}">{{ page.title }}</a>
+							<p class="post-date">{{ page.date | date: date_format}} </p>
+						</div>
+						
 
 						<div class="excerpt">
 							{%- if site.show_excerpts -%}
@@ -133,11 +143,10 @@ title: Justin Cho
 
 				{%- if site.posts -%}
 					{%- for page in site.posts limit:2 -%}
-						<a class="post-link" href="{{ page.url | relative_url }}">
-							<div class="small-title">{{ page.title }}</div>
-						</a>
-						
-						<div class="post-date">{{ page.date | date: date_format}} </div>
+						<div class="small-title">
+							<a class="post-link" href="{{ page.url | relative_url }}">{{ page.title }}</a>
+							<span class="post-date">{{ page.date | date: date_format}} </span>
+						</div>
 
 						<div class="excerpt">
 							{%- if site.show_excerpts -%}
@@ -186,7 +195,7 @@ title: Justin Cho
 	</main>
 
 	<div class="footer">
-		Last updated: May 2020. <a href="#top"> Back to top </a>
+		Last updated: August 2020. <a href="#top"> Back to top </a>
 	</div>
 
 

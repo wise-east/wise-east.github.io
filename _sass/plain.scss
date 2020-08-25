@@ -13,8 +13,8 @@ $leftWidth: 250px;
 }
 
 body {
-	font-family: 'Raleway', sans-serif;
-	font-size: 16px;
+	font-family: 'Lato', sans-serif !important; 
+	font-size: 16px !important;
 	line-height: 1.2em;
 	margin: 20px;
 	-webkit-font-smoothing: antialiased;
@@ -146,10 +146,7 @@ main {
 		margin-right: 10px;
 	}
 }
-.post-date {
-	margin-right: 10px;
-	color: #555;
-}
+
 .post-meta {
 	display: flex;
 	justify-content: space-between;
