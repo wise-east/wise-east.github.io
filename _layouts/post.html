@@ -12,7 +12,7 @@ layout: post-default
 		<li>{{ tag }}</li>
 		{%- endfor -%}
 	</ul> -->
-	<div class="post-date"><i class="icon-calendar"></i>{{ page.date | date: date_format }}</div>
+	<div class="post-date"><i class="icon-calendar"></i>Last updated: {{ page.date | date: date_format }}</div>
 </div>
 <div class="post">
 	{{ content }}

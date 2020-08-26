@@ -126,7 +126,7 @@ title: Justin Cho
 				<h3> Blog Posts	</h3>
 
 				{%- if site.recreation -%}
-					{%- for page in site.recreation reversed limit:2 -%}
+					{%- for page in site.recreation reversed limit:3 -%}
 						<div class="small-title">
 							<a class="post-link" href="{{ page.url | relative_url }}">{{ page.title }}</a>
 							<p class="post-date">{{ page.date | date: date_format}} </p>
@@ -142,7 +142,7 @@ title: Justin Cho
 				{%- endif -%}
 
 				{%- if site.posts -%}
-					{%- for page in site.posts limit:2 -%}
+					{%- for page in site.posts limit:3 -%}
 						<div class="small-title">
 							<a class="post-link" href="{{ page.url | relative_url }}">{{ page.title }}</a>
 							<span class="post-date">{{ page.date | date: date_format}} </span>
@@ -156,6 +156,7 @@ title: Justin Cho
 					{%- endfor -%}
 				{%- endif -%}
 
+				<div class="small-title"> <a href="{{ '/blog.html' | absolute_url}}">More...</a></div>
 
 			</div>
 
