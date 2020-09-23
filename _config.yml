@@ -23,8 +23,6 @@ plainwhite:
   affiliations: 
     - name: USC Information Sciences Institute
       link: https://www.isi.edu/
-    - name: Computer Science graduate of HKUST
-      link: https://www.ust.hk/home 
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
   disqus_shortname: justin-cho
