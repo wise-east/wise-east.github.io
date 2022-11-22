@@ -1,0 +1,170 @@
+---
+layout: research-page
+title: CheckDST 
+description: Project page for CheckDST
+tagline: "Know Thy Strengths: Comprehensive Dialogue State Tracking Diagnostics"
+conference: EMNLP2022 Findings
+repolink: https://github.com/wise-east/CheckDST
+paperlink: https://justin-cho.com/assets/CheckDST.pdf
+---
+
+<main class="container">
+    <div class="jumbotron heading">
+        <h1>
+            <!-- <span class="title-font">{{ page.title }}</span>:  -->
+            {{page.tagline}} ({{page.conference}})
+        </h1>
+
+        <a class="btn btn-lg" style="background-color: #a32121; color: white;" href={{page.paperlink}} target="_blank" role="button">Paper »</a>
+        <a class="btn btn-lg btn-info" href="{{page.repolink}}" target="_blank" role="button">Repo »</a>
+
+    </div>
+
+    <div id="about">
+        <div>
+            <p>
+                We present our findings from standardized and comprehensive DST diagnoses, which have previously been sparse and uncoordinated, using our toolkit, CheckDST, a collection of robustness tests and failure mode analytics. We discover that different classes of DST models have clear strengths and weaknesses, where generation models are more promising for handling language variety while classification models are more robust to unseen entities.
+            </p>
+
+        </div>
+    </div>
+
+    <div id="intro">
+        <h3> What is CheckDST? </h3>
+
+        <div class="yesand-example-wrapper row justify-content-center">
+            <div class="col-sm-8 col-md-5 col-lg-3">
+                <img src="{{ '/assets/checkdst.png' | absolute_url }}" alt="CheckDST overview" >
+            </div>
+            
+            <div class="col-md-7 col-lg-8">
+                <p>
+                    A dialogue state tracking diagnostics toolkit that examines performance beyond benchmark results to get a more comprehensive understanding of a model's relative performance. 
+                </p>
+            </div>
+        </div>
+
+        <h3> I want to use CheckDST! </h3>
+
+        <div>
+            The CheckDST toolkit and the results shared in the paper is accessible through our <a href="{{page.repolink}}" target="_blank" >GitHub repo</a>. 
+        </div>
+    </div>
+
+    <div id="info">
+
+        <div id="paper">
+            <h3> Paper </h3>
+
+            <div class="img-wrapper">
+                <a href={{page.paperlink}} target="_blank">
+                    <img class="img-fluid" src="{{ '/assets/paper-preview.png' | absolute_url }}" alt="paper-preview">
+                    <div class="img-overlay">
+                        <button class="btn btn-info">Read our paper»</button>
+                    </div>
+                </a>
+            </div>
+
+            <div class="vspacing">
+                If our work inspires you, please cite us: 
+            </div>
+
+            <div class='citation-wrapper'>
+                <pre class="citation">
+@inproceedings{cho2020spolin,
+    title={Grounding Conversations with Improvised Dialogues},
+    author={Cho, Hyundong and May, Jonathan},
+    booktitle ={Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},
+    year={2020}
+}                    </pre>
+            </div>
+
+        </div>
+
+        <div id="authors">
+            <h3> Authors </h3>
+
+            <div class="vspacing"> 
+                We are researchers at the <a href="https://isi.edu" target="_blank">Information Sciences Institute</a>, a research organization of the <a href="https://viterbischool.usc.edu/" target="_blank"> University of Southern California Vitberi School of Engineering </a>. 
+            </div>
+
+            <div class="row justify-content-center" style="margin: 0 auto;">
+                <div class="card headshot box-shadow">
+                    <img class="card-img-top" src="{{ '/assets/portfolio.png' | absolute_url }}" alt="justin">
+                    <div class="card-body">
+                        <p class="card-text"><a href="../" target="_blank">Justin Cho</a></p>
+                    </div>
+                </div>
+
+                <div class="card headshot box-shadow">
+                    <img class="card-img-top" src="{{ '/assets/portfolio.png' | absolute_url }}" alt="justin">
+                    <div class="card-body">
+                        <p class="card-text"><a href="../" target="_blank">Chinnadhurai Sankar</a></p>
+                    </div>
+                </div>
+
+                <div class="card headshot box-shadow">
+                    <img class="card-img-top" src="{{ '/assets/portfolio.png' | absolute_url }}" alt="justin">
+                    <div class="card-body">
+                        <p class="card-text"><a href="../" target="_blank">Justin Cho</a></p>
+                    </div>
+                </div>
+
+                <div class="card headshot box-shadow">
+                    <img class="card-img-top" src="{{ '/assets/portfolio.png' | absolute_url }}" alt="justin">
+                    <div class="card-body">
+                        <p class="card-text"><a href="../" target="_blank">Justin Cho</a></p>
+                    </div>
+                </div>
+
+                <div class="card headshot box-shadow">
+                    <img class="card-img-top" src="{{ '/assets/jon-profile.png' | absolute_url }}" alt="jon">
+                    <div class="card-body">
+                        <p class="card-text"><a href="https://www.isi.edu/~jonmay/" target="_blank">Jonathan May</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- <div id="disclaimer">
+            <h3>Disclaimer</h3>
+
+            <div>
+                This material is based on research sponsored by the AFRL and DARPA under agreement number FA8650-18-C-7878. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of the AFRL, DARPA, or the U.S. Government. 
+            </div>
+
+        </div> -->
+
+
+
+        <div id="contact">
+            <h3> Contact </h3>
+
+            <div>
+                If you have any questions about the dataset, feel free to email us at "hd.justin at gmail dot com" or raise an issue on the <a href="{{page.repolink}}" target="_blank">Github</a> page. 
+            </div>
+        </div>
+
+        <div id="License">
+            <h3>License</h3>
+            <div>
+               <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type"><span class="title-font"> CheckDST</span></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://justin-cho.com/checkdst" property="cc:attributionName" rel="cc:attributionURL">Hyundong Cho and Jonathan May</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+            </div>
+            <div>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" style="padding-bottom: 50px; padding-top: 20px;">
+            <div class="col-xs-6 col-sm-7 col-md-6 col-lg-4 thumb d-flex align-items-center">
+                <a href="https://isi.edu" target="_blank" class="thumbnail">
+                    <img class="img-fluid" src="{{ '/assets/usc_isi.png' | absolute_url }}" alt="usc-isi">
+                </a>
+            </div>
+
+            <!-- TODO: add Meta logo -->
+        </div>
+    </div>
+
+</main>
