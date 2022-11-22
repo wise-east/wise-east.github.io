@@ -20,12 +20,11 @@ title: Justin Cho
 				</a>
 			</div>
 
-			<h2> Justin Cho  </h2>
-
-			<h4> 조현동 </h4>
+			<h1> Justin Cho  </h1>
+			<h1> 조현동 </h1>
 
 			<!-- <h1 class="name">{{ site.plainwhite.name }} </h1> -->
-			<p class="tagline">{{ site.plainwhite.tagline }}</p>
+			<div class="tagline">{{ site.plainwhite.tagline }}</div>
 
 			<div class="affiliation-wrapper">
 				{% for affil in site.plainwhite.affiliations %}
@@ -71,7 +70,7 @@ title: Justin Cho
 			<div id="research">
 				<h3> Research </h3>
 
-				<div class="research-item">
+				<div class="research-item"  style="margin-bottom: 10px;">
 
 					<div class="pull-left thumbnail-wrapper">
 						<img src="{{ '/assets/checkdst.png' | absolute_url }}" alt="checkdst-thumbnail" class="thumbnail">
@@ -264,46 +263,6 @@ title: Justin Cho
 				
 			</div>
 
-
-			<!-- <div id="blog-list">
-				<h3> Blog Posts	</h3>
-
-				{%- if site.recreation -%}
-					{%- for page in site.recreation reversed limit:3 -%}
-						<div class="small-title">
-							<a class="post-link" href="{{ page.url | relative_url }}">{{ page.title }}</a>
-							<p class="post-date">{{ page.date | date: date_format}} </p>
-						</div>
-						
-
-						<div class="excerpt">
-							{%- if site.show_excerpts -%}
-							{{ page.excerpt }}
-							{%- endif -%}
-						</div>
-					{%- endfor -%}
-				{%- endif -%}
-
-				{%- if site.posts -%}
-					{%- for page in site.posts limit:3 -%}
-						<div class="small-title">
-							<a class="post-link" href="{{ page.url | relative_url }}">{{ page.title }}</a>
-							<span class="post-date">{{ page.date | date: date_format}} </span>
-						</div>
-
-						<div class="excerpt">
-							{%- if site.show_excerpts -%}
-							{{ page.excerpt }}
-							{%- endif -%}
-						</div>
-					{%- endfor -%}
-				{%- endif -%}
-
-				<div class="small-title"> <a href="{{ '/blog.html' | absolute_url}}">More...</a></div>
-
-			</div> -->
-
-
 			<div id="Misc.">
 				<h3> Misc. </h3>
 
@@ -335,7 +294,7 @@ title: Justin Cho
 	</main>
 
 	<div class="footer">
-		Last updated: July 2022. <a href="#top"> Back to top </a>
+		Last updated: November 2022. <a href="#top"> Back to top </a>
 	</div>
 
 
