@@ -5,8 +5,38 @@ description: Project page for CheckDST
 tagline: "Know Thy Strengths: Comprehensive Dialogue State Tracking Diagnostics"
 conference: EMNLP2022 Findings
 repolink: https://github.com/wise-east/CheckDST
-paperlink: https://justin-cho.com/assets/CheckDST.pdf
+paperlink: https://arxiv.org/abs/2112.08321
 ---
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #a32121;">
+    <a class="navbar-brand title-font" href="#"> {{ page.title }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link active" href="#about">
+              About 
+              <!-- <span class="sr-only">(current)</span> -->
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#video">Video</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#authors">Authors</a>
+        </li>
+        <li>
+            <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#License">License</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 <main class="container">
     <div class="jumbotron heading">
@@ -17,48 +47,120 @@ paperlink: https://justin-cho.com/assets/CheckDST.pdf
 
         <a class="btn btn-lg" style="background-color: #a32121; color: white;" href={{page.paperlink}} target="_blank" role="button">Paper »</a>
         <a class="btn btn-lg btn-info" href="{{page.repolink}}" target="_blank" role="button">Repo »</a>
+        <a class="btn btn-lg btn-success" href="{{ '/assets/checkdst/emnlp2022_checkdst_a0_portrait.pdf' | absolute_url }}" target="_blank" role="button">Poster »</a>
+        <a class="btn btn-lg btn-warning" href="https://bit.ly/3us55pu" target="_blank" role="button">Slides »</a>
 
-    </div>
-
-    <div id="about">
-        <div>
-            <p>
-                We present our findings from standardized and comprehensive DST diagnoses, which have previously been sparse and uncoordinated, using our toolkit, CheckDST, a collection of robustness tests and failure mode analytics. We discover that different classes of DST models have clear strengths and weaknesses, where generation models are more promising for handling language variety while classification models are more robust to unseen entities.
-            </p>
-
-        </div>
     </div>
 
     <div id="intro">
-        <h3> What is CheckDST? </h3>
+
+        <h3> Dialogue State Tracking (DST) models are brittle, but comparisons beyond joint goal accuracy have been sparse and uncoordinated</h3>
 
         <div class="yesand-example-wrapper row justify-content-center">
-            <div class="col-sm-8 col-md-5 col-lg-3">
-                <img src="{{ '/assets/checkdst.png' | absolute_url }}" alt="CheckDST overview" >
+            <div class="col-sm-8 col-md-5 col-lg-5">
+                <img src="{{ '/assets/checkdst/dst.png' | absolute_url }}" alt="DST overview" >
             </div>
             
-            <div class="col-md-7 col-lg-8">
+            <div class="col-md-7 col-lg-7">
                 <p>
-                    A dialogue state tracking diagnostics toolkit that examines performance beyond benchmark results to get a more comprehensive understanding of a model's relative performance. 
+                    A key skill🔑 for task-oriented dialogue (TOD) models is DST: identifying what the user wants, i.e. dialogue state or belief state, in the format of slot key-value pairs that can be passed on to APIs to make requests necessary for fulfilling a task. 
+                </p>
+
+                <p>
+                    DST models are evaluated on an in-distribution test set  so models that perform well on DST benchmarks can be brittle to distribution shift😱. Therefore, benchmark results are often a poor guide to a model’s performance at deployment😥. 
                 </p>
             </div>
+
+        </div>
+
+        <div class="yesand-example-wrapper row justify-content-center">
+
+            <div class="col-sm-8 col-md-5 col-lg-5">
+                <img src="{{ '/assets/checkdst/prev_work.png' | absolute_url }}" alt="DST overview" >
+            </div>
+
+            <div class="col-md-7 col-lg-7">
+                <p>
+                    This is not news! Previous work have recognized this issue and went beyond comparing on slot prediction accuracy, but these efforts have been sparse and uncoordinated, making it difficult for DST models to be compared holistically. 
+                </p>
+            </div>
+        </div>
+
+        <h3> CheckDST facilitates a comprehensive and consolidated comparison of DST performance </h3>
+
+        <div class="yesand-example-wrapper row justify-content-center">
+            <div class="col-sm-8 col-md-8 col-lg-7">
+                <img src="{{ '/assets/checkdst/checkdst_table.png' | absolute_url }}" alt="CheckDST overview" >
+            </div>
+            
+            <div class="col-md-4 col-lg-5">
+                <p>
+                    So we put together CheckDST, a consolidation of robustness metrics and analytical tools that quantify prediction consistency under perturbations, performance for challenging cases that contain coreferences, and problematic behaviors such as hallucination. 
+                </p>
+
+            </div>
+        </div>
+
+        <div class="yesand-example-wrapper row justify-content-center">
+            <div class="col-md-12 col-lg-12">
+
+                <p>
+                    With CheckDST, we can easily get a comprehensive and fine-grained picture of a model's performance. Comparing two major classes of DST models with CheckDST reveals that their DST benchmark results do not correlate with its robustness and that each has clear strengths and weaknesses. 
+                </p>
+            </div>
+
+            <div class="col-md-12 col-lg-12">
+                <img src="{{ '/assets/checkdst/main_results.png' | absolute_url }}" alt="results overview" >
+            </div>
+        </div>
+
+
+        <h3>
+            CheckDST can help develop more robust DST models
+        </h3>
+
+        <div class="yesand-example-wrapper row justify-content-center">
+            <div class="col-md-12 col-lg-12">
+                <p>
+                    Also, we show how the weaknesses exposed by CheckDST serve as a guide to develop robust DST models. We achieve holistic improvements with PrefineDST, which prefinetunes generation models with multiple tasks that can mitigate the weaknesses. 
+                </p>
+
+                <p>
+                    So for anyone working on DST, we encourage using CheckDST to facilitate an extensive comparison to establish strengths and weaknesses and use the findings as a guide for developing more robust models.
+                    For the full set of findings and the juicy details, please check out our paper! 
+                </p>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <img src="{{ '/assets/checkdst/prefinedst.png' | absolute_url }}" alt="PrefineDST overview" >
+            </div>
+            
+
+        </div>
+
+
+    </div>
+
+    <div id="info">
+
+        <h3 id="video"> Video </h3>
+
+        <div>
+            <iframe width="100%" height="540" src="https://www.youtube.com/embed/Sc9Td3-Nu1o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <h3> I want to use CheckDST! </h3>
 
         <div>
-            The CheckDST toolkit and the results shared in the paper is accessible through our <a href="{{page.repolink}}" target="_blank" >GitHub repo</a>. 
+            The CheckDST toolkit can be accessed through our <a href="{{page.repolink}}" target="_blank" >GitHub repository</a>. 
         </div>
-    </div>
-
-    <div id="info">
 
         <div id="paper">
             <h3> Paper </h3>
 
             <div class="img-wrapper">
                 <a href={{page.paperlink}} target="_blank">
-                    <img class="img-fluid" src="{{ '/assets/paper-preview.png' | absolute_url }}" alt="paper-preview">
+                    <img class="img-fluid" src="{{ '/assets/checkdst/paper_preview.png' | absolute_url }}" alt="paper-preview">
                     <div class="img-overlay">
                         <button class="btn btn-info">Read our paper»</button>
                     </div>
@@ -71,12 +173,13 @@ paperlink: https://justin-cho.com/assets/CheckDST.pdf
 
             <div class='citation-wrapper'>
                 <pre class="citation">
-@inproceedings{cho2020spolin,
-    title={Grounding Conversations with Improvised Dialogues},
-    author={Cho, Hyundong and May, Jonathan},
-    booktitle ={Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics},
-    year={2020}
-}                    </pre>
+@article{cho2021checkdst,
+    title={Know Thy Strengths: Comprehensive Dialogue State Tracking Diagnostics},
+    author={Cho, Hyundong and Sankar, Chinnadhurai and Lin, Christopher and Sadagopan, Kaushik Ram and Shayandeh, Shahin and Celikyilmaz, Asli and May, Jonathan and Beirami, Ahmad},
+    journal={arXiv preprint arXiv:2112.08321},
+    year={2021}
+}                
+                </pre>
             </div>
 
         </div>
@@ -85,42 +188,63 @@ paperlink: https://justin-cho.com/assets/CheckDST.pdf
             <h3> Authors </h3>
 
             <div class="vspacing"> 
-                We are researchers at the <a href="https://isi.edu" target="_blank">Information Sciences Institute</a>, a research organization of the <a href="https://viterbischool.usc.edu/" target="_blank"> University of Southern California Vitberi School of Engineering </a>. 
+                This work was done by a group of researchers at USC ISI, Meta AI, and Google AI. This work was done while  Justin and Ahmad were at Meta when Justin was an intern. 
             </div>
 
             <div class="row justify-content-center" style="margin: 0 auto;">
                 <div class="card headshot box-shadow">
-                    <img class="card-img-top" src="{{ '/assets/portfolio.png' | absolute_url }}" alt="justin">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C4E03AQHl_J7pE0o4Bw/profile-displayphoto-shrink_400_400/0/1585298906001?e=1675296000&v=beta&t=RTYCtCswWNWMLrF6OSR5zH5BD6xaxJhQep0TlcCa7Ys" alt="justin">
                     <div class="card-body">
                         <p class="card-text"><a href="../" target="_blank">Justin Cho</a></p>
                     </div>
                 </div>
 
                 <div class="card headshot box-shadow">
-                    <img class="card-img-top" src="{{ '/assets/portfolio.png' | absolute_url }}" alt="justin">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C5603AQEfZBlOBIJH7A/profile-displayphoto-shrink_400_400/0/1575080481847?e=1675296000&v=beta&t=whb9ZyK9RQ49aN04u9yjb3UZu3gqgqLV9mWDXD5hWAM" alt="chinnadhurai">
                     <div class="card-body">
-                        <p class="card-text"><a href="../" target="_blank">Chinnadhurai Sankar</a></p>
+                        <p class="card-text"><a href="https://chinnadhurai.github.io/" target="_blank">Chinnadhurai Sankar</a></p>
                     </div>
                 </div>
 
                 <div class="card headshot box-shadow">
-                    <img class="card-img-top" src="{{ '/assets/portfolio.png' | absolute_url }}" alt="justin">
+                    <img class="card-img-top" src="https://christopherhlin.com/chris.jpg" alt="chris">
                     <div class="card-body">
-                        <p class="card-text"><a href="../" target="_blank">Justin Cho</a></p>
+                        <p class="card-text"><a href="https://christopherhlin.com/" target="_blank">Christopher Lin</a></p>
                     </div>
                 </div>
 
                 <div class="card headshot box-shadow">
-                    <img class="card-img-top" src="{{ '/assets/portfolio.png' | absolute_url }}" alt="justin">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C5603AQHo1iXDKofs8A/profile-displayphoto-shrink_400_400/0/1653954620461?e=1675296000&v=beta&t=z8LD-tvsWkMpP1wWJZT91itDrUoSZKr3CgI6sgnLlQs" alt="kaushik">
                     <div class="card-body">
-                        <p class="card-text"><a href="../" target="_blank">Justin Cho</a></p>
+                        <p class="card-text"><a href="https://scholar.google.com/citations?user=egmoOgkAAAAJ&hl=en" target="_blank">Kaushik Ram Sadagopan</a></p>
                     </div>
                 </div>
 
                 <div class="card headshot box-shadow">
-                    <img class="card-img-top" src="{{ '/assets/jon-profile.png' | absolute_url }}" alt="jon">
+                    <img class="card-img-top" src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=7UZMWukAAAAJ&citpid=1" alt="shahin">
+                    <div class="card-body">
+                        <p class="card-text"><a href="https://scholar.google.com/citations?user=7UZMWukAAAAJ&hl=en" target="_blank">Shahin Shayandeh</a></p>
+                    </div>
+                </div>
+
+                <div class="card headshot box-shadow">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C4E03AQGfhDpcY7eqbw/profile-displayphoto-shrink_400_400/0/1596517009816?e=1675296000&v=beta&t=5TH2wp5-fb_gzphEyYUfOhyDSOCL2II_p8dncAOpFjs" alt="asli">
+                    <div class="card-body">
+                        <p class="card-text"><a href="http://asli.us/" target="_blank">Asli Celikyilmaz</a></p>
+                    </div>
+                </div>
+
+                <div class="card headshot box-shadow">
+                    <img class="card-img-top" src="{{ '/assets/jon_profile.png' | absolute_url }}" alt="jon">
                     <div class="card-body">
                         <p class="card-text"><a href="https://www.isi.edu/~jonmay/" target="_blank">Jonathan May</a></p>
+                    </div>
+                </div>
+
+                <div class="card headshot box-shadow">
+                    <img class="card-img-top" src="https://media-exp1.licdn.com/dms/image/C4E03AQGEi3EOscrtkg/profile-displayphoto-shrink_400_400/0/1595652705428?e=1675296000&v=beta&t=K0tYSv2N1sUxwcS1eKFSOAZXLl9Z_nF2PFi9UhkGBD0" alt="ahmad">
+                    <div class="card-body">
+                        <p class="card-text"><a href="https://sites.google.com/view/beirami" target="_blank">Ahmad Beirami</a></p>
                     </div>
                 </div>
             </div>
@@ -142,14 +266,14 @@ paperlink: https://justin-cho.com/assets/CheckDST.pdf
             <h3> Contact </h3>
 
             <div>
-                If you have any questions about the dataset, feel free to email us at "hd.justin at gmail dot com" or raise an issue on the <a href="{{page.repolink}}" target="_blank">Github</a> page. 
+                If you have any questions about the CheckDST toolkit, feel free to email us at "hd.justin at gmail dot com" or raise an issue on the <a href="{{page.repolink}}" target="_blank">Github repository</a>. 
             </div>
         </div>
 
         <div id="License">
             <h3>License</h3>
             <div>
-               <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type"><span class="title-font"> CheckDST</span></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://justin-cho.com/checkdst" property="cc:attributionName" rel="cc:attributionURL">Hyundong Cho and Jonathan May</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+               <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type"><span class="title-font"> CheckDST</span></span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
             </div>
             <div>
                 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
@@ -157,13 +281,21 @@ paperlink: https://justin-cho.com/assets/CheckDST.pdf
         </div>
 
         <div class="row justify-content-center" style="padding-bottom: 50px; padding-top: 20px;">
-            <div class="col-xs-6 col-sm-7 col-md-6 col-lg-4 thumb d-flex align-items-center">
-                <a href="https://isi.edu" target="_blank" class="thumbnail">
-                    <img class="img-fluid" src="{{ '/assets/usc_isi.png' | absolute_url }}" alt="usc-isi">
-                </a>
+            <div class="col-xs-6 col-sm-7 col-md-6 col-lg-4 thumb d-flex align-items-center logo">
+                <img class="img-fluid" src="{{ '/assets/usc_isi.png' | absolute_url }}" alt="usc-isi">
             </div>
 
-            <!-- TODO: add Meta logo -->
+            <div class="col-xs-6 col-sm-7 col-md-6 col-lg-4 thumb d-flex align-items-center logo">
+                <img class="img-fluid" src="{{ '/assets/cutelabname.jpg' | absolute_url }}" alt="usc-isi">
+            </div>
+
+            <div class="col-xs-6 col-sm-7 col-md-6 col-lg-4 thumb d-flex align-items-center logo">
+                <img class="img-fluid" src="{{ '/assets/meta_ai_logo.png' | absolute_url }}" alt="usc-isi">
+            </div>
+
+            <div class="col-xs-6 col-sm-7 col-md-6 col-lg-4 thumb d-flex align-items-center logo">
+                <img class="img-fluid" src="{{ '/assets/google_ai_logo.png' | absolute_url }}" alt="usc-isi">
+            </div>
         </div>
     </div>
 

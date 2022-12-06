@@ -140,7 +140,7 @@ div.heading{
     }
 
     .headshot{
-        width: 8rem;
+        width: 7.5rem;
         margin: 0.4rem;
         box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05); 
     }
@@ -259,4 +259,21 @@ content: "";
 .active,
 .demo:hover {
     opacity: 1;
+}
+
+// .logo {
+//     height: 4rem; 
+// }
+
+.logo img {
+    width: 100%; 
+}    
+
+.row {
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+h3 {
+    margin-top: 20px; 
 }
