@@ -62,7 +62,7 @@ plainwhite:
 
 remote_theme: samarsault/plainwhite-jekyll
 # # Build settings
-theme: plainwhite
+# theme: plainwhite # this doesn't work in github pages, use remote_theme as above
 
 plugins:
   - jekyll-seo-tag
