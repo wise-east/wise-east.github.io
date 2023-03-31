@@ -3,5 +3,6 @@
 source "https://rubygems.org"
 gemspec
 
+gem "plainwhite"
 gem "webrick"
 gem "kramdown-parser-gfm"
