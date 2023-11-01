@@ -42,33 +42,96 @@ title: Justin Cho
 		<section class="content">
 			<div class="intro">
 
-				<p> <small> <code class="language-plaintext highlighter-rouge">jcho [at] isi [dot] edu</code></small> / <a href="https://scholar.google.com/citations?user=9YrOON8AAAAJ&hl=en" target="_blank">google scholar</a> / <a href="{{ '/assets/cv.pdf' | relative_url }}" target="_blank">resume</a> / <a href="{{ '/blog.html' | absolute_url}}">blog</a></p>
+				<p> <small> <code class="language-plaintext highlighter-rouge">hd [dot] justincho [at] gmail [dot] com</code></small> / <a href="https://scholar.google.com/citations?user=9YrOON8AAAAJ&hl=en" target="_blank">google scholar</a> / <a href="{{ '/assets/cv.pdf' | relative_url }}" target="_blank">resume</a> / <a href="{{ '/blog.html' | absolute_url}}">blog</a></p>
 				<div class="intro-text">
 					I am a PhD student at the University of Southern California's (USC) Information Sciences Institute (ISI), advised by Prof. <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a>. 
 					<br>
 					<br> 
-					My research interest is in natural language processing (NLP), specifically in natural language generation and dialogue systems. I am interested in making both open-domain and task-oriented dialogue systems more robust and versatile by 1) reducing the distribution shift from training time to deployment, 2) leveraging non-dialogue data to learn better representations about the world, and 3) learning continually and adapt to changes in the world. 
+					My research interest is in natural language processing (NLP), specifically in natural language generation and dialogue systems. I'm excited by the prospect of seamlessly conversing with machines, so I am broadly interested in making language models more interactive and versatile for dialogue applications.  
 					<br> 
 					<br>
-					Ultimately, I want to establish chatbots as the main interface that we use to interact with machines. Conversations are the most convenient means of communication for most people and so I believe my goal will make even complex intelligent systems accessible to a wider group of people, regardless of their technical expertise. Think of Samantha in <a href="https://en.wikipedia.org/wiki/Her_(film)"> Her </a> and <a href="https://interstellarfilm.fandom.com/wiki/TARS"> TARS </a> in Interstellar! 
+					Conversations are the most convenient means of communication for most people and so I believe my research agenda will help make even complex intelligent systems accessible to a wider group of people, regardless of their technical expertise. Think of Samantha in <a href="https://en.wikipedia.org/wiki/Her_(film)"> Her </a> and <a href="https://interstellarfilm.fandom.com/wiki/TARS"> TARS </a> in Interstellar! 
 				</div>
 
 				<div class="intro-text">
-					Prior to my PhD program, I worked at ISI as a programmer analyst and graduated from HKUST with a Bachelor's in Computer Science. I have interned at <a href="https://ai.facebook.com/research/" target="_blank">Meta AI</a>, <a href="https://www.stitchfix.com/" target="_blank">Stitch Fix</a>, <a href="https://www.isi.edu/research_groups/nlg/home" target="_blank"> ISI's Natural Language Group</a>, and <a href="https://www.imago.ai/" target="_blank"> Imago.ai</a>. 
+					Prior to my PhD program, I worked at ISI as a programmer analyst and graduated from HKUST with a Bachelor's in Computer Science. I have interned at Amazon Alexa, <a href="https://ai.facebook.com/research/" target="_blank">Meta AI</a>, <a href="https://www.stitchfix.com/" target="_blank">Stitch Fix</a>, <a href="https://www.isi.edu/research_groups/nlg/home" target="_blank"> ISI's Natural Language Group</a>, and <a href="https://www.imago.ai/" target="_blank"> Imago.ai</a>. 
 				</div>
 			</div>	
 
 			<div id="office-hours">
 				<h3> Office hours</h3>
 				<div>
-					I am hosting virtual office hours for those who want my advice/thoughts on their topic of interest. My primary intent for these office hours is knowledge transfer, helping you with productivity tips and getting started with research or with CS. 
+					I host virtual office hours! The main purpose for these office hours is to provide advice on research or a career in computer science. 
 					<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jcho-9/office-hours'});return false;">Please schedule through Calendly.</a> 
-					I will do my best to accommodate different time zones.
+					Email me if the time slots don't work for you. 
 				</div>
 			</div>
 
 			<div id="research">
 				<h3> Research </h3>
+
+				<div class="research-item"  style="margin-bottom: 10px;">
+
+					<div class="pull-left thumbnail-wrapper">
+						<img src="{{ '/assets/dst_egqa/intro2.png' | absolute_url }}" alt="dstegqa-thumbnail" class="thumbnail">
+					</div>
+
+					<div class="description">
+						<div class="paper-title"> 
+							<a href="https://arxiv.org/abs/2305.13721" target="_blank"> Continual Dialogue State Tracking via Example-Guided Question Answering</a>	
+						</div>
+						<div class="authors">
+							<u><strong>Hyundong J. Cho</strong></u>, Andrea Madotto, Zhaojiang Lin, Khyathi Raghavi Chandu, Satwik Kottur, Jing Xu, Jonathan May, Chinnadhurai Sankar, <em>EMNLP2023</em> <a href="https://arxiv.org/abs/2305.13721" target="_blank"> [paper] </a> 
+						</div>
+
+						<div class="excerpt">
+							We restructure dialogue state tracking (DST) to eliminate service-specific structured text and unify data from all services by decomposing each DST sample to a bundle of fine-grained example-guided question answering tasks. Our reformulation encourages a model to learn the general skill of learning from an in-context example to correctly answer a natural language question that corresponds to a slot in a dialogue state. With a retriever trained to find examples that introduce similar updates to dialogue states, we find that our method can significantly boost continual learning performance, even for a model with just 60M parameters. 
+						</div>
+					</div>
+
+				</div>
+
+				<div class="research-item"  style="margin-bottom: 10px;">
+
+					<div class="pull-left thumbnail-wrapper">
+						<img src="{{ '/assets/normvio_livestream.png' | absolute_url }}" alt="dstegqa-thumbnail" class="thumbnail">
+					</div>
+
+					<div class="description">
+						<div class="paper-title"> 
+							<a href="https://arxiv.org/abs/2305.10731" target="_blank"> Analyzing Norm Violations in Live-Stream Chat</a>	
+						</div>
+						<div class="authors">
+							Jihyung Moon, Dong-Ho Lee, <u><strong>Hyundong J. Cho</strong></u>, Woojeong Jin, Chan Young Park, Minwoo Kim, Jonathan May, Jay Pujara, Sungjoon Park, <em>EMNLP2023</em> <a href="https://arxiv.org/abs/2305.10731" target="_blank"> [paper] </a> 
+						</div>
+
+						<div class="excerpt">
+							Previous approaches to detecting toxic language and norm violations are not effective when applied to conversations on live-streaming platforms, such as Twitch and YouTube Live, as each comment is only visible for a limited time and lacks a thread structure that establishes its relationship with other comments. We share the first NLP study dedicated to detecting norm violations in conversations on live-streaming platforms. We define norm violation categories in live-stream chats and annotate 4,583 moderated comments from Twitch. We identify the informational context humans use in live-stream moderation, and train models leveraging context to identify norm violations. Our results show that appropriate contextual information can boost moderation performance by 35%.
+						</div>
+					</div>
+
+				</div>
+
+				<div class="research-item"  style="margin-bottom: 10px;">
+
+					<div class="pull-left thumbnail-wrapper">
+						<img src="{{ '/assets/recap.png' | absolute_url }}" alt="dstegqa-thumbnail" class="thumbnail">
+					</div>
+
+					<div class="description">
+						<div class="paper-title"> 
+							<a href="https://aclanthology.org/2023.acl-long.468/" target="_blank"> RECAP: Retrieval-Enhanced Context-Aware Prefix Encoder for Personalized Dialogue Response Generation</a>	
+						</div>
+						<div class="authors">
+							Shuai Liu, <u><strong>Hyundong J. Cho</strong></u>, Marjorie Freedman, Xuezhe Ma, Jonathan May, <em>ACL2023</em> <a href="https://aclanthology.org/2023.acl-long.468/" target="_blank"> [paper] </a> 
+						</div>
+
+						<div class="excerpt">
+							Endowing chatbots with a consistent persona is essential to an engaging conversation, yet it remains an unresolved challenge. In this work, we propose a new retrieval-enhanced approach for personalized response generation. Specifically, we design a hierarchical transformer retriever trained on dialogue domain data to perform personalized retrieval and a context-aware prefix encoder that fuses the retrieved information to the decoder more effectively. Extensive experiments on a real-world dataset demonstrate the effectiveness of our model at generating more fluent and personalized responses. We quantitatively evaluate our model's performance under a suite of human and automatic metrics and find it to be superior compared to state-of-the-art baselines on English Reddit conversations.
+						</div>
+					</div>
+
+				</div>
 
 				<div class="research-item"  style="margin-bottom: 10px;">
 
@@ -82,7 +145,7 @@ title: Justin Cho
 						</div>
 						<div class="authors">
 							<u><strong>Hyundong J. Cho</strong></u>, Chinnadhurai Sankar, Christopher Lin, Kaushik Ram Sadagopan, Shahin Shayandeh, Asli Celikyilmaz, Jonathan May, Ahmad Beirami, <em>EMNLP2022 Findings</em> <a href="https://arxiv.org/abs/2112.08321" target="_blank"> [paper] </a> 
-							<a href="{{ '/checkdst' | absolute_url }}"> [project page] </a>
+							<!-- <a href="{{ '/checkdst' | absolute_url }}"> [project page] </a> -->
 						</div>
 
 						<div class="excerpt">
@@ -133,28 +196,6 @@ title: Justin Cho
 					</div>
 
 				</div>
-				<div class="research-item"> 
-
-					<div class="pull-left thumbnail-wrapper">
-						<img src="{{ '/assets/dialdoc2021.png' | absolute_url }}" alt="dialdoc2021-thumbnail" class="thumbnail">
-					</div>
-
-					<div class="description">
-						<div class="paper-title"> 
-							<a href="https://aclanthology.org/2021.dialdoc-1.15/">Agenda Pushing in Non-collaborative Dialogue </a>
-						</div>
-						<div class="authors">
-							<u><strong>Hyundong J. Cho</strong></u>, <a href="https://steel.isi.edu/members/gbartlet/" target="_blank"> Genevieve Bartlett</a>,
-							<a href="https://www.isi.edu/people/mrf/about" target="_blank">Marjorie Freedman</a>.  <em>ACL2021 DialDoc Workshop.</em> <a href="https://aclanthology.org/2021.dialdoc-1.15/" target="_blank"> [paper] </a> 
-						</div>
-
-						<div class="excerpt">
-							We propose <i>Puppeteer</i> as a promising framework to combat social-engineering attacks by automatically responding to emails: a hybrid system that uses customizable probabilistic finite state transducers to orchestrate pushing agendas coupled with neural dialogue systems that generate responses to unexpected prompts. We emphasize the need for this system by highlighting each component's strengths and weaknesses and show how they complement each other.
-						</div>
-					</div>
-
-				</div>
-
 
 				<div class="research-item">
 					<div class="pull-left thumbnail-wrapper">
@@ -193,6 +234,24 @@ title: Justin Cho
 				<h3> Preprints / Others </h3>
 
 
+				<div class="research-item">
+					<div class="pull-left thumbnail-wrapper">
+						<img src="{{ '/assets/conversational_moderation_example.png' | absolute_url }}" alt="viola-thumbnail" class="thumbnail">
+					</div>
+					<div class="description">
+						<div class="paper-title"> 
+							<a href="{{ '/assets/scalable_conversational_moderation.pdf' | absolute_url }}" target="_blank"> Scalable Conversational Moderation: Promoting Constructive Dialogue Online  </a>
+						</div>
+						<div class="authors">
+							<u><strong>Hyundong J. Cho</strong></u>, Shuai Liu, Taiwei Shi, Darpan Jain, Basem Rizk, Yuyang Huang, Zixun Lu, Nuan Wen, Jonathan Gratch, Emilio Ferrera, Jonathan May. <em>Under review.</em>
+						</div>
+
+						<div class="excerpt">
+							Conversational moderation, intervening in conversations to encourage constructive behavior, is an effective alternative to banning users or deleting comments, which can exacerbate polarization by driving users toward echo chambers. However, it is challenging to scale, as human moderators are scarce and it is emotionally taxing to repeatedly respond to toxicity. Encouraged by the enhancement to conversational AI through developments in large language models, we study the potential for scaling conversational moderation through automatic moderation suggestions from moderator bots.
+						</div>
+					</div>
+				</div>
+
 
 				<div class="research-item">
 
@@ -222,13 +281,22 @@ title: Justin Cho
 				<div>
 					<ul>
 						<li>
+							2023/11: I'll be attending EMNLP 2023 in person to present <a href="https://arxiv.org/abs/2305.13721" target="_blank"> Continual Dialogue State Tracking via Example-Guided Question Answering</a> and <a href="https://arxiv.org/abs/2305.10731" target="_blank"> Analyzing Norm Violations in Live-Stream Chat</a>.
+						</li>
+						<li>
+							2023/7: I'm an organizer for ICML 2023's <a href="https://sites.google.com/view/teach-icml-23/home" target="_blank">What's left to TEACH chatbots? workshop</a>. See you in Hawaii!
+						</li>
+						<li>
+							2023/6: I've started my internship with Amazon Alexa AI to work on adapting language models for voice-based interactions using reinforcement learning with human feedback. 
+						</li>
+						<li>
 							2022/11: I'll be attending EMNLP 2022 in person to present <a href="https://arxiv.org/abs/2112.08321" target="_blank"> Know Thy Strengths: Comprehensive Dialogue State Tracking Diagnostics</a> and <a href="https://arxiv.org/abs/2211.09267" target="_blank"> Reflect, Not Reflex: Inference-Based Common Ground Improves Dialogue Response Quality</a>. 
 						</li>
 						<li>
 							2022/6: I've started my summer internship at Meta AI to work on continual learning. 
 						</li>
 						<li>
-							2021/8: I started my intership with <a href="https://ai.facebook.com/research/conversational-ai/" target="_blank">Meta AI's Conversational AI</a> team to work on the robustness of task-oriented dialogue models. 
+							2021/8: I started my internship with <a href="https://ai.facebook.com/research/conversational-ai/" target="_blank">Meta AI's Conversational AI</a> team to work on the robustness of task-oriented dialogue models. 
 						</li>
 						<li>
 							2021/8: <em> "Probing Causal Common Sense in Dialogue Response Generation"</em>, work with Pei Zhou, has been accepted to EMNLP2021 Findings. 
@@ -275,6 +343,10 @@ title: Justin Cho
 					</li>
 
 					<li>
+						I'm working on a language learning app that takes a bottom-up approach called <a href="https://autolang.co" target="_blank">AutoLang</a>. It's geared towards intermediate-level users who want to improve their listening and speaking skills. Start by talking to discover things you didn't know how to say or understand and automatically create a curriculum with flashcards you create in the process.  
+					</li>
+
+					<li>
 						I love playing football⚽ and I am a huge fan of FC Barcelona. Visca el Barça!
 					</li>
 
@@ -293,7 +365,7 @@ title: Justin Cho
 	</main>
 
 	<div class="footer">
-		Last updated: November 2022. <a href="#top"> Back to top </a>
+		Last updated: October 2023. <a href="#top"> Back to top </a>
 	</div>
 
 
