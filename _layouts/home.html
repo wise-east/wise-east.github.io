@@ -44,24 +44,26 @@ title: Justin Cho
 
 				<p> <small> <code class="language-plaintext highlighter-rouge">hd [dot] justincho [at] gmail [dot] com</code></small> / <a href="https://scholar.google.com/citations?user=9YrOON8AAAAJ&hl=en" target="_blank">google scholar</a> / <a href="{{ '/assets/cv.pdf' | relative_url }}" target="_blank">resume</a> / <a href="{{ '/blog.html' | absolute_url}}">blog</a></p>
 				<div class="intro-text">
-					I am a PhD student at the University of Southern California's (USC) Information Sciences Institute (ISI), advised by Prof. <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a>. 
+					I am a PhD candidate at the University of Southern California's (USC) Information Sciences Institute (ISI), advised by <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a>. 
 					<br>
 					<br> 
-					My research interest is in natural language processing (NLP), specifically in natural language generation and dialogue systems. I'm excited by the prospect of seamlessly conversing with machines, so I am broadly interested in making language models more interactive and versatile for dialogue applications.  
+					I'm interested in <b>improving and evaluating language models for conversational applications, creativity, and commonsense reasoning, enhancing NLP-based content moderation for safe and constructive online environments,</b> and  <b>developing language agents for complex human tasks.</b>
+					I've always been mesmerized by super intelligent systems in science fiction such as <a href="https://interstellarfilm.fandom.com/wiki/TARS"> TARS </a> in Interstellar and I'm excited to be working on making them a reality.
 					<br> 
-					<br>
-					Conversations are the most convenient means of communication for most people and so I believe my research agenda will help make even complex intelligent systems accessible to a wider group of people, regardless of their technical expertise. Think of Samantha in <a href="https://en.wikipedia.org/wiki/Her_(film)"> Her </a> and <a href="https://interstellarfilm.fandom.com/wiki/TARS"> TARS </a> in Interstellar! 
+					<!-- Conversations are the most convenient means of communication for most people and so I believe my research agenda will help make even complex intelligent systems accessible to a wider group of people, regardless of their technical expertise. Think of Samantha in <a href="https://en.wikipedia.org/wiki/Her_(film)"> Her </a> and <a href="https://interstellarfilm.fandom.com/wiki/TARS"> TARS </a> in Interstellar!  -->
 				</div>
 
 				<div class="intro-text">
-					Prior to my PhD program, I worked at ISI as a programmer analyst and graduated from HKUST with a Bachelor's in Computer Science. I have interned at Amazon Alexa, <a href="https://ai.facebook.com/research/" target="_blank">Meta AI</a>, <a href="https://www.stitchfix.com/" target="_blank">Stitch Fix</a>, <a href="https://www.isi.edu/research_groups/nlg/home" target="_blank"> ISI's Natural Language Group</a>, and <a href="https://www.imago.ai/" target="_blank"> Imago.ai</a>. 
+					<a href="#">
+						Previously, I did my undergraduate studies at Hong Kong University of Science and Technology with a major in Computer Science, where I first worked on NLP with <a href="https://pascale.home.ece.ust.hk/" target="_blank">Pascale Fung</a>. I have also interned at Amazon Alexa, working with <a href="https://www.linkedin.com/in/nic-jedema-1ba0bbb1" target="_blank">Nicolaas Jedema</a>, <a href="https://disi.unitn.it/~moschitti/" target="_blank">Alessandro Moschitti</a>, and <a href="https://scholar.google.com/citations?user=U1A6iBMAAAAJ&hl=en" target="_blank">Pedro Szekely</a>(2022), at <a href="https://ai.facebook.com/research/" target="_blank">Meta AI</a> on <a href="https://sites.google.com/view/alborz-geramifard/home" target="_blank">Alborz Geramifard</a>'s Cognitive AI team with <a href="https://chinnadhurai.github.io/" target="_blank">Chinnadhurai Sankar</a> (2022) and with <a href="https://sites.google.com/view/beirami" target="_blank">Ahmad Beirami</a> (2021), <a href="https://www.stitchfix.com/" target="_blank">Stitch Fix</a> (2020), and at <a href="https://www.isi.edu/research_groups/nlg/home" target="_blank"> ISI's Natural Language Group</a> with <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a> (2019). 
+					</a>
 				</div>
 			</div>	
 
 			<div id="office-hours">
 				<h3> Office hours</h3>
 				<div>
-					I host virtual office hours! The main purpose for these office hours is to provide advice on research or a career in computer science. 
+					I host virtual office hours! I've had the pleasure making many new connections through these office hours. I'm open to discussing anything from research to career advice that I can help with. 
 					<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jcho-9/office-hours'});return false;">Please schedule through Calendly.</a> 
 					Email me if the time slots don't work for you. 
 				</div>
@@ -70,8 +72,44 @@ title: Justin Cho
 			<div id="research">
 				<h3> Research </h3>
 
-				<div class="research-item"  style="margin-bottom: 10px;">
+				<div class="research-item">
+					<!-- <div class="pull-left thumbnail-wrapper">
+						<img src="{{ '/assets/conversational_moderation_example.png' | absolute_url }}" alt="viola-thumbnail" class="thumbnail">
+					</div> -->
+					<div class="description">
+						<div class="paper-title"> 
+							Speechworthy Instruction-tuned Language Models
+						</div>
+						<div class="authors">
+							<u><strong>Hyundong J. Cho</strong></u>, Nicolass Jedema, Leonardo F. R. Ribeiro, Karishma Sharma, Pedro Szekely, Alessandro Moschitti, Ruben Janssen, Jonathan May. <em>Under review.</em>
+						</div>
 
+						<div class="excerpt">
+							We collect 20K human preference data where annotators <em>listen</em> to the paired responses, instead of reading them through a text interface. We use this data for reinforcement learning with human feedback to adapt an instruction-tuned language model to generate text that is more suitable as inputs for a text-to-speech system. Our trained model, SpeechFalcon, generates responses that are more frequently preferred than the human-written responses from the original instruction dataset and the generated responses from the base model and its prompted counterpart.
+						</div>
+					</div>
+				</div>
+
+
+				<div class="research-item">
+					<div class="pull-left thumbnail-wrapper">
+						<img src="{{ '/assets/conversational_moderation_example.png' | absolute_url }}" alt="viola-thumbnail" class="thumbnail">
+					</div>
+					<div class="description">
+						<div class="paper-title"> 
+							<a href="https://arxiv.org/abs/2311.10781" target="_blank"> Can Language Model Moderators Improve the Health of Online Discourse?  </a>
+						</div>
+						<div class="authors">
+							<u><strong>Hyundong J. Cho</strong></u>, Shuai Liu, Taiwei Shi, Darpan Jain, Basem Rizk, Yuyang Huang, Zixun Lu, Nuan Wen, Jonathan Gratch, Emilio Ferrera, Jonathan May. <em>Under review.</em>
+						</div>
+
+						<div class="excerpt">
+							We establish a systematic definition of conversational moderation effectiveness through a multidisciplinary lens that incorporates insights from social science. We then propose a comprehensive evaluation framework that uses this definition to asses models' moderation capabilities independently of human intervention. With our framework, we conduct the first known study of conversational dialogue models as moderators, finding that appropriately prompted models can provide specific and fair feedback on toxic behavior but struggle to influence users to increase their levels of respect and cooperation. 
+						</div>
+					</div>
+				</div>
+
+				<div class="research-item"  style="margin-bottom: 10px;">
 					<div class="pull-left thumbnail-wrapper">
 						<img src="{{ '/assets/dst_egqa/intro2.png' | absolute_url }}" alt="dstegqa-thumbnail" class="thumbnail">
 					</div>
@@ -231,27 +269,7 @@ title: Justin Cho
 			</div>
 
 			<div id="research">
-				<h3> Preprints / Others </h3>
-
-
-				<div class="research-item">
-					<div class="pull-left thumbnail-wrapper">
-						<img src="{{ '/assets/conversational_moderation_example.png' | absolute_url }}" alt="viola-thumbnail" class="thumbnail">
-					</div>
-					<div class="description">
-						<div class="paper-title"> 
-							<a href="https://arxiv.org/abs/2311.10781" target="_blank"> Can Language Model Moderators Improve the Health of Online Discourse?  </a>
-						</div>
-						<div class="authors">
-							<u><strong>Hyundong J. Cho</strong></u>, Shuai Liu, Taiwei Shi, Darpan Jain, Basem Rizk, Yuyang Huang, Zixun Lu, Nuan Wen, Jonathan Gratch, Emilio Ferrera, Jonathan May. <em>Under review.</em>
-						</div>
-
-						<div class="excerpt">
-							We establish a systematic definition of conversational moderation effectiveness through a multidisciplinary lens that incorporates insights from social science. We then propose a comprehensive evaluation framework that uses this definition to asses models' moderation capabilities independently of human intervention. With our framework, we conduct the first known study of conversational dialogue models as moderators, finding that appropriately prompted models can provide specific and fair feedback on toxic behavior but struggle to influence users to increase their levels of respect and cooperation. 
-						</div>
-					</div>
-				</div>
-
+				<h3> Others </h3>
 
 				<div class="research-item">
 
