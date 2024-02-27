@@ -38,17 +38,27 @@ title: Justin Cho
 				<a href="https://www.linkedin.com/{{ site.plainwhite.social_links.linkedIn }}" target="_blank"><li><i class="icon-linkedin-squared"></i></li></a>
 				<a href="https://twitter.com/{{site.plainwhite.social_links.twitter}}" target="_blank"><li><i class="icon-twitter-squared"></i></li></a>
 			</ul>
+
+			<!-- create hyperlinks to each main sections -->
+			<div class="nav">
+				<a href="#research">Research</a> / 
+				<a href="#news">News</a> / 
+				<a href="#misc">Misc.</a>
+			</div>
 		</section>
 		<section class="content">
 			<div class="intro">
 
 				<p> <small> <code class="language-plaintext highlighter-rouge">hd [dot] justincho [at] gmail [dot] com</code></small> / <a href="https://scholar.google.com/citations?user=9YrOON8AAAAJ&hl=en" target="_blank">google scholar</a> / <a href="{{ '/assets/cv.pdf' | relative_url }}" target="_blank">resume</a> / <a href="{{ '/blog.html' | absolute_url}}">blog</a></p>
+
+				<h3> 👋 Hi there!	</h3>
+
 				<div class="intro-text">
 					I am a PhD candidate at the University of Southern California's (USC) Information Sciences Institute (ISI), advised by <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a>. 
 					<br>
 					<br> 
-					I'm interested in <b>(i) improving and evaluating language models for dialogue, commonsense reasoning, and creativity, (ii) enhancing NLP-based content moderation for safe and constructive online environments,</b> and  <b> (iii) developing language agents for complex human tasks.</b>
-					I've always been mesmerized by super intelligent systems in science fiction such as <a href="https://interstellarfilm.fandom.com/wiki/TARS"> TARS </a> in Interstellar and I'm excited to be working on making them a reality.
+					I'm interested in <b>(i) improving and evaluating language models for human interactions</b> in terms of dialogue, commonsense reasoning, and creativity <b> (ii) developing language agents for accomplishing or facilitating complex human tasks,</b> and <b>(iii) doing so safely through scalable oversight and weak-to-strong generalization methods.</b>
+					I've always been mesmerized by superintelligent systems in science fiction such as <a href="https://interstellarfilm.fandom.com/wiki/TARS"> TARS </a> in Interstellar and I'm excited to make them a reality.
 					<br> 
 					<!-- Conversations are the most convenient means of communication for most people and so I believe my research agenda will help make even complex intelligent systems accessible to a wider group of people, regardless of their technical expertise. Think of Samantha in <a href="https://en.wikipedia.org/wiki/Her_(film)"> Her </a> and <a href="https://interstellarfilm.fandom.com/wiki/TARS"> TARS </a> in Interstellar!  -->
 				</div>
@@ -59,7 +69,7 @@ title: Justin Cho
 			</div>	
 
 			<div id="office-hours">
-				<h3> Office hours</h3>
+				<h3> 📆 Office hours</h3>
 				<div>
 					I host virtual office hours! I've had the pleasure making many new connections through these office hours. I'm open to discussing anything from research to career advice that I can help with. 
 					<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/jcho-9/office-hours'});return false;">Please schedule through Calendly.</a> 
@@ -68,214 +78,216 @@ title: Justin Cho
 			</div>
 
 			<div id="research">
-				<h3> Research </h3>
+				<h3> 🔍 Research </h3>
 
-				<div class="research-item">
-					<!-- <div class="pull-left thumbnail-wrapper">
-						<img src="{{ '/assets/conversational_moderation_example.png' | absolute_url }}" alt="viola-thumbnail" class="thumbnail">
-					</div> -->
-					<div class="description">
-						<div class="paper-title"> 
-							Speechworthy Instruction-tuned Language Models
+				<div class="research-items">
+
+					<div class="research-item">
+						<!-- <div class="pull-left thumbnail-wrapper">
+							<img src="{{ '/assets/conversational_moderation_example.png' | absolute_url }}" alt="viola-thumbnail" class="thumbnail">
+						</div> -->
+						<div class="description">
+							<div class="paper-title"> 
+								Speechworthy Instruction-tuned Language Models
+							</div>
+							<div class="authors">
+								<u><strong>Hyundong J. Cho</strong></u>, Nicolaas Jedema, Leonardo F. R. Ribeiro, Karishma Sharma, Pedro Szekely, Alessandro Moschitti, Ruben Janssen, Jonathan May. <em>Under review.</em>
+							</div>
+
+							<div class="excerpt">
+								Current LLMs are fine-tuned with data exclusively with a text interface, which does not capture human preferences for speech, and thus generate text that is not suitable for text-to-speech systems.
+								We collect 20K human preference data where annotators <em>listen</em> to the paired responses, instead of reading them through a text interface. We use this data for reinforcement learning with human feedback to adapt an instruction-tuned language model to generate speech-suitable text. 
+								<!-- Our trained model, SpeechFalcon, generates responses that are more frequently preferred than the human-written responses from the original instruction dataset and the generated responses from the base model and its prompted counterpart. -->
+							</div>
 						</div>
-						<div class="authors">
-							<u><strong>Hyundong J. Cho</strong></u>, Nicolaas Jedema, Leonardo F. R. Ribeiro, Karishma Sharma, Pedro Szekely, Alessandro Moschitti, Ruben Janssen, Jonathan May. <em>Under review.</em>
+					</div>
+
+
+					<div class="research-item">
+						<div class="pull-left thumbnail-wrapper">
+							<img src="{{ '/assets/conversational_moderation_example.png' | absolute_url }}" alt="viola-thumbnail" class="thumbnail">
+						</div>
+						<div class="description">
+							<div class="paper-title"> 
+								<a href="https://arxiv.org/abs/2311.10781" target="_blank"> Can Language Model Moderators Improve the Health of Online Discourse?  </a>
+							</div>
+							<div class="authors">
+								<u><strong>Hyundong J. Cho</strong></u>, Shuai Liu, Taiwei Shi, Darpan Jain, Basem Rizk, Yuyang Huang, Zixun Lu, Nuan Wen, Jonathan Gratch, Emilio Ferrera, Jonathan May. <em>Under review.</em>
+							</div>
+
+							<div class="excerpt">
+								Deleting comments and banning users are iron-fisted moderation tactics that can lead to a chilling effect on free speech. Instead, conversational moderation aims to guide users to more constructive behavior. 
+								We investigate whether language models can be effective conversational moderators and thus be effective tools for improving the health of online discourse.
+								<!-- We establish a systematic definition of conversational moderation effectiveness through a multidisciplinary lens that incorporates insights from social science and propose a comprehensive evaluation framework that uses this definition to asses models' moderation capabilities independently of human intervention. We find that appropriately prompted models can provide specific and fair feedback on toxic behavior but struggle to influence users to increase their levels of respect and cooperation.  -->
+							</div>
+						</div>
+					</div>
+
+					<div class="research-item"  style="margin-bottom: 10px;">
+						<div class="pull-left thumbnail-wrapper">
+							<img src="{{ '/assets/dst_egqa/intro2.png' | absolute_url }}" alt="dstegqa-thumbnail" class="thumbnail">
 						</div>
 
-						<div class="excerpt">
-							Current LLMs are fine-tuned with data exclusively with a text interface, which does not capture human preferences for speech, and thus generate text that is not suitable for text-to-speech systems.
-							We collect 20K human preference data where annotators <em>listen</em> to the paired responses, instead of reading them through a text interface. We use this data for reinforcement learning with human feedback to adapt an instruction-tuned language model to generate speech-suitable text. 
-							<!-- Our trained model, SpeechFalcon, generates responses that are more frequently preferred than the human-written responses from the original instruction dataset and the generated responses from the base model and its prompted counterpart. -->
+						<div class="description">
+							<div class="paper-title"> 
+								<a href="https://arxiv.org/abs/2305.13721" target="_blank"> Continual Dialogue State Tracking via Example-Guided Question Answering</a>	
+							</div>
+							<div class="authors">
+								<u><strong>Hyundong J. Cho</strong></u>, Andrea Madotto, Zhaojiang Lin, Khyathi Raghavi Chandu, Satwik Kottur, Jing Xu, Jonathan May, Chinnadhurai Sankar, <em>EMNLP2023</em> <a href="https://arxiv.org/abs/2305.13721" target="_blank"> [paper] </a> 
+							</div>
+
+							<div class="excerpt">
+								Estimating a user's goal in a dialogue can be done by asking natural language questions, and answering questions is a transferable skill that can be easily learned from examples. 
+								With this insight, we restructure dialogue state tracking (DST) to eliminate service-specific structured text and unify data from all services by decomposing each DST sample to a bundle of fine-grained example-guided question answering tasks. With a retriever trained to find examples that introduce similar updates to dialogue states, we find that our method can significantly boost continual learning performance, even for a model with just 60M parameters. 
+							</div>
 						</div>
+
+					</div>
+
+					<div class="research-item"  style="margin-bottom: 10px;">
+
+						<div class="pull-left thumbnail-wrapper">
+							<img src="{{ '/assets/normvio_livestream.png' | absolute_url }}" alt="dstegqa-thumbnail" class="thumbnail">
+						</div>
+
+						<div class="description">
+							<div class="paper-title"> 
+								<a href="https://arxiv.org/abs/2305.10731" target="_blank"> Analyzing Norm Violations in Live-Stream Chat</a>	
+							</div>
+							<div class="authors">
+								Jihyung Moon, Dong-Ho Lee, <u><strong>Hyundong J. Cho</strong></u>, Woojeong Jin, Chan Young Park, Minwoo Kim, Jonathan May, Jay Pujara, Sungjoon Park, <em>EMNLP2023</em> <a href="https://arxiv.org/abs/2305.10731" target="_blank"> [paper] </a> 
+							</div>
+
+							<div class="excerpt">
+								Toxic behavior in live-stream chat is a growing concern as live-streaming platforms such as Twitch and YouTube live are becoming increasingly popular. 
+								Previous detection methods are not effective for live-stream chat as each comment is only visible for a limited time and lacks a thread structure. To bridge this gap, we define norm violation categories in live-stream chats and annotate 4,583 moderated comments from Twitch and train live-stream chat-specific detection models.
+								<!-- We identify the informational context humans use in live-stream moderation, and train models leveraging context to identify norm violations. We find that selecting relevant contextual information can boost moderation performance by 35%. -->
+							</div>
+						</div>
+
+					</div>
+
+					<div class="research-item"  style="margin-bottom: 10px;">
+
+						<div class="pull-left thumbnail-wrapper">
+							<img src="{{ '/assets/recap.png' | absolute_url }}" alt="dstegqa-thumbnail" class="thumbnail">
+						</div>
+
+						<div class="description">
+							<div class="paper-title"> 
+								<a href="https://aclanthology.org/2023.acl-long.468/" target="_blank"> RECAP: Retrieval-Enhanced Context-Aware Prefix Encoder for Personalized Dialogue Response Generation</a>	
+							</div>
+							<div class="authors">
+								Shuai Liu, <u><strong>Hyundong J. Cho</strong></u>, Marjorie Freedman, Xuezhe Ma, Jonathan May, <em>ACL2023</em> <a href="https://aclanthology.org/2023.acl-long.468/" target="_blank"> [paper] </a> 
+							</div>
+
+							<div class="excerpt">
+								Endowing chatbots with a consistent persona is essential to an engaging conversation, yet it remains an unresolved challenge. In this work, we propose a new retrieval-enhanced approach for personalized response generation. 
+								<!-- Specifically, we design a hierarchical transformer retriever trained on dialogue domain data to perform personalized retrieval and a context-aware prefix encoder that fuses the retrieved information to the decoder more effectively. Extensive experiments on a real-world dataset demonstrate the effectiveness of our model at generating more fluent and personalized responses. We quantitatively evaluate our model's performance under a suite of human and automatic metrics and find it to be superior compared to state-of-the-art baselines on English Reddit conversations. -->
+							</div>
+						</div>
+
+					</div>
+
+					<div class="research-item"  style="margin-bottom: 10px;">
+
+						<div class="pull-left thumbnail-wrapper">
+							<img src="{{ '/assets/checkdst/checkdst.png' | absolute_url }}" alt="checkdst-thumbnail" class="thumbnail">
+						</div>
+
+						<div class="description">
+							<div class="paper-title"> 
+								<a href="https://arxiv.org/abs/2112.08321" target="_blank"> Know Thy Strengths: Comprehensive Dialogue State Tracking Diagnostics</a>	
+							</div>
+							<div class="authors">
+								<u><strong>Hyundong J. Cho</strong></u>, Chinnadhurai Sankar, Christopher Lin, Kaushik Ram Sadagopan, Shahin Shayandeh, Asli Celikyilmaz, Jonathan May, Ahmad Beirami, <em>EMNLP2022 Findings</em> <a href="https://arxiv.org/abs/2112.08321" target="_blank"> [paper] </a> 
+								<a href="{{ '/checkdst' | absolute_url }}"> [project page] </a>
+							</div>
+
+							<div class="excerpt">
+								Humans are robust to understanding dialogue states in the presence of noise and ambiguity, but dialogue state tracking (DST) models are not. This analysis of DST robustness has been sparse and uncoordinated in previous work. Our standardized and comprehensive DST diagnoses toolkit, CheckDST, is a collection of robustness tests and failure mode analytics. With CheckDST, we discover that different classes of DST models have clear strengths and weaknesses, where generation models are more promising for handling language variety while classification models are more robust to unseen entities.
+							</div>
+						</div>
+
+					</div>
+
+					<div class="research-item">
+
+						<div class="pull-left thumbnail-wrapper">
+							<img src="{{ '/assets/reflect_not_reflex.png' | absolute_url }}" alt="reflect-thumbnail" class="thumbnail">
+						</div>
+
+						<div class="description">
+							<div class="paper-title"> 
+								<a href="https://arxiv.org/abs/2211.09267" target="_blank"> Reflect, Not Reflex: Inference-Based Common Ground Improves Dialogue Response Quality</a>	
+							</div>
+							<div class="authors">
+								Pei Zhou, <u><strong>Hyundong J. Cho</strong></u>, Pegah Jandaghi, Dong-Ho Lee, Bill Yuchen Lin, Jay Pujara, Xiang Ren. <em>EMNLP2022 </em> <a href="https://arxiv.org/abs/2211.09267" target="_blank"> [paper] </a> <a href="https://inklab.usc.edu/Reflect/" target="_blank"> [project page]</a>
+							</div>
+
+							<div class="excerpt">
+								We introduce Reflect, a dataset that annotates dialogues with explicit CG and solicits 9k diverse human-generated responses each following one common ground. Using Reflect, we showcase the limitations of current dialogue data and RG models: less than half of the responses in current data are rated as high quality and models trained using this data have even lower quality, while most Reflect responses are judged high quality. We also analyze whether CG can help models produce better-quality responses by using Reflect CG to guide RG models. </div>
+						</div>
+
+					</div>
+
+					<div class="research-item">
+
+
+						<div class="pull-left thumbnail-wrapper">
+							<img src="{{ '/assets/zhou_emnlp2021.png' | absolute_url }}" alt="emnlp2021findings-thumbnail" class="thumbnail">
+						</div>
+
+						<div class="description">
+							<div class="paper-title"> 
+								<a href="https://aclanthology.org/2021.findings-emnlp.349" target="_blank"> Probing Commonsense Explanation in Dialogue Response Generation </a>
+							</div>
+							<div class="authors">
+								Pei Zhou, Pegah Jandaghi, <u><strong>Hyundong J. Cho</strong></u>, Bill Yuchen Lin, Jay Pujara, Xiang Ren. <em>EMNLP2021 Findings</em> <a href="https://aclanthology.org/2021.findings-emnlp.349" target="_blank"> [paper] </a> 
+							</div>
+
+							<div class="excerpt">
+								We collect 6k annotated explanations justifying responses from four dialogue datasets and ask humans to verify them and propose two probing settings to evaluate response generation models' commonsense reasoning capabilities. Probing results show that response generation models fail to capture the logical relations between commonsense explanations and responses and fine-tuning on in-domain data and increasing model sizes do not lead to understanding of commonsense reasoning. 
+							</div>
+						</div>
+
+					</div>
+
+					<div class="research-item">
+						<div class="pull-left thumbnail-wrapper">
+							<img src="{{ '/assets/spolin/yesand_example2.png' | absolute_url }}" alt="spolin-thumbnail" class="thumbnail">
+						</div>
+
+						<div class="description">
+							<div class="paper-title"> 
+								<a href="https://aclanthology.org/2020.acl-main.218/"> Grounding Conversations with Improvised Dialogues </a>
+							</div>
+							<div class="authors">
+								<u><strong>Hyundong J. Cho</strong></u>, <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a>. <em>ACL2020.</em>
+								<a href="https://aclanthology.org/2020.acl-main.218/" target="_blank"> [paper] </a> 
+								<a href="{{ '/spolin' | absolute_url }}"> [project page] </a> 
+								<a href="https://spolin.isi.edu" target="_blank"> [demo]</a>
+							</div>
+							<div class="press">
+								Press: 
+									<a href="https://www.sciencedaily.com/releases/2020/07/200715095502.htm" target="_blank">Science Daily</a>, 
+									<a href="https://viterbischool.usc.edu/news/2020/07/move-over-siri-usc-viterbi-researchers-develop-improv-based-chatbot/">USC Viterbi</a>, 
+									<a href="https://www.mindbounce.com/445861/meet-the-chatbot-thats-learning-to-improvise/">mindbounce</a>, 
+									<a href="https://techwithgajesh.com/spolinbot-the-new-avatar-of-chatbots/">Tech With Gajesh</a>
+							</div>
+
+							<div class="excerpt">
+								Open-domain dialogue systems overlook an important phenomena that makes conversations engaging: the initiation of the next relevant contribution, which is the most proactive method of "grounding". We collect "Yes, and" type dialogue pairs that naturally embed such initations from an improv podcast and existing dialogue corpora to create the Spontaneanation Pairs Of Learnable ImprovisatioN (<span class="spolin-text">SPOLIN</span>) dataset. Human evaluation shows that models fine-tuned with <span class="spolin-text">SPOLIN</span> generate more engaging results. 
+							</div>
+						</div>
+
 					</div>
 				</div>
-
-
-				<div class="research-item">
-					<div class="pull-left thumbnail-wrapper">
-						<img src="{{ '/assets/conversational_moderation_example.png' | absolute_url }}" alt="viola-thumbnail" class="thumbnail">
-					</div>
-					<div class="description">
-						<div class="paper-title"> 
-							<a href="https://arxiv.org/abs/2311.10781" target="_blank"> Can Language Model Moderators Improve the Health of Online Discourse?  </a>
-						</div>
-						<div class="authors">
-							<u><strong>Hyundong J. Cho</strong></u>, Shuai Liu, Taiwei Shi, Darpan Jain, Basem Rizk, Yuyang Huang, Zixun Lu, Nuan Wen, Jonathan Gratch, Emilio Ferrera, Jonathan May. <em>Under review.</em>
-						</div>
-
-						<div class="excerpt">
-							Deleting comments and banning users are iron-fisted moderation tactics that can lead to a chilling effect on free speech. Instead, conversational moderation aims to guide users to more constructive behavior. 
-							We investigate whether language models can be effective conversational moderators and thus be effective tools for improving the health of online discourse.
-							<!-- We establish a systematic definition of conversational moderation effectiveness through a multidisciplinary lens that incorporates insights from social science and propose a comprehensive evaluation framework that uses this definition to asses models' moderation capabilities independently of human intervention. We find that appropriately prompted models can provide specific and fair feedback on toxic behavior but struggle to influence users to increase their levels of respect and cooperation.  -->
-						</div>
-					</div>
-				</div>
-
-				<div class="research-item"  style="margin-bottom: 10px;">
-					<div class="pull-left thumbnail-wrapper">
-						<img src="{{ '/assets/dst_egqa/intro2.png' | absolute_url }}" alt="dstegqa-thumbnail" class="thumbnail">
-					</div>
-
-					<div class="description">
-						<div class="paper-title"> 
-							<a href="https://arxiv.org/abs/2305.13721" target="_blank"> Continual Dialogue State Tracking via Example-Guided Question Answering</a>	
-						</div>
-						<div class="authors">
-							<u><strong>Hyundong J. Cho</strong></u>, Andrea Madotto, Zhaojiang Lin, Khyathi Raghavi Chandu, Satwik Kottur, Jing Xu, Jonathan May, Chinnadhurai Sankar, <em>EMNLP2023</em> <a href="https://arxiv.org/abs/2305.13721" target="_blank"> [paper] </a> 
-						</div>
-
-						<div class="excerpt">
-							Estimating a user's goal in a dialogue can be done by asking natural language questions, and answering questions is a transferable skill that can be easily learned from examples. 
-							With this insight, we restructure dialogue state tracking (DST) to eliminate service-specific structured text and unify data from all services by decomposing each DST sample to a bundle of fine-grained example-guided question answering tasks. With a retriever trained to find examples that introduce similar updates to dialogue states, we find that our method can significantly boost continual learning performance, even for a model with just 60M parameters. 
-						</div>
-					</div>
-
-				</div>
-
-				<div class="research-item"  style="margin-bottom: 10px;">
-
-					<div class="pull-left thumbnail-wrapper">
-						<img src="{{ '/assets/normvio_livestream.png' | absolute_url }}" alt="dstegqa-thumbnail" class="thumbnail">
-					</div>
-
-					<div class="description">
-						<div class="paper-title"> 
-							<a href="https://arxiv.org/abs/2305.10731" target="_blank"> Analyzing Norm Violations in Live-Stream Chat</a>	
-						</div>
-						<div class="authors">
-							Jihyung Moon, Dong-Ho Lee, <u><strong>Hyundong J. Cho</strong></u>, Woojeong Jin, Chan Young Park, Minwoo Kim, Jonathan May, Jay Pujara, Sungjoon Park, <em>EMNLP2023</em> <a href="https://arxiv.org/abs/2305.10731" target="_blank"> [paper] </a> 
-						</div>
-
-						<div class="excerpt">
-							Toxic behavior in live-stream chat is a growing concern as live-streaming platforms such as Twitch and YouTube live are becoming increasingly popular. 
-							Previous detection methods are not effective for live-stream chat as each comment is only visible for a limited time and lacks a thread structure. To bridge this gap, we define norm violation categories in live-stream chats and annotate 4,583 moderated comments from Twitch and train live-stream chat-specific detection models.
-							<!-- We identify the informational context humans use in live-stream moderation, and train models leveraging context to identify norm violations. We find that selecting relevant contextual information can boost moderation performance by 35%. -->
-						</div>
-					</div>
-
-				</div>
-
-				<div class="research-item"  style="margin-bottom: 10px;">
-
-					<div class="pull-left thumbnail-wrapper">
-						<img src="{{ '/assets/recap.png' | absolute_url }}" alt="dstegqa-thumbnail" class="thumbnail">
-					</div>
-
-					<div class="description">
-						<div class="paper-title"> 
-							<a href="https://aclanthology.org/2023.acl-long.468/" target="_blank"> RECAP: Retrieval-Enhanced Context-Aware Prefix Encoder for Personalized Dialogue Response Generation</a>	
-						</div>
-						<div class="authors">
-							Shuai Liu, <u><strong>Hyundong J. Cho</strong></u>, Marjorie Freedman, Xuezhe Ma, Jonathan May, <em>ACL2023</em> <a href="https://aclanthology.org/2023.acl-long.468/" target="_blank"> [paper] </a> 
-						</div>
-
-						<div class="excerpt">
-							Endowing chatbots with a consistent persona is essential to an engaging conversation, yet it remains an unresolved challenge. In this work, we propose a new retrieval-enhanced approach for personalized response generation. 
-							<!-- Specifically, we design a hierarchical transformer retriever trained on dialogue domain data to perform personalized retrieval and a context-aware prefix encoder that fuses the retrieved information to the decoder more effectively. Extensive experiments on a real-world dataset demonstrate the effectiveness of our model at generating more fluent and personalized responses. We quantitatively evaluate our model's performance under a suite of human and automatic metrics and find it to be superior compared to state-of-the-art baselines on English Reddit conversations. -->
-						</div>
-					</div>
-
-				</div>
-
-				<div class="research-item"  style="margin-bottom: 10px;">
-
-					<div class="pull-left thumbnail-wrapper">
-						<img src="{{ '/assets/checkdst/checkdst.png' | absolute_url }}" alt="checkdst-thumbnail" class="thumbnail">
-					</div>
-
-					<div class="description">
-						<div class="paper-title"> 
-							<a href="https://arxiv.org/abs/2112.08321" target="_blank"> Know Thy Strengths: Comprehensive Dialogue State Tracking Diagnostics</a>	
-						</div>
-						<div class="authors">
-							<u><strong>Hyundong J. Cho</strong></u>, Chinnadhurai Sankar, Christopher Lin, Kaushik Ram Sadagopan, Shahin Shayandeh, Asli Celikyilmaz, Jonathan May, Ahmad Beirami, <em>EMNLP2022 Findings</em> <a href="https://arxiv.org/abs/2112.08321" target="_blank"> [paper] </a> 
-							<a href="{{ '/checkdst' | absolute_url }}"> [project page] </a>
-						</div>
-
-						<div class="excerpt">
-							Humans are robust to understanding dialogue states in the presence of noise and ambiguity, but dialogue state tracking (DST) models are not. This analysis of DST robustness has been sparse and uncoordinated in previous work. Our standardized and comprehensive DST diagnoses toolkit, CheckDST, is a collection of robustness tests and failure mode analytics. With CheckDST, we discover that different classes of DST models have clear strengths and weaknesses, where generation models are more promising for handling language variety while classification models are more robust to unseen entities.
-						</div>
-					</div>
-
-				</div>
-
-				<div class="research-item">
-
-					<div class="pull-left thumbnail-wrapper">
-						<img src="{{ '/assets/reflect_not_reflex.png' | absolute_url }}" alt="reflect-thumbnail" class="thumbnail">
-					</div>
-
-					<div class="description">
-						<div class="paper-title"> 
-							<a href="https://arxiv.org/abs/2211.09267" target="_blank"> Reflect, Not Reflex: Inference-Based Common Ground Improves Dialogue Response Quality</a>	
-						</div>
-						<div class="authors">
-							Pei Zhou, <u><strong>Hyundong J. Cho</strong></u>, Pegah Jandaghi, Dong-Ho Lee, Bill Yuchen Lin, Jay Pujara, Xiang Ren. <em>EMNLP2022 </em> <a href="https://arxiv.org/abs/2211.09267" target="_blank"> [paper] </a> <a href="https://inklab.usc.edu/Reflect/" target="_blank"> [project page]</a>
-						</div>
-
-						<div class="excerpt">
-							We introduce Reflect, a dataset that annotates dialogues with explicit CG and solicits 9k diverse human-generated responses each following one common ground. Using Reflect, we showcase the limitations of current dialogue data and RG models: less than half of the responses in current data are rated as high quality and models trained using this data have even lower quality, while most Reflect responses are judged high quality. We also analyze whether CG can help models produce better-quality responses by using Reflect CG to guide RG models. </div>
-					</div>
-
-				</div>
-
-				<div class="research-item">
-
-
-					<div class="pull-left thumbnail-wrapper">
-						<img src="{{ '/assets/zhou_emnlp2021.png' | absolute_url }}" alt="emnlp2021findings-thumbnail" class="thumbnail">
-					</div>
-
-					<div class="description">
-						<div class="paper-title"> 
-							<a href="https://aclanthology.org/2021.findings-emnlp.349" target="_blank"> Probing Commonsense Explanation in Dialogue Response Generation </a>
-						</div>
-						<div class="authors">
-							Pei Zhou, Pegah Jandaghi, <u><strong>Hyundong J. Cho</strong></u>, Bill Yuchen Lin, Jay Pujara, Xiang Ren. <em>EMNLP2021 Findings</em> <a href="https://aclanthology.org/2021.findings-emnlp.349" target="_blank"> [paper] </a> 
-						</div>
-
-						<div class="excerpt">
-							We collect 6k annotated explanations justifying responses from four dialogue datasets and ask humans to verify them and propose two probing settings to evaluate response generation models' commonsense reasoning capabilities. Probing results show that response generation models fail to capture the logical relations between commonsense explanations and responses and fine-tuning on in-domain data and increasing model sizes do not lead to understanding of commonsense reasoning. 
-						</div>
-					</div>
-
-				</div>
-
-				<div class="research-item">
-					<div class="pull-left thumbnail-wrapper">
-						<img src="{{ '/assets/spolin/yesand_example2.png' | absolute_url }}" alt="spolin-thumbnail" class="thumbnail">
-					</div>
-
-					<div class="description">
-						<div class="paper-title"> 
-							<a href="https://aclanthology.org/2020.acl-main.218/"> Grounding Conversations with Improvised Dialogues </a>
-						</div>
-						<div class="authors">
-							<u><strong>Hyundong J. Cho</strong></u>, <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a>. <em>ACL2020.</em>
-							<a href="https://aclanthology.org/2020.acl-main.218/" target="_blank"> [paper] </a> 
-							<a href="{{ '/spolin' | absolute_url }}"> [project page] </a> 
-							<a href="https://spolin.isi.edu" target="_blank"> [demo]</a>
-						</div>
-						<div class="press">
-							Press: 
-								<a href="https://www.sciencedaily.com/releases/2020/07/200715095502.htm" target="_blank">Science Daily</a>, 
-								<a href="https://viterbischool.usc.edu/news/2020/07/move-over-siri-usc-viterbi-researchers-develop-improv-based-chatbot/">USC Viterbi</a>, 
-								<a href="https://www.mindbounce.com/445861/meet-the-chatbot-thats-learning-to-improvise/">mindbounce</a>, 
-								<a href="https://techwithgajesh.com/spolinbot-the-new-avatar-of-chatbots/">Tech With Gajesh</a>
-						</div>
-
-						<div class="excerpt">
-							Open-domain dialogue systems overlook an important phenomena that makes conversations engaging: the initiation of the next relevant contribution, which is the most proactive method of "grounding". We collect "Yes, and" type dialogue pairs that naturally embed such initations from an improv podcast and existing dialogue corpora to create the Spontaneanation Pairs Of Learnable ImprovisatioN (<span class="spolin-text">SPOLIN</span>) dataset. Human evaluation shows that models fine-tuned with <span class="spolin-text">SPOLIN</span> generate more engaging results. 
-						</div>
-					</div>
-
-				</div>
-
 
 			</div>
 
-			<div id="research">
-				<h3> Others </h3>
+			<div id="other">
+				<h3> 🔍 Others </h3>
 
 				<div class="research-item">
 
@@ -301,9 +313,12 @@ title: Justin Cho
 
 
 			<div id="news">
-				<h3> News </h3>
+				<h3> 📢 News </h3>
 				<div>
 					<ul>
+						<li>
+							2024/2: I'm giving a talk at <a href="https://www.tonal.com/" target="_blank">Tonal</a> on "Large Language Models: The Recipes and Applications of ChatGPT's Engine" to give an overview of recent advances in NLP and my work on Speechworthy Instruction-tuned Language Models.
+						</li>
 						<li>
 							2023/11: I'll be attending EMNLP 2023 in person to present <a href="https://arxiv.org/abs/2305.13721" target="_blank"> Continual Dialogue State Tracking via Example-Guided Question Answering</a> and <a href="https://arxiv.org/abs/2305.10731" target="_blank"> Analyzing Norm Violations in Live-Stream Chat</a>.
 						</li>
@@ -354,8 +369,8 @@ title: Justin Cho
 				
 			</div>
 
-			<div id="Misc.">
-				<h3> Miscellaneous </h3>
+			<div id="misc">
+				<h3> ➕ Miscellaneous </h3>
 
 				<ul>
 					<li>
@@ -367,11 +382,11 @@ title: Justin Cho
 					</li>
 
 					<li>
-						I'm working on a language learning app called <a href="https://autolang.co" target="_blank">AutoLang</a>. I was frustrated that I couldn't say what I wantd to say to my Chinese peers even after mastering all the Chinese lessons on Duolingo. I realized I need a more personalized, bottom-up approach and decided to make one myself with a couple of friends. Start by talking to discover things you didn't know how to say or understand and automatically build your own curriculum with flashcards you create in the process!  
+						I'm working on a language learning app called <a href="https://autolang.co" target="_blank">AutoLang</a>. I was frustrated that I couldn't say what I wanted to say to my Chinese peers even after mastering all the Chinese lessons on Duolingo. I realized I need a more personalized, bottom-up approach and decided to make one myself with a couple of friends. With AutoLang, you start learning things relevant to you from day 1 and build confidence to converse by talking to discover things you didn't know how to say or understand and automatically build your own curriculum with flashcards you create in the process!  
 					</li>
 
 					<li>
-						I'm a bit of a productivity geek. Ask me about knowledge management and productivity tips! 
+						I'm a bit of a productivity geek. Ask me about knowledge management and productivity tips! I use <a href="https://logseq.com/" target="_blank">Logseq</a> for knowledge management and use tips from <a href="https://amzn.to/3SStsbM" target="_blank">How to Take Smart Notes</a>, which recommends the <a href="https://en.wikipedia.org/wiki/Zettelkasten" target="_blank"> Zettelkasten</a> method. 
 					</li>
 
 					<li>
@@ -413,6 +428,7 @@ title: Justin Cho
 		// parse date_modified to get the month and year, month in the format "Jan" and year in the format "2023"
 		date = date_modified.substring(0, 10);
 		document.querySelector('.footer').innerHTML = "Last updated: " + date + ". <a href=\"#top\"> Back to top </a>";
+
 
 	</script>
 	{%- endif -%}

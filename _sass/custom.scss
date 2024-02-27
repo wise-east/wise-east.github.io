@@ -105,6 +105,59 @@ div{
 	}
 }
 
+// make research section scrollable
+.research-items{
+	overflow-y: scroll; 
+	height: 800px; 
+	border-bottom: solid 1px gray;
+}
+
+h3{
+	padding-top: 20px; 
+}
+
+#other {
+
+	.research-item{
+		padding-bottom: 20px; 
+		padding-top: 10px;
+		border-bottom: solid rgb(223, 223, 223) 1px; 
+	}
+
+	.thumbnail-wrapper{
+		
+		height: 100%; 
+		.thumbnail {
+			@media screen and (max-width: $mobileW){
+				display: block;
+			}
+			@media screen and (min-width: $mobileW + 1){
+				display: table-cell;
+			}
+			width: 150px; 
+			margin-top: 5px; 
+			// margin-bottom: 10px; 
+		}
+
+		margin-right: 10px; 
+	}
+
+
+	.description{
+		display: table-cell;
+		.excerpt{
+			color: rgb(102, 102, 102);
+			font-size: 0.8em; 
+		}
+
+		.paper-title{
+			font-style: italic;
+			font-size: 1.2em; 
+		}
+		
+	}
+}
+
 
 #blog-list{
 
@@ -165,4 +218,22 @@ div{
 
 	border-bottom: solid 1px gray; 
 
+}
+
+// make news section's list items have emoji bullets
+#news{
+	li {
+		list-style: "📍"; 
+		padding-left: 0;
+		margin-left: 0;  
+		margin-bottom: 5px;
+	}
+}
+
+#misc{
+
+	li {
+		list-style: "🍀"; 
+		margin-bottom: 5px;
+	}
 }
