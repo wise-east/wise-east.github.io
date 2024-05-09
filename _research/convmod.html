@@ -1,0 +1,202 @@
+---
+layout: research-page
+title: ConvMod 
+description: Project page for "Can Language Models Improve the Health of Online Discourse?"
+tagline: "Can Language Models Improve the Health of Online Discourse?"
+conference: NAACL 2024 
+repolink: https://github.com/isi-nlp/isi_darma
+paperlink: https://arxiv.org/abs/2311.10781 
+---
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #a32121;">
+    <a class="navbar-brand title-font" href="#"> {{ page.title }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link active" href="#about">
+              About 
+              <!-- <span class="sr-only">(current)</span> -->
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#video">Video</a>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/AdRvTkctCcI?si=XkRJHkttJh4UQq0m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#authors">Authors</a>
+        </li>
+        <li>
+            <a class="nav-link" href="#contact">Contact</a>
+
+            hd dot justincho at gmail dot com
+        </li>
+        <li>
+          <a class="nav-link" href="#License">License</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<main class="container">
+    <div class="jumbotron heading">
+        <h1>
+            <!-- <span class="title-font">{{ page.title }}</span>:  -->
+            {{page.tagline}} ({{page.conference}})
+        </h1>
+
+        <a class="btn btn-lg" style="background-color: #a32121; color: white;" href="{{ '/assets/boteval/boteval_acl2024.pdf' | absolute_url }}" target="_blank" role="button">Paper »</a>
+        <a class="btn btn-lg btn-info" href="{{page.repolink}}" target="_blank" role="button">Repo »</a>
+        <!-- <a class="btn btn-lg btn-success" href="{{ '/assets/checkdst/emnlp2022_checkdst_a0_portrait.pdf' | absolute_url }}" target="_blank" role="button">Poster »</a> -->
+        <!-- <a class="btn btn-lg btn-warning" href="https://bit.ly/3us55pu" target="_blank" role="button">Slides »</a> -->
+
+    </div>
+
+    <div id="intro">
+
+
+
+
+    </div>
+
+    <div id="info">
+
+        <h3 id="video"> Video </h3>
+
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ElPCNqjYbQM?si=NXH8kKEBRptPpcq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <h3> I want to use BotEval! </h3>
+
+        <div>
+            BotEval can be accessed through our <a href="{{page.repolink}}" target="_blank" >GitHub repository</a>. 
+        </div>
+
+        <div id="paper">
+            <h3> Paper </h3>
+
+            <div class="img-wrapper">
+                <a href={{page.paperlink}} target="_blank">
+                    <img class="img-fluid" src="{{ '/assets/boteval/boteval_paper_preview.png' | absolute_url }}" alt="paper-preview">
+                    <div class="img-overlay">
+                        <button class="btn btn-info">Read our paper»</button>
+                    </div>
+                </a>
+            </div>
+
+            <!-- <div class="vspacing">
+                If our work inspires you, please cite us: 
+            </div>
+
+            <div class='citation-wrapper'>
+                <pre class="citation">
+@article{cho2021checkdst,
+    title={Know Thy Strengths: Comprehensive Dialogue State Tracking Diagnostics},
+    author={Cho, Hyundong and Sankar, Chinnadhurai and Lin, Christopher and Sadagopan, Kaushik Ram and Shayandeh, Shahin and Celikyilmaz, Asli and May, Jonathan and Beirami, Ahmad},
+    journal={arXiv preprint arXiv:2112.08321},
+    year={2021}
+}                
+                </pre>
+            </div> -->
+
+        </div>
+
+        <!-- <div id="authors">
+            <h3> Authors </h3>
+
+            <div class="vspacing"> 
+                This work was done by a group of researchers at USC ISI and Microsoft Translator.  
+            </div>
+
+            <div class="row justify-content-center" style="margin: 0 auto;">
+                <div class="card headshot box-shadow">
+                    <img class="card-img-top" src="{{ '/assets/portfolio.png' | absolute_url }}" alt="justin">
+                    <div class="card-body">
+                        <p class="card-text"><a href="../" target="_blank">Justin Cho</a></p>
+                    </div>
+                </div>
+
+                <div class="card headshot box-shadow">
+                    <img class="card-img-top" src="https://christopherhlin.com/chris.jpg" alt="chris">
+                    <div class="card-body">
+                        <p class="card-text"><a href="https://christopherhlin.com/" target="_blank">Thamme Gowda</a></p>
+                    </div>
+                </div>
+
+                <div class="card headshot box-shadow">
+                    <img class="card-img-top" src="{{ '/assets/checkdst/kaushik.jpeg' | absolute_url }}" alt="kaushik">
+                    <div class="card-body">
+                        <p class="card-text"><a href="https://scholar.google.com/citations?user=egmoOgkAAAAJ&hl=en" target="_blank">Yuyang Huang</a></p>
+                    </div>
+                </div>
+
+                <div class="card headshot box-shadow">
+                    <img class="card-img-top" src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=7UZMWukAAAAJ&citpid=1" alt="shahin">
+                    <div class="card-body">
+                        <p class="card-text"><a href="https://scholar.google.com/citations?user=7UZMWukAAAAJ&hl=en" target="_blank">Zixun Lu</a></p>
+                    </div>
+                </div>
+
+                <div class="card headshot box-shadow">
+                    <img class="card-img-top" src="{{ '/assets/checkdst/asli.png' | absolute_url }}" alt="asli">
+                    <div class="card-body">
+                        <p class="card-text"><a href="http://asli.us/" target="_blank">Tianli Tong</a></p>
+                    </div>
+                </div>
+
+                <div class="card headshot box-shadow">
+                    <img class="card-img-top" src="{{ '/assets/jon_profile.png' | absolute_url }}" alt="jon">
+                    <div class="card-body">
+                        <p class="card-text"><a href="https://www.isi.edu/~jonmay/" target="_blank">Jonathan May</a></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div> -->
+
+        <!-- <div id="disclaimer">
+            <h3>Disclaimer</h3>
+
+            <div>
+                This material is based on research sponsored by the AFRL and DARPA under agreement number FA8650-18-C-7878. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of the AFRL, DARPA, or the U.S. Government. 
+            </div>
+
+        </div> -->
+
+
+
+        <div id="contact">
+            <h3> Contact </h3>
+
+            <div>
+                If you have any questions about the BotEval, feel free to email us at "hd.justin at gmail dot com" or raise an issue on the <a href="{{page.repolink}}" target="_blank">Github repository</a>. 
+            </div>
+        </div>
+
+        <div id="License">
+            <h3>License</h3>
+            <div>
+               <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type"><span class="title-font"> BotEval</span></span> is licensed under a <a rel="license" href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a>.
+            </div>
+        </div>
+
+        <div class="row justify-content-center" style="padding-bottom: 50px; padding-top: 20px;">
+            <div class="col-xs-6 col-sm-7 col-md-6 col-lg-4 thumb d-flex align-items-center logo">
+                <img class="img-fluid" src="{{ '/assets/usc_isi.png' | absolute_url }}" alt="usc-isi">
+            </div>
+
+            <div class="col-xs-6 col-sm-7 col-md-6 col-lg-4 thumb d-flex align-items-center logo">
+                <img class="img-fluid" src="{{ '/assets/cutelabname.jpg' | absolute_url }}" alt="usc-isi">
+            </div>
+
+        </div>
+    </div>
+
+</main>
