@@ -83,6 +83,44 @@ title: Justin Cho
 				<div class="research-items">
 
 
+					<div class="research-item">
+						<div class="pull-left thumbnail-wrapper">
+							<img src="{{ '/assets/speechllm/motivating_example.png' | absolute_url }}" alt="speechllm-thumbnail" class="thumbnail">
+						</div>
+						<div class="description">
+							<div class="paper-title"> 
+								<a href="{{ '/speechllm.html' | absolute_url }}" target="_blank">Speechworthy Instruction-tuned Language Models</a>
+							</div>
+							<div class="authors">
+								<u><strong>Hyundong J. Cho</strong></u>, Nicolaas Jedema, Leonardo F. R. Ribeiro, Karishma Sharma, Pedro Szekely, Alessandro Moschitti, Ruben Janssen, Jonathan May. <em>EMNLP 2024</em> <a href="{{ '/speechllm.html' | absolute_url }}"> [project page] </a>
+							</div>
+	
+							<div class="excerpt">
+								Current LLMs are fine-tuned with data exclusively with a text interface, which does not capture human preferences for speech, and thus generate text that is not suitable for text-to-speech systems.
+								We collect 20K human preference data where annotators <strong>listen</strong> to the paired responses, instead of reading them through a text interface. We use this data for reinforcement learning with human feedback to adapt an instruction-tuned language model to generate speech-suitable text. 
+								<!-- Our trained model, SpeechFalcon, generates responses that are more frequently preferred than the human-written responses from the original instruction dataset and the generated responses from the base model and its prompted counterpart. -->
+							</div>
+						</div>
+					</div>
+
+					<div class="research-item">
+						<div class="pull-left thumbnail-wrapper">
+							<img src="{{ '/assets/boteval/boteval_thumbnail.png' | absolute_url }}" alt="boteval-thumbnail" class="thumbnail">
+						</div>
+						<div class="description">
+							<div class="paper-title"> 
+								<a href="{{ '/assets/boteval/boteval_acl2024.pdf' | absolute_url }}">BotEval: Facilitating Interactive Human Evaluation</a>
+							</div>
+							<div class="authors">
+								<u><strong>Hyundong J. Cho</strong></u>, Thamme Gowda, Yuyang Huang, Zixun Lu, Tianli Tong, Jonathan May. <em> ACL 2024 SDT </em>
+								<!-- <a href="{{ '/boteval' | absolute_url }}"> [project page] </a> -->
+							</div>
+	
+							<div class="excerpt">
+								We develop BotEval, an easily customizable, open-source, evaluation toolkit that focuses on enabling human-bot interactions as part of the evaluation process, as opposed to human evaluators evaluating a static input. 
+							</div>
+						</div>
+					</div>
 
 
 					<div class="research-item">
@@ -273,46 +311,6 @@ title: Justin Cho
 				<h3> 🔍 Others </h3>
 
 				<div class="research-item">
-					<div class="pull-left thumbnail-wrapper">
-						<img src="{{ '/assets/speechllm/motivating_example.png' | absolute_url }}" alt="speechllm-thumbnail" class="thumbnail">
-					</div>
-					<div class="description">
-						<div class="paper-title"> 
-							Speechworthy Instruction-tuned Language Models
-						</div>
-						<div class="authors">
-							<u><strong>Hyundong J. Cho</strong></u>, Nicolaas Jedema, Leonardo F. R. Ribeiro, Karishma Sharma, Pedro Szekely, Alessandro Moschitti, Ruben Janssen, Jonathan May. <em>Under review.</em>
-						</div>
-
-						<div class="excerpt">
-							Current LLMs are fine-tuned with data exclusively with a text interface, which does not capture human preferences for speech, and thus generate text that is not suitable for text-to-speech systems.
-							We collect 20K human preference data where annotators <em>listen</em> to the paired responses, instead of reading them through a text interface. We use this data for reinforcement learning with human feedback to adapt an instruction-tuned language model to generate speech-suitable text. 
-							<!-- Our trained model, SpeechFalcon, generates responses that are more frequently preferred than the human-written responses from the original instruction dataset and the generated responses from the base model and its prompted counterpart. -->
-						</div>
-					</div>
-				</div>
-
-
-				<div class="research-item">
-					<div class="pull-left thumbnail-wrapper">
-						<img src="{{ '/assets/boteval/boteval_thumbnail.png' | absolute_url }}" alt="boteval-thumbnail" class="thumbnail">
-					</div>
-					<div class="description">
-						<div class="paper-title"> 
-							<a href="{{ '/assets/boteval/boteval_acl2024.pdf' | absolute_url }}">BotEval: Facilitating Interactive Human Evaluation</a>
-						</div>
-						<div class="authors">
-							<u><strong>Hyundong J. Cho</strong></u>, Thamme Gowda, Yuyang Huang, Zixun Lu, Tianli Tong, Jonathan May. <em>Under review.</em>
-							<!-- <a href="{{ '/boteval' | absolute_url }}"> [project page] </a> -->
-						</div>
-
-						<div class="excerpt">
-							We develop BotEval, an easily customizable, open-source, evaluation toolkit that focuses on enabling human-bot interactions as part of the evaluation process, as opposed to human evaluators evaluating a static input. 
-						</div>
-					</div>
-				</div>
-
-				<div class="research-item">
 
 					<div class="pull-left thumbnail-wrapper">
 						<img src="{{ '/assets/viola.png' | absolute_url }}" alt="viola-thumbnail" class="thumbnail">
@@ -337,8 +335,14 @@ title: Justin Cho
 
 			<div id="news">
 				<h3> 📢 News </h3>
-				<div>
+				<div class="news-items">
 					<ul>
+						<li>
+							2024/9: Our work "Speechworthy Instruction-tuned Language Models" has been accepted to EMNLP 2024! See you in Miami!
+						</li>
+						<li>
+							2024/6: Our work "BotEval: Facilitating Interactive Human Evaluation" has been accepted to ACL 2024 SDT! I've also started my internship with Amazon as an applied scientist intern. 
+						</li>
 						<li>
 							2024/3: Our work "Can Language Model Moderators Improve the Health of Online Discourse?" has been accepted to NAACL 2024! See you in Mexico City!  
 						</li>

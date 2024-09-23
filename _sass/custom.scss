@@ -109,7 +109,18 @@ div{
 .research-items{
 	overflow-y: scroll; 
 	height: 800px; 
-	border-bottom: solid 1px gray;
+	border-bottom: solid 1px lightblue;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+.news-items{
+	overflow-y: scroll; 
+	height: 400px; 
+	border-bottom: solid 1px lightblue;
+	padding-top: 10px;
+	padding-bottom: 10px; 
 }
 
 h3{
