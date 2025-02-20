@@ -8,6 +8,15 @@ title: Justin Cho
 	<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 	<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T2B7ZCDLB3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T2B7ZCDLB3');
+</script>
 
 
 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -79,6 +88,45 @@ title: Justin Cho
 				<h3> 🔍 Research </h3>
 
 				<div class="research-items">
+
+
+					<div class="research-item">
+						<div class="pull-left thumbnail-wrapper">
+							<img src="{{ '/assets/ticl/problem_example.png' | absolute_url }}" alt="ticl-thumbnail" class="thumbnail">
+						</div>
+						<div class="description">
+							<div class="paper-title"> 
+								<a href="{{ '/ticl.html' | absolute_url }}" target="_blank">Tuning-Free Personalized Alignment via Trial-Error-Explain In-Context Learning</a>
+							</div>
+							<div class="authors">
+								<u><strong>Hyundong J. Cho</strong></u>, Karishma Sharma, Nicolaas Jedema, Leonardo F. R. Ribeiro, Alessandro Moschitti, Ravi Krishnan, Jonathan May. <em>NAACL 2025 Findings</em> <a href="{{ '/ticl.html' | absolute_url }}"> [project page] </a>
+							</div>
+	
+							<div class="excerpt">
+								We present a tuning-free method that personalizes language models for text generation tasks with fewer than 10 examples per user. TICL iteratively expands an in-context learning prompt via a trial-error-explain process, adding model-generated negative samples and explanations that provide fine-grained guidance towards a specific user's style. We show that the negative samples and explanations enable language models to learn stylistic context more effectively and overcome the bias towards structural and formal phrases observed in their zero-shot outputs and few-shot outputs.
+
+							</div>
+						</div>
+					</div>
+
+					<div class="research-item">
+						<div class="pull-left thumbnail-wrapper">
+							<img src="{{ '/assets/ditto.png' | absolute_url }}" alt="ticl-thumbnail" class="thumbnail">
+						</div>
+						<div class="description">
+							<div class="paper-title"> 
+								<a href="https://arxiv.org/abs/2406.00888" target="_blank">Aligning Language Models with Demonstrated Feedback</a>
+							</div>
+							<div class="authors">
+								Omar Shaikh, Michelle Lam, Joey Hejna, Yijia Shao, <u><strong>Hyundong J. Cho</strong></u>, Michael Bernstein, Diyi Yang <em>ICLR 2025</em> 
+								<!-- <a href="{{ '/ditto.html' | absolute_url }}"> [project page] </a> -->
+							</div>
+	
+							<div class="excerpt">
+								We show that it is possible to align an LLM to a specific setting by leveraging a very small number (&lt;10) of demonstrations as feedback. Our method, <strong>D</strong>emonstration <strong>IT</strong>erated <strong>Task</strong> <strong>O</strong>ptimization (DITTO), directly aligns language model outputs to a user's demonstrated behaviors. Derived using ideas from online imitation learning, DITTO cheaply generates online comparison data by treating users' demonstrations as preferred over output from the LLM and its intermediate checkpoints. Across our benchmarks and user study, we find that win-rates for DITTO outperform few-shot prompting, supervised fine-tuning, and other self-play methods by an average of 19% points. By using demonstrations as feedback directly, DITTO offers a novel method for effective customization of LLMs.
+							</div>
+						</div>
+					</div>
 
 
 					<div class="research-item">
@@ -335,6 +383,10 @@ title: Justin Cho
 				<h3> 📢 News </h3>
 				<div class="news-items">
 					<ul>
+						<li>
+							2025/1: "Tuning-Free Personalized Alignment via Trial-Error-Explain In-Context Learning" has been accepted to NAACL 2025 Findings!
+							"Aligning Language Models with Demonstrated Feedback" has been accepted to ICLR 2025!
+						</li>
 						<li>
 							2024/9: Our work "Speechworthy Instruction-tuned Language Models" has been accepted to EMNLP 2024! See you in Miami!
 						</li>

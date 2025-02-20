@@ -1,10 +1,9 @@
 ---
-title: SpeechLLM 
-description: Project page for "Speechworthy Instruction-tuned Language Models"
-tagline: "Speechworthy Instruction-tuned Language Models"
-conference: EMNLP 2024 
-repolink: TBD
-paperlink: https://arxiv.org/abs/2409.14672
+title: TICL 
+description: Project page for "Tuning-Free Personalized Alignment via Trial-Error-Explain In-Context Learning"
+tagline: "Tuning-Free Personalized Alignment via Trial-Error-Explain In-Context Learning"
+conference: TBD
+paperlink: https://arxiv.org/abs/2502.08972
 ---
 
 <!DOCTYPE html>
@@ -29,11 +28,11 @@ paperlink: https://arxiv.org/abs/2409.14672
   <meta name="twitter:image" content="/assets/convmod/static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="speechworthy, instruction-tuned language models, speech-suitable, radio-industry best practices, preference learning, speech-suitable, speech-suitable, speech-suitable, speech-suitable">
+  <meta name="keywords" content="conversational moderation, moderation, large language model, evaluation, prompting, prompt engineering">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Speechworthy Instruction-tuned Language Models</title>
+  <title>Academic Project Page</title>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -60,12 +59,15 @@ paperlink: https://arxiv.org/abs/2409.14672
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-2 publication-title">Speechworthy Instruction-tuned Language Models
+            <h1 class="title is-2 publication-title">Tuning-Free Personalized Alignment via Trial-Error-Explain In-Context Learning
             </h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
                 <a href="https://justin-cho.com" target="_blank">Hyundong Justin Cho</a><sup>1</sup>,</span>
+                <span class="author-block">
+                    <a href="https://www.linkedin.com/in/karishma-sharma-a7257546/" target="_blank">Karishma Sharma</a><sup>2</sup>,
+                </span>
                 <span class="author-block">
                     <a href="https://www.amazon.science/author/nicolaas-jedema" target="_blank">Nicolaas Jedema</a><sup>2</sup>, 
                 </span>
@@ -73,18 +75,11 @@ paperlink: https://arxiv.org/abs/2409.14672
                     <a href="https://leoribeiro.github.io/" target="_blank">Leonardo F.R. Ribeiro</a><sup>2</sup>,
                 </span>     
                 <span class="author-block">
-                    <a href="https://www.linkedin.com/in/karishma-sharma-a7257546/" target="_blank">Karishma Sharma</a><sup>2</sup>,
-                </span>
-                <span class="author-block">
-                    <a href="https://www.linkedin.com/in/szeke/" target="_blank">Pedro Szekely</a><sup>2</sup>,
-                </span>
-                <span class="author-block">
                     <a href="https://disi.unitn.it/~moschitti/" target="_blank">Alessandro Moschitti</a><sup>2</sup>, 
                 </span>
                 <span class="author-block">
-                    <a href="https://www.linkedin.com/in/ruben-janssen-411b779b" target="_blank">Ruben Janssen</a><sup>2</sup>,
+                    <a href="https://www.linkedin.com/in/ravi-krishnan-59509155/" target="_blank">Ravi Krishnan</a><sup>2</sup>,
                 </span>
-
                 <span class="author-block">
                 <a href="https://jonmay.github.io/webpage/" target="_blank">Jonathan May</a><sup>1</sup>
                 </span>
@@ -105,7 +100,7 @@ paperlink: https://arxiv.org/abs/2409.14672
                 <div class="column has-text-centered">
                 <div class="publication-links">
                         <!-- Arxiv PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                     <a href="{{page.paperlink}}" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -113,7 +108,7 @@ paperlink: https://arxiv.org/abs/2409.14672
                     </span>
                     <span>Paper</span>
                     </a>
-                </span>
+                    </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -164,11 +159,34 @@ paperlink: https://arxiv.org/abs/2409.14672
   <div class="container is-max-desktop">
 
     <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3">Speechworthiness</h2>
+      <h3 class="title is-3">Challenge: Personalizing Language Models for Text Generation in Realistic Settings</h3>
     </div>
 
-    <div class="hero-img" style="text-align: center;">
-        <img style="max-width:600px" src="/assets/speechllm/motivating_example.png" alt="Speechworthy Overview">
+    <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px;">
+        <div style="flex: 1;">
+            <div class="hero-body content has-text-justified">
+                <p> 
+                    Language models are aligned to the collective voice of many, resulting in generic outputs that do not align with specific users' styles. 
+                    Yet end users often have specific needs that call for personalized text generation, such as writing an email. Therefore, adapting LLMs for personalized text generation has drawn a growing interest, but prior work on personalized text generation either rely on large amounts of personal or parameter updates that result in cumbersome per-user model parameters. Can we instead personalize language models for text generation tasks without any parameter updates and with only a few examples?
+                </p>
+            </div>
+        </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <h3 class="title is-3">Trial-Error-Explain In-Context Learning (TICL)</h3>
+    </div>  
+
+    <div class="hero-img">
+      <img src="/assets/ticl/method_overview.png" alt="TICL Overview">
     </div>
 
     <div class="columns is-centered has-text-centered">
@@ -177,7 +195,8 @@ paperlink: https://arxiv.org/abs/2409.14672
         <div class="hero-body content has-text-justified">
           <p>
             
-            Current instruction-tuned language models are exclusively trained with textual preference data and thus are often not aligned with the unique requirements of other modalities, such as speech. To better align language models with the speech domain, we explore (<em>i</em>) prompting strategies grounded in radio-industry best practices and (<em>ii</em>) preference learning using a novel speech-based preference data of 20K samples, generated with a wide spectrum of prompts that induce varying dimensions of speech-suitability and labeled by annotators who <strong></strong>listen</strong> to response pairs. Both human and automatic evaluation show that both prompting and preference learning increase the speech-suitability of popular instruction-tuned LLMs. Interestingly, we find that prompting and preference learning can be additive; combining them achieves the best win rates in head-to-head comparison, resulting in responses that are preferred or tied to the base model in 76.2% of comparisons on average. Lastly, we share lexical, syntactical, and qualitative analyses to showcase how each method contributes to improving the speech-suitability of generated responses.
+            To address this challenge, we propose Trial-Error-Explain In-Context Learning (TICL), an inference-only approach that front-loads inference compute to create a user-specific in-context learning prompt that does not require extra generation steps at test time.
+            The key idea of TICL is to iteratively expand a few-shot in-context learning prompt via a trial-error-explain process, adding model-generated negative samples and explanations that provide fine-grained guidance towards a specific user's style. 
 
           </p>
         </div>
@@ -186,38 +205,26 @@ paperlink: https://arxiv.org/abs/2409.14672
   </div>
 </section>
 
-
-
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3">How to evaluate for conversational moderation?</h2>
-    </div>  
-
-    <div class="hero-img">
-      <img src="/assets/convmod/methodology.png" alt="Conversational Moderation Overview">
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+  
+      <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px;">
+          <div style="flex: 0 0 400px;">
+              <img style="width: 100%;" src="/assets/ticl/problem_example.png" alt="TICL Teaser">
+          </div>
+          <div style="flex: 1;">
+              <div class="hero-body content has-text-justified">
+                  <p> 
+                    We find that a providing model with its own "failures" as negative samples and corresponding explanations enables the model to learn stylistic context more effectively and overcome the bias towards structural and formal phrases observed in their zero-shot and few-shot outputs.
+                    TICL achieves favorable win rates on pairwise comparisons with LLM-as-a-judge up to 91.5% against the previous state-of-the-art and outperforms competitive tuning-free baselines for personalized alignment tasks of writing emails, essays and news articles. 
+                  </p>
+              </div>
+          </div>
+      </div>
+  
     </div>
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-
-        <div class="hero-body content has-text-justified">
-          <p>
-            
-            We propose a comprehensive evaluation framework to assess models' moderation capabilities independently of human intervention. We build on moderation literature from <a href="https://openyls.law.yale.edu/handle/20.500.13051/7798" target="_blank">Grimmelman</a> that establishes two main goals of moderation: (1) <em>respectful:</em> making users more respectful (i.e., reducing toxicity) and (2) <em>cooperative:</em> fostering constructive conversations. Also, <a href="https://www.jstor.org/stable/j.ctt5hhgvw">Kiesler et al.</a> found that moderators who provided fair and specific feedback were considered more effective in achieving these goals, so we also evaluate on (3) <em>fairness</em> and (4) <em>specificity</em>.
-
-            <br><br>
-
-            We want to evaluate language model-based conversational moderators on these dimensions in a realistic, safe, and controlled manner. To this end, we extract controversial conversations from Reddit (realistic) and have these conversations continued offline as a dyadic conversation between a human participant that provided consent for our study and the moderator (safe). We then ask evaluators to rate the continuation of these conversations based on a survey about the evaluation criteria. Our setup circumvents confounding factors such as when to intervene and whether human moderators will actually choose to use the model's suggested responses (controlled). 
-
-          </p>
-        </div>
-      </div> 
-    </div>
-  </div>
-</section> -->
-
+  </section>
+  
 
 
 
@@ -296,29 +303,16 @@ paperlink: https://arxiv.org/abs/2409.14672
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{cho-etal-2024-speechworthy,
-        title = "Speechworthy Instruction-tuned Language Models",
-        author = "Cho, Hyundong Justin  and
-          Jedema, Nicolaas Paul  and
-          Ribeiro, Leonardo F. R.  and
-          Sharma, Karishma  and
-          Szekely, Pedro  and
-          Moschitti, Alessandro  and
-          Janssen, Ruben  and
-          May, Jonathan",
-        editor = "Al-Onaizan, Yaser  and
-          Bansal, Mohit  and
-          Chen, Yun-Nung",
-        booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
-        month = nov,
-        year = "2024",
-        address = "Miami, Florida, USA",
-        publisher = "Association for Computational Linguistics",
-        url = "https://aclanthology.org/2024.emnlp-main.595/",
-        doi = "10.18653/v1/2024.emnlp-main.595",
-        pages = "10652--10670",
-        abstract = "Current instruction-tuned language models are exclusively trained with textual preference data and thus may not be aligned to the unique requirements of other modalities, such as speech. To better align language models with the speech domain, we explore i) prompting strategies based on radio-industry best practices and ii) preference learning using a novel speech-based preference data of 20K samples collected by annotators who listen to response pairs. Both human and automatic evaluation show that both prompting and preference learning increase the speech-suitability of popular instruction tuned LLMs. More interestingly, we show that these methods are additive; combining them achieves the best win rates in head-to-head comparison, resulting in responses that are preferred or tied to the base model in 76.2{\%} of comparisons on average. Lastly, we share lexical, syntactical, and qualitative analyses that elicit how our studied methods differ with baselines in generating more speech-suitable responses."
-    }</code></pre>
+      <pre><code>@misc{cho2025tuningfreepersonalizedalignmenttrialerrorexplain,
+        title={Tuning-Free Personalized Alignment via Trial-Error-Explain In-Context Learning}, 
+        author={Hyundong Cho and Karishma Sharma and Nicolaas Jedema and Leonardo F. R. Ribeiro and Alessandro Moschitti and Ravi Krishnan and Jonathan May},
+        year={2025},
+        eprint={2502.08972},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL},
+        url={https://arxiv.org/abs/2502.08972}, 
+  }
+</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
@@ -342,11 +336,6 @@ paperlink: https://arxiv.org/abs/2409.14672
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
