@@ -2,7 +2,8 @@
 @import 'ext/normalize';
 @import 'syntax';
 
-$linkColor: #0A59B0;
+$linkColor: #006400;
+$hoverColor: #8d090b;
 $mobileW: 768px;
 $smallMobileW: 480px;
 $bigScreenW: 1600px;
@@ -19,19 +20,19 @@ body {
 	margin: 20px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+
+	a {
+		text-decoration: none;
+		transition: color 0.3s;
+		color: $linkColor !important;
+		&:hover {
+			color: $hoverColor !important;
+		}
+	}
 }
 
 img, embed, object, video {
 	max-width: 100%;
-}
-
-a {
-	text-decoration: none;
-	transition: color 0.3s;
-	&:hover {
-		color: $linkColor;
-		text-decoration: underline;
-	}
 }
 
 h2 {
@@ -71,7 +72,7 @@ main {
 	}
 
 	.content {
-		@media screen and (min-width: $mobileW + 1){
+		@media screen and (min-width: ($mobileW + 1)) {
 			max-width: 650px;
 			margin-left: $leftWidth;
 		}
@@ -85,7 +86,7 @@ main {
 			height: auto;	
 			padding: 5vh 0;
 		}
-		@media screen and (min-width: $mobileW + 1) {
+		@media screen and (min-width: ($mobileW + 1)) {
 			position: fixed;
 		}
 		min-width: 180px;
@@ -110,11 +111,12 @@ main {
 			font-size: 12px;
 			text-align: center;
 			a {
-				text-decoration: none;
-				transition: border-bottom 0.4s;
+				text-decoration: none !important;
+				transition: color 0.4s;
 				color: rgb(105, 105, 105);
 				&:hover {
 					color: $linkColor;
+					text-decoration: none !important;
 				}
 			}
 		}
@@ -130,11 +132,12 @@ main {
 	list-style-type: none;
 	padding: 0;
 	margin-top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
 	li {
-		float: left;
-		i {
-			font-size: 27px;
-		}
+		display: inline-block;
 	}
 }
 
@@ -195,10 +198,11 @@ div.blog-body {
 	line-height: 1.9em;
 	a {
 		color: $linkColor;
-		text-decoration: none;
-		transition: border-bottom 0.4s;
+		text-decoration: none !important;
+		transition: color 0.4s;
 		&:hover {
-			border-bottom: 0.5px solid $linkColor;
+			color: $hoverColor;
+			text-decoration: none !important;
 		}
 	}
 
@@ -216,4 +220,20 @@ div.blog-body {
 	letter-spacing: 0.5px;
 	padding-bottom: 10px;
 	font-weight: normal;
+}
+
+.highlighter-green {
+	background-color: #e6ffe6;
+	padding: 2px 4px;
+	border-radius: 3px;
+	color: #006400;
+}
+
+.icon {
+	margin: 0 5px;
+	display: inline-block;
+	
+	i {
+		font-size: 27px;
+	}
 }
