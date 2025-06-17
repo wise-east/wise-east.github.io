@@ -4,6 +4,8 @@ description: Project page for "Can Vision Language Models Understand Mimed Actio
 tagline: "Can Vision Language Models Understand Mimed Actions?"
 conference: ACL 2025 Findings
 paperlink: TBD
+repolink: https://github.com/wise-east/mime
+datalink: https://mime-understanding.s3.amazonaws.com/index.html
 ---
 
 <!DOCTYPE html>
@@ -95,7 +97,7 @@ paperlink: TBD
                 &nbsp;
                 &nbsp;
                 &nbsp;
-                <span class="author-block"><sup>2</sup>&nbsp;<img style="max-width: auto; height: 50px;" src="/assets/mime/usc_ict.jpeg"/></span>
+                <span class="author-block"><sup>2</sup>&nbsp;<img style="max-width: auto; height: 50px;" src="/assets/usc_ict.jpeg"/></span>
                 <span class="author-block"><sup>3</sup>&nbsp;<img style="max-width: autho; height: 50px;" src="/assets/usc_logo.png"/></span>
                 <span class="author-block"><sup>4</sup>&nbsp;<img style="max-width: autho; height: 50px;" src="/assets/ucsb_logo.png"/></span>
                 <span class="author-block"><sup>5</sup>&nbsp;<img style="max-width: autho; height: 50px;" src="/assets/aristotle_logo.png"/></span>
@@ -121,10 +123,22 @@ paperlink: TBD
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code & Data (TBD)
+                    <span>Code (TBD) 
                     </span>
                   </a>
                 </span>
+
+                <!-- Data link -->
+                <span class="link-block">
+                  <a href="{{page.datalink}}" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Data
+                  </span>
+                </a>
+              </span>
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
@@ -133,7 +147,7 @@ paperlink: TBD
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>arXiv (TBD)</span>
                   </a>
                 </span>
 
@@ -163,14 +177,19 @@ paperlink: TBD
   <div class="container is-max-desktop">
 
     <div class="columns is-centered has-text-centered">
-      <h3 class="title is-3">Prerequisite to Nonverbal Communication Understanding: Foundational Understanding of Human Gestures</h3>
+      <h4 class="title is-4 ">Evaluating VLM's Understanding of Human Gestures through Mimed Actions: </h4>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <h4 class="title is-5 ">A Foundational Prerequisite for Nonverbal Communication Understanding</h4>
     </div>
 
-    <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px;">
-        <div style="flex: 1;">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
             <div class="hero-body content has-text-justified">
                 <p> 
-
+                  Nonverbal communication (NVC) plays an integral role in human language, but studying NVC in general is challenging because of its broad scope and high variance in interpretation among individuals and cultures.
+                  However, mime - the theatrical technique of suggesting intent using only gesture, expression, and movement - is a subset of NVC that consists of explicit and embodied actions with much lower human interpretation variance. 
+                  We argue that a solid understanding of mimed actions is a crucial prerequisite for vision-language models capable of interpreting and commanding more subtle aspects of NVC. 
                 </p>
             </div>
         </div>
@@ -185,47 +204,135 @@ paperlink: TBD
   <div class="container is-max-desktop">
 
     <div class="columns is-centered has-text-centered">
-      <h3 class="title is-3">Mime Identification Multimodal Evaluation (MIME)</h3>
+      <h3 class="title is-4">Mime Identification Multimodal Evaluation (<span style="font-variant: small-caps;">MIME</span>)</h3>
     </div>  
 
-    <div class="hero-img">
-      <img src="/assets/mime/intro.png" alt="TICL Overview">
-    </div>
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-
-        <div class="hero-body content has-text-justified">
-          <p>
-            
-
-          </p>
-        </div>
-      </div> 
-    </div>
+    <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px;">
+      <div class="hero-body content" style="flex: 0 0 400px;">
+          <img style="width: 100%;" src="/assets/mime/intro.png" alt="MIME Overview">
+      </div>
+      <div style="flex: 1;">
+          <div class="hero-body content has-text-justified">
+              <p> 
+                Hence, we propose Mime Identification Multimodal Evaluation (MIME), a novel video-based question answering benchmark comprising of 86 mimed actions. 
+                <br/>
+                <br/>
+                The figure on the left shows a simplified illustration of a sample in MIME shown with a single frame from a video of a 3D male character miming a basketball shot. 
+                We evaluate with both multiple-choice (MC) and free-form short answer (FF) formats, where the former provides a list of options, which in effect supplies contextual information, while the latter requires the model to provide a short answer without such context and is therefore more challenging. 
+                <br/>
+                <br/>
+                <strong>Spoiler alert:</strong> Humans achieve almost perfect accuracy on identifying mimed actions regardless of evaluation format, adversarial perturbations, and the absence of any salient context (e.g., basketball, court, basketball uniform), while VLMs struggle without salient context. 
+              </p>
+          </div>
+      </div>
+  </div>
   </div>
 </section>
 
 <section class="hero teaser">
     <div class="container is-max-desktop">
   
-      <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 40px;">
-          <div style="flex: 0 0 400px;">
-              <img style="width: 100%;" src="/assets/ticl/problem_example.png" alt="TICL Teaser">
+      <div class="hero-img">
+        <img src="/assets/mime/pipeline.png" alt="MIME pipeline">
+      </div>
+
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+  
+          <div class="hero-body content has-text-justified">
+            <p>
+              
+              We illustrate the pipeline for constructing MIME above. 
+              <span style="font-family: monospace;">(1)</span> We first collect motion capture data of a mimed action on a Vicon stage. 
+              <span style="font-family: monospace;">(2)</span> Then, a 3D character is retargeted to our motion capture data in Blender, a computer graphics software. 
+              <span style="font-family: monospace;">(3)</span> Next, we render frames of the animation with a transparent background. 
+              <span style="font-family: monospace;">(4)</span> With frames rendered with transparent backgrounds, we can easily overlay them over images of our choice.
+            </p>
           </div>
-          <div style="flex: 1;">
-              <div class="hero-body content has-text-justified">
-                  <p> 
-                    We find that a providing model with its own "failures" as negative samples and corresponding explanations enables the model to learn stylistic context more effectively and overcome the bias towards structural and formal phrases observed in their zero-shot and few-shot outputs.
-                    TICL achieves favorable win rates on pairwise comparisons with LLM-as-a-judge up to 91.5% against the previous state-of-the-art and outperforms competitive tuning-free baselines for personalized alignment tasks of writing emails, essays and news articles. 
-                  </p>
-              </div>
+        </div> 
+      </div>
+  
+    </div>
+  </section>
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+  
+      <div class="hero-img">
+        <img src="/assets/mime/variants.png" alt="MIME variants">
+      </div>
+
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+  
+          <div class="hero-body content has-text-justified">
+            <p>
+              The main benefit of our setup is that we can flexibly permute different configurations for each action to ablate the robustness of a VLM's understanding of mimed actions. 
+              <br/>
+              <br/>
+              <span style="font-family: monospace;">(a,b,f,g)</span> are examples of the same animation but with changes to the camera angle. Different body parts become occluded depending on the angle. 
+              <span style="font-family: monospace;">(c)</span> and <span style="font-family: monospace;">(h)</span>  only change the character from <span style="font-family: monospace;">(a)</span>. 
+              <span style="font-family: monospace;">(c)</span> is a female human character while <span style="font-family: monospace;">(h)</span> is an adversarial character <img src="https://abs.twimg.com/emoji/v2/72x72/1f608.png" alt="😈" style="height: 1.2em; vertical-align: middle; margin: 0 0.1em;"> in a sci-fi spacesuit. 
+              <span style="font-family: monospace;">(d)</span> and <span style="font-family: monospace;">(i)</span> are variants of <span style="font-family: monospace;">(a)</span> and <span style="font-family: monospace;">(h)</span> respectively with aligned backgrounds (<span style="font-family: monospace;">=background</span>, e.g., basketball court for basketball-related action) while <span style="font-family: monospace;">(e)</span> and <span style="font-family: monospace;">(j)</span> have adversarial backgrounds (<span style="font-family: monospace;">≠background</span>, e.g., living room).
+            </p>
           </div>
+        </div> 
       </div>
   
     </div>
   </section>
   
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+  
+      <div class="hero-img">
+        <img src="/assets/mime/main_results.png" alt="MIME main results">
+      </div>
+
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+  
+          <div class="hero-body content has-text-justified">
+            <p>
+              We evaluate various open-weight and API-based vision-language models on MIME. 
+              We find that humans are robust to all variations, but VLMs drop performance for adversarial perturbations while the performance improves when exposed to signals from the background that are aligned with the action! This motivates the need for increased research for instilling more robust understanding of human gestures in VLMs.
+            </p>
+          </div>
+        </div> 
+      </div>
+  
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+  
+      <div class="columns is-centered has-text-centered">
+        <h3 class="title is-5">Check out the paper for more details and other interesting findings!</h3>
+      </div>  
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+  
+          <div class="hero-body content has-text-justified">
+            <p>
+              We share interesting findings on results with attempts to improve on MIME, such as Chain-of-Thought (CoT) prompting, few-shot in-context learning, and fine-tuning! We also analyze the failure modes of CoT to identify why current VLMs fail so miserably on MIME.  
+            </p>
+          </div>
+        </div> 
+      </div>
+
+
+
+    </div>
+  </section>
+
+
+
 
 
 
@@ -328,7 +435,7 @@ paperlink: TBD
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
             You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
