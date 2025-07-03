@@ -1,5 +1,5 @@
 ---
-title: MIME 
+title: Mime
 description: Project page for "Can Vision Language Models Understand Mimed Actions?"
 tagline: "Can Vision Language Models Understand Mimed Actions?"
 conference: ACL 2025 Findings
@@ -14,9 +14,9 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="Can Vision Language Models Understand Mimed Actions? MIME Benchmark"/>
-  <meta property="og:title" content="Can Vision Language Models Understand Mimed Actions? MIME Benchmark"/>
-  <meta property="og:description" content="Can Vision Language Models Understand Mimed Actions? MIME Benchmark"/>
+  <meta name="description" content="Can Vision Language Models Understand Mimed Actions? Mime Benchmark"/>
+  <meta property="og:title" content="Can Vision Language Models Understand Mimed Actions? Mime Benchmark"/>
+  <meta property="og:description" content="Can Vision Language Models Understand Mimed Actions? Mime Benchmark"/>
   <meta property="og:url" content="https://justin-cho.com/mime"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="/assets/research_page_template/static/images/banner.png"/>
@@ -24,8 +24,8 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="Can Vision Language Models Understand Mimed Actions? MIME Benchmark">
-  <meta name="twitter:description" content="Can Vision Language Models Understand Mimed Actions? MIME Benchmark">
+  <meta name="twitter:title" content="Can Vision Language Models Understand Mimed Actions? Mime Benchmark">
+  <meta name="twitter:description" content="Can Vision Language Models Understand Mimed Actions? Mime Benchmark">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="/assets/mime/intro.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -34,7 +34,7 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Can Vision Language Models Understand Mimed Actions? MIME Benchmark</title>
+  <title>Can Vision Language Models Understand Mimed Actions? Mime Benchmark</title>
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -48,95 +48,72 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
   <link rel="stylesheet" href="/assets/research_page_template/static/css/index.css">
 
   <style>
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 15px;
-      margin-bottom: 40px;
+
+
+  
+    
+    /* Add more spacing between sections */
+    .hero.teaser {
+      margin-bottom: 3rem;
     }
     
-    .video-container {
-      aspect-ratio: 1;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      background: #000;
-      position: relative;
+    .hero-img {
+      margin: 2rem 0;
     }
     
-    .video-wrapper {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      position: relative;
+    .publication-video {
+      margin: 2rem 0;
     }
-    
-    .video-wrapper video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      transform: scale(1.6);
-      cursor: pointer;
-    }
-    
-    .custom-controls {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 40px;
-      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+
+    .mime-tabs {
       display: flex;
-      align-items: center;
-      padding: 0 10px;
-      gap: 10px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #dbdbdb;
     }
-    
-    .video-container:hover .custom-controls {
-      opacity: 1;
-      pointer-events: all;
-    }
-    
-    .play-pause-btn, .fullscreen-btn {
-      background: none;
+    .mime-tab {
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
       border: none;
-      color: white;
-      cursor: pointer;
-      font-size: 16px;
-      padding: 5px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+      background: none;
+      font-size: 1.1rem;
+      color: #363636;
+      outline: none;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.2s, color 0.2s;
     }
-    
-    .fullscreen-btn {
-      font-size: 14px;
+    .mime-tab.active {
+      color: #3273dc;
+      border-bottom: 2px solid #3273dc;
+      font-weight: bold;
     }
-    
-    .progress-bar {
-      flex: 1;
-      height: 3px;
-      background: rgba(255,255,255,0.3);
-      border-radius: 2px;
-      cursor: pointer;
-      position: relative;
+    .mime-leaderboard-table { display: none; }
+    .mime-leaderboard-table.active { display: block; }
+    .human-row {
+      background-color: #e3f6ff !important;
     }
-    
-    .progress-fill {
-      height: 100%;
-      background: rgba(255,255,255,0.8);
-      border-radius: 2px;
-      width: 0%;
-      transition: width 0.1s ease;
+    .top-accuracy {
+      color: #3273dc;
+      font-weight: bold;
     }
-    
-    .time-display {
-      color: white;
-      font-size: 11px;
-      min-width: 45px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    .table-responsive {
+      width: 100%;
+      overflow-x: auto;
+    }
+    @media (max-width: 600px) {
+      .mime-tabs {
+        font-size: 0.9rem;
+      }
+      .mime-tab {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.7rem;
+      }
+      .table, .table th, .table td {
+        font-size: 0.85rem;
+      }
+      .title.is-5 {
+        font-size: 1.1rem;
+      }
     }
   </style>
 
@@ -146,126 +123,6 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
   <script src="/assets/research_page_template/static/js/bulma-carousel.min.js"></script>
   <script src="/assets/research_page_template/static/js/bulma-slider.min.js"></script>
   <script src="/assets/research_page_template/static/js/index.js"></script>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Video URLs array
-      const videoUrls = [
-        'https://mime-understanding.s3.amazonaws.com/man_j_Basketball001_angle0_blank.mp4',
-        'https://mime-understanding.s3.amazonaws.com/man_j_Basketball001_angle0_basketball_court.mp4',
-        'https://mime-understanding.s3.amazonaws.com/man_j_Basketball001_angle0_living_room.mp4',
-        'https://mime-understanding.s3.amazonaws.com/spacesuit_j_Basketball001_angle0_living_room.mp4',
-        'https://mime-understanding.s3.amazonaws.com/man_j_Swimming001_angle0_blank.mp4',
-        'https://mime-understanding.s3.amazonaws.com/man_j_Swimming001_angle90_blank.mp4',
-        'https://mime-understanding.s3.amazonaws.com/man_j_Swimming001_angle180_blank.mp4',
-        'https://mime-understanding.s3.amazonaws.com/man_j_Swimming001_angle270_blank.mp4',
-        'https://mime-understanding.s3.amazonaws.com/man_j_GolfSwing001_angle0_blank.mp4',
-        'https://mime-understanding.s3.amazonaws.com/woman_j_GolfSwing001_angle0_blank.mp4',
-        'https://mime-understanding.s3.amazonaws.com/spacesuit_j_GolfSwing001_angle0_blank.mp4',
-        'https://mime-understanding.s3.amazonaws.com/spacesuit_j_GolfSwing001_angle0_concert_hall.mp4'
-      ];
-
-      // Generate video elements
-      const videoGrid = document.getElementById('video-grid');
-      
-      videoUrls.forEach(url => {
-        const videoContainer = document.createElement('div');
-        videoContainer.className = 'video-container';
-        
-        videoContainer.innerHTML = `
-          <div class="video-wrapper">
-            <video src="${url}"></video>
-          </div>
-          <div class="custom-controls">
-            <button class="play-pause-btn">▶</button>
-            <div class="progress-bar">
-              <div class="progress-fill"></div>
-            </div>
-            <div class="time-display">0:00</div>
-            <button class="fullscreen-btn">⛶</button>
-          </div>
-        `;
-        
-        videoGrid.appendChild(videoContainer);
-      });
-
-      // Initialize custom video controls
-      const videoContainers = document.querySelectorAll('.video-container');
-      
-      videoContainers.forEach(container => {
-        const video = container.querySelector('video');
-        const playPauseBtn = container.querySelector('.play-pause-btn');
-        const progressBar = container.querySelector('.progress-bar');
-        const progressFill = container.querySelector('.progress-fill');
-        const timeDisplay = container.querySelector('.time-display');
-        const fullscreenBtn = container.querySelector('.fullscreen-btn');
-        
-        // Play/Pause functionality
-        playPauseBtn.addEventListener('click', () => {
-          if (video.paused) {
-            video.play();
-            playPauseBtn.textContent = '⏸';
-          } else {
-            video.pause();
-            playPauseBtn.textContent = '▶';
-          }
-        });
-        
-        // Click on video to play/pause
-        video.addEventListener('click', () => {
-          if (video.paused) {
-            video.play();
-            playPauseBtn.textContent = '⏸';
-          } else {
-            video.pause();
-            playPauseBtn.textContent = '▶';
-          }
-        });
-        
-        // Update progress bar and time
-        video.addEventListener('timeupdate', () => {
-          const progress = (video.currentTime / video.duration) * 100;
-          progressFill.style.width = progress + '%';
-          
-          const currentTime = Math.floor(video.currentTime);
-          const duration = Math.floor(video.duration);
-          timeDisplay.textContent = `${Math.floor(currentTime / 60)}:${(currentTime % 60).toString().padStart(2, '0')}`;
-        });
-        
-        // Click on progress bar to seek
-        progressBar.addEventListener('click', (e) => {
-          const rect = progressBar.getBoundingClientRect();
-          const clickX = e.clientX - rect.left;
-          const progress = clickX / rect.width;
-          video.currentTime = progress * video.duration;
-        });
-        
-        // Reset button when video ends
-        video.addEventListener('ended', () => {
-          playPauseBtn.textContent = '▶';
-        });
-        
-        // Update duration when metadata is loaded
-        video.addEventListener('loadedmetadata', () => {
-          const duration = Math.floor(video.duration);
-          timeDisplay.textContent = `0:00 / ${Math.floor(duration / 60)}:${(duration % 60).toString().padStart(2, '0')}`;
-        });
-
-        // Fullscreen functionality
-        fullscreenBtn.addEventListener('click', () => {
-          if (video.requestFullscreen) {
-            video.requestFullscreen();
-          } else if (video.mozRequestFullScreen) { /* Firefox */
-            video.mozRequestFullScreen();
-          } else if (video.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-            video.webkitRequestFullscreen();
-          } else if (video.msRequestFullscreen) { /* IE/Edge */
-            video.msRequestFullscreen();
-          }
-        });
-      });
-    });
-  </script>
 </head>
 <body>
 
@@ -274,9 +131,14 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">
-              Can Vision Language Models Understand Mimed Actions?
-            </h1>
+
+            <div class="teaser">
+              <img src="{{ '/assets/mime/teaser.png' | absolute_url }}" alt="Mime teaser" style="width:50%; margin-bottom: 20px;"/>
+            </div>
+
+            <h2 class="title is-2 publication-title">
+              Can Vision Language Models Understand <br/> Mimed Actions?
+            </h2>
             <div class="is-size-6 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -339,6 +201,32 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
                     <span>arXiv</span>
                   </a>
                 </span>
+                <!-- link to leaderboard -->
+                <span class="link-block">
+                  <a href="#mime-leaderboard"
+                  class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-trophy"></i>
+                    </span>
+                    <span>Leaderboard</span>
+                  </a>
+                </span>
+
+                <!-- link to poster -->
+                <span class="link-block">
+                  <a href="/assets/mime/poster.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                    <span>Poster</span>
+                  </a>
+                </span>
+
+                <!-- link to slides -->
+                <span class="link-block">
+                  <a href="/assets/mime/slides.pdf" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                    <span>Slides</span>
+                  </a>
+                </span>
 
                 <!-- <span class="link-block">
                   <a href="https://docs.google.com/presentation/d/165ZwxObkNQYbFNo7lEOA31L9zOC9PZ98n12G2RS5ego/edit?usp=sharing" target="_blank"
@@ -395,23 +283,23 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
 
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
-        <h4 class="title is-4">Mime Identification Multimodal Evaluation (MIME)</h4>
+        <h4 class="title is-4">Mime Identification Multimodal Evaluation (<span style="font-family: 'Times New Roman', serif; font-variant: small-caps; font-weight: bold;">Mime</span>)</h4>
       </div>
     </div>  
 
     <div class="columns is-centered">
       <div class="column is-half-tablet is-full-mobile">
         <div class="hero-body content has-text-centered">
-            <img style="width: 100%; max-width: 400px;" src="/assets/mime/intro.png" alt="MIME Overview">
+            <img style="width: 100%; max-width: 400px;" src="/assets/mime/intro.png" alt="Mime Overview">
         </div>
       </div>
       <div class="column is-half-tablet is-full-mobile">
           <div class="hero-body content has-text-justified">
               <p> 
-                Hence, we propose Mime Identification Multimodal Evaluation (MIME), a novel video-based question answering benchmark comprising of 86 mimed actions. 
+                Hence, we propose <span style="font-family: 'Times New Roman', serif; font-variant: small-caps; font-weight: bold;">Mime</span> Identification Multimodal Evaluation (<span style="font-family: 'Times New Roman', serif; font-variant: small-caps; font-weight: bold;">Mime</span>), a novel video-based question answering benchmark comprising of 86 mimed actions. 
                 <br/>
                 <br/>
-                The figure on the left shows a simplified illustration of a sample in MIME shown with a single frame from a video of a 3D male character miming a basketball shot. 
+                The figure on the left shows a simplified illustration of a sample in <span style="font-family: 'Times New Roman', serif; font-variant: small-caps; font-weight: bold;">Mime</span> shown with a single frame from a video of a 3D male character miming a basketball shot. 
                 We evaluate with both multiple-choice (MC) and free-form short answer (FF) formats, where the former provides a list of options, which in effect supplies contextual information, while the latter requires the model to provide a short answer without such context and is therefore more challenging. 
                 <br/>
                 <br/>
@@ -423,14 +311,15 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
 
     <div class="columns is-centered has-text-centered" >
       <div class="column is-full">
-        <h4 class="title is-4">Sample MIME Videos</h4>
+        <h4 class="title is-4"><span style="font-family: 'Times New Roman', serif; font-variant: small-caps; font-weight: bold;">Mime</span> Teaser</h4>
       </div>
     </div>  
     
     <div class="columns is-centered">
+      <!-- add video at https://mime-understanding.s3.amazonaws.com/mime_teaser.mp4 -->
       <div class="column is-full">
-        <div class="video-grid" id="video-grid">
-          <!-- Videos will be generated by JavaScript -->
+        <div class="video-container" style="max-width: 80%; margin: 0 auto;">
+          <video src="https://mime-understanding.s3.amazonaws.com/mime_teaser.mp4" controls></video>
         </div>
       </div>
     </div>
@@ -441,11 +330,11 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
     <div class="container is-max-desktop">
   
       <div class="columns is-centered has-text-centered">
-        <h4 class="title is-4">MIME Pipeline</h4>
+        <h4 class="title is-4"><span style="font-family: 'Times New Roman', serif; font-variant: small-caps; font-weight: bold;">Mime</span> Pipeline</h4>
       </div>
 
-      <div class="hero-img">
-        <img src="/assets/mime/pipeline.png" alt="MIME pipeline">
+      <div class="hero-img" style="max-width: 80%; margin: 0 auto;">
+        <img src="/assets/mime/pipeline.png" alt="Mime pipeline">
       </div>
 
 
@@ -455,7 +344,7 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
           <div class="hero-body content has-text-justified">
             <p>
               
-              We illustrate the pipeline for constructing MIME above. 
+              We illustrate the pipeline for constructing <span style="font-family: 'Times New Roman', serif; font-variant: small-caps; font-weight: bold;">Mime</span> above. 
               <span style="font-family: monospace;">(1)</span> We first collect motion capture data of a mimed action on a Vicon stage. 
               <span style="font-family: monospace;">(2)</span> Then, a 3D character is retargeted to our motion capture data in Blender, a computer graphics software. 
               <span style="font-family: monospace;">(3)</span> Next, we render frames of the animation with a transparent background. 
@@ -473,11 +362,11 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
     <div class="container is-max-desktop">
   
       <div class="columns is-centered has-text-centered">
-        <h4 class="title is-4">MIME Variants</h4>
+        <h4 class="title is-4"><span style="font-family: 'Times New Roman', serif; font-variant: small-caps; font-weight: bold;">Mime</span> Variants</h4>
       </div>
 
-      <div class="hero-img">
-        <img src="/assets/mime/variants.png" alt="MIME variants">
+      <div class="hero-img" style="max-width: 80%; margin: 0 auto;">
+        <img src="/assets/mime/variants.png" alt="Mime variants">
       </div>
 
 
@@ -507,10 +396,10 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
   
 
       <div class="columns is-centered has-text-centered">
-        <h4 class="title is-4">MIME Results</h4>
+        <h4 class="title is-4"><span style="font-family: 'Times New Roman', serif; font-variant: small-caps; font-weight: bold;">Mime</span> Results</h4>
       </div>
-      <div class="hero-img">
-        <img src="/assets/mime/main_results.png" alt="MIME main results">
+      <div class="hero-img" style="max-width: 80%; margin: 0 auto;">
+        <img src="/assets/mime/main_results.png" alt="Mime main results">
       </div>
 
 
@@ -519,7 +408,7 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
   
           <div class="hero-body content has-text-justified">
             <p>
-              We evaluate various open-weight and API-based vision-language models on MIME. 
+              We evaluate various open-weight and API-based vision-language models on <span style="font-family: 'Times New Roman', serif; font-variant: small-caps; font-weight: bold;">Mime</span>. 
               We find that humans are robust to all variations, but VLMs drop performance for adversarial perturbations while the performance improves when exposed to signals from the background that are aligned with the action! This motivates the need for increased research for instilling more robust understanding of human gestures in VLMs.
             </p>
           </div>
@@ -541,19 +430,166 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
   
           <div class="hero-body content has-text-justified">
             <p>
-              We share interesting findings on results with attempts to improve on MIME, such as Chain-of-Thought (CoT) prompting, few-shot in-context learning, and fine-tuning! We also analyze the failure modes of CoT to identify why current VLMs fail so miserably on MIME.  
+              We share interesting findings on results with attempts to improve on <span style="font-family: 'Times New Roman', serif; font-variant: small-caps; font-weight: bold;">Mime</span>, such as Chain-of-Thought (CoT) prompting, few-shot in-context learning, and fine-tuning! We also analyze the failure modes of CoT to identify why current VLMs fail so miserably on <span style="font-family: 'Times New Roman', serif; font-variant: small-caps; font-weight: bold;">Mime</span>.  
             </p>
           </div>
         </div> 
       </div>
 
+      <div class="columns is-centered has-text-centered" id="mime-leaderboard">
+        <h3 class="title is-3"><i class="fas fa-trophy"></i> <span style="font-family: 'Times New Roman', serif; font-variant: small-caps; font-weight: bold;">Mime</span> Leaderboard</h3>
+      </div>  
 
+      <div class="mime-tabs">
+        <button class="mime-tab active" onclick="showMimeLeaderboardTab(0)">😈 + ≠background@0 (Free-form)</button>
+        <button class="mime-tab" onclick="showMimeLeaderboardTab(1)">😈 + ≠background@0 (Multiple Choice)</button>
+        <button class="mime-tab" onclick="showMimeLeaderboardTab(2)">Base + blank@0 (Free-form)</button>
+        <button class="mime-tab" onclick="showMimeLeaderboardTab(3)">Base + blank@0 (Multiple Choice)</button>
+      </div>
 
+      <div id="mime-leaderboard-tables">
+        <div class="mime-leaderboard-table active" id="mime-table-ff-adv">
+          <div class="hero-body content has-text-centered">
+            <h5 class="title is-5"><span style="font-family: monospace;">😈 + ≠background@0 (Free-form)</span></h5>
+            <div class="table-responsive">
+              <table class="table is-striped is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Model</th>
+                    <th>Method</th>
+                    <th>Accuracy (%)</th>
+                    <th>Submission Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="human-row"><td>-</td><td>Cho et al. 2025</td><td>Human</td><td>-</td><td><strong>95.0</strong></td><td>2025-07-03</td></tr>
+                  <tr><td>1</td><td>Cho et al. 2025</td><td>Gemini 1.5 Flash</td><td>CoT</td><td class="top-accuracy">11.6</td><td>2025-07-03</td></tr>
+                  <tr><td>2</td><td>Cho et al. 2025</td><td>Phi 3.5 (4.2B)</td><td>Zero-shot</td><td>5.8</td><td>2025-07-03</td></tr>
+                  <tr><td>3</td><td>Cho et al. 2025</td><td>GPT-4o Mini</td><td>CoT</td><td>8.1</td><td>2025-07-03</td></tr>
+                  <tr><td>4</td><td>Cho et al. 2025</td><td>Gemini 1.5 Flash</td><td>Zero-shot</td><td>3.5</td><td>2025-07-03</td></tr>
+                  <tr><td>5</td><td>Cho et al. 2025</td><td>GPT-4o Mini</td><td>Zero-shot</td><td>2.3</td><td>2025-07-03</td></tr>
+                  <tr><td>6</td><td>Cho et al. 2025</td><td>GPT-4o Mini</td><td>Few-shot</td><td>2.3</td><td>2025-07-03</td></tr>
+                  <tr><td>7</td><td>Cho et al. 2025</td><td>InternVL2.5 (8B)</td><td>Zero-shot</td><td>2.3</td><td>2025-07-03</td></tr>
+                  <tr><td>8</td><td>Cho et al. 2025</td><td>Phi 3.5 (4.2B)</td><td>CoT</td><td>2.3</td><td>2025-07-03</td></tr>
+                  <tr><td>9</td><td>Cho et al. 2025</td><td>Qwen 2.5 VL (7B)</td><td>CoT</td><td>1.2</td><td>2025-07-03</td></tr>
+                  <tr><td>10</td><td>Cho et al. 2025</td><td>Qwen 2.5 VL (3B)</td><td>Zero-shot</td><td>0.0</td><td>2025-07-03</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="mime-leaderboard-table" id="mime-table-mc-adv">
+          <div class="hero-body content has-text-centered">
+            <h5 class="title is-5"><span style="font-family: monospace;">😈 + ≠background@0 (Multiple Choice)</span></h5>
+            <div class="table-responsive">
+              <table class="table is-striped is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Model</th>
+                    <th>Method</th>
+                    <th>Accuracy (%)</th>
+                    <th>Submission Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="human-row"><td>-</td><td>Cho et al. 2025</td><td>Human</td><td>-</td><td><strong>99.2</strong></td><td>2025-07-03</td></tr>
+                  <tr><td>1</td><td>Cho et al. 2025</td><td>GPT-4o Mini</td><td>Few-shot</td><td class="top-accuracy">59.3</td><td>2025-07-03</td></tr>
+                  <tr><td>2</td><td>Cho et al. 2025</td><td>Gemini 1.5 Flash</td><td>CoT</td><td>48.8</td><td>2025-07-03</td></tr>
+                  <tr><td>3</td><td>Cho et al. 2025</td><td>Gemini 1.5 Flash</td><td>Few-shot</td><td>44.2</td><td>2025-07-03</td></tr>
+                  <tr><td>4</td><td>Cho et al. 2025</td><td>GPT-4o Mini</td><td>CoT</td><td>44.2</td><td>2025-07-03</td></tr>
+                  <tr><td>5</td><td>Cho et al. 2025</td><td>Gemini 1.5 Flash</td><td>Zero-shot</td><td>36.1</td><td>2025-07-03</td></tr>
+                  <tr><td>6</td><td>Cho et al. 2025</td><td>GPT-4o Mini</td><td>Zero-shot</td><td>36.1</td><td>2025-07-03</td></tr>
+                  <tr><td>7</td><td>Cho et al. 2025</td><td>Phi 3.5 (4.2B)</td><td>Zero-shot</td><td>36.1</td><td>2025-07-03</td></tr>
+                  <tr><td>8</td><td>Cho et al. 2025</td><td>Qwen 2.5 VL (7B)</td><td>Zero-shot</td><td>30.2</td><td>2025-07-03</td></tr>
+                  <tr><td>9</td><td>Cho et al. 2025</td><td>InternVL2.5 (8B)</td><td>Zero-shot</td><td>30.2</td><td>2025-07-03</td></tr>
+                  <tr><td>10</td><td>Cho et al. 2025</td><td>Qwen 2.5 VL (3B)</td><td>CoT</td><td>25.6</td><td>2025-07-03</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="mime-leaderboard-table" id="mime-table-ff-base">
+          <div class="hero-body content has-text-centered">
+            <h5 class="title is-5"><span style="font-family: monospace;">Base + blank@0 (Free-form)</span></h5>
+            <div class="table-responsive">
+              <table class="table is-striped is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Model</th>
+                    <th>Method</th>
+                    <th>Accuracy (%)</th>
+                    <th>Submission Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="human-row"><td>-</td><td>Cho et al. 2025</td><td>Human</td><td>-</td><td><strong>89.5</strong></td><td>2025-07-03</td></tr>
+                  <tr><td>1</td><td>Cho et al. 2025</td><td>Gemini 1.5 Flash</td><td>CoT</td><td class="top-accuracy">22.1</td><td>2025-07-03</td></tr>
+                  <tr><td>2</td><td>Cho et al. 2025</td><td>Gemini 1.5 Flash</td><td>Zero-shot</td><td>19.8</td><td>2025-07-03</td></tr>
+                  <tr><td>3</td><td>Cho et al. 2025</td><td>Gemini 1.5 Flash</td><td>Few-shot</td><td>14.0</td><td>2025-07-03</td></tr>
+                  <tr><td>4</td><td>Cho et al. 2025</td><td>GPT-4o Mini</td><td>CoT</td><td>16.3</td><td>2025-07-03</td></tr>
+                  <tr><td>5</td><td>Cho et al. 2025</td><td>GPT-4o Mini</td><td>Zero-shot</td><td>11.6</td><td>2025-07-03</td></tr>
+                  <tr><td>6</td><td>Cho et al. 2025</td><td>GPT-4o Mini</td><td>Few-shot</td><td>9.3</td><td>2025-07-03</td></tr>
+                  <tr><td>7</td><td>Cho et al. 2025</td><td>Qwen 2.5 VL (7B)</td><td>CoT</td><td>8.1</td><td>2025-07-03</td></tr>
+                  <tr><td>8</td><td>Cho et al. 2025</td><td>Phi 3.5 (4.2B)</td><td>CoT</td><td>4.7</td><td>2025-07-03</td></tr>
+                  <tr><td>9</td><td>Cho et al. 2025</td><td>Qwen 2.5 VL (7B)</td><td>Zero-shot</td><td>5.8</td><td>2025-07-03</td></tr>
+                  <tr><td>10</td><td>Cho et al. 2025</td><td>InternVL2.5 (8B)</td><td>Zero-shot</td><td>2.3</td><td>2025-07-03</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="mime-leaderboard-table" id="mime-table-mc-base">
+          <div class="hero-body content has-text-centered">
+            <h5 class="title is-5"><span style="font-family: monospace;">Base + blank@0 (Multiple Choice)</span></h5>
+            <div class="table-responsive">
+              <table class="table is-striped is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Model</th>
+                    <th>Method</th>
+                    <th>Accuracy (%)</th>
+                    <th>Submission Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="human-row"><td>-</td><td>Cho et al. 2025</td><td>Human</td><td>-</td><td><strong>99.6</strong></td><td>2025-07-03</td></tr>
+                  <tr><td>1</td><td>Cho et al. 2025</td><td>GPT-4o Mini</td><td>Few-shot</td><td class="top-accuracy">74.4</td><td>2025-07-03</td></tr>
+                  <tr><td>2</td><td>Cho et al. 2025</td><td>Gemini 1.5 Flash</td><td>Few-shot</td><td>57.0</td><td>2025-07-03</td></tr>
+                  <tr><td>3</td><td>Cho et al. 2025</td><td>Gemini 1.5 Flash</td><td>CoT</td><td>54.7</td><td>2025-07-03</td></tr>
+                  <tr><td>4</td><td>Cho et al. 2025</td><td>Gemini 1.5 Flash</td><td>Zero-shot</td><td>52.3</td><td>2025-07-03</td></tr>
+                  <tr><td>5</td><td>Cho et al. 2025</td><td>GPT-4o Mini</td><td>CoT</td><td>43.0</td><td>2025-07-03</td></tr>
+                  <tr><td>6</td><td>Cho et al. 2025</td><td>Qwen 2.5 VL (3B)</td><td>CoT</td><td>43.0</td><td>2025-07-03</td></tr>
+                  <tr><td>7</td><td>Cho et al. 2025</td><td>GPT-4o Mini</td><td>Zero-shot</td><td>41.9</td><td>2025-07-03</td></tr>
+                  <tr><td>8</td><td>Cho et al. 2025</td><td>Qwen 2.5 VL (7B)</td><td>CoT</td><td>41.9</td><td>2025-07-03</td></tr>
+                  <tr><td>9</td><td>Cho et al. 2025</td><td>Qwen 2.5 VL (7B)</td><td>Zero-shot</td><td>39.5</td><td>2025-07-03</td></tr>
+                  <tr><td>10</td><td>Cho et al. 2025</td><td>Qwen 2.5 VL (7B)</td><td>FT</td><td>36.8</td><td>2025-07-03</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+  
+          <div class="hero-body content has-text-centered">
+            <p>
+              To submit your results, please fill out this <a href="https://forms.gle/wngEpygGdWyjRonE7" target="_blank">submission form</a>. 
+            </p>
+          </div>
+        </div> 
+      </div>
     </div>
   </section>
-
-
-
 
 
 
@@ -596,21 +632,21 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
 
 
 <!-- Youtube video -->
-<!-- <section class="hero is-small">
+<section class="hero is-small">
   <div class="hero-body">
     <div class="container has-text-centered is-centered">
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+        <div class="column is-three-fifths">
           
           <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/AdRvTkctCcI?si=VHIbN_wRc4jIGEK9" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/viCEzhtiS_w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 <!-- End youtube video -->
 
 
@@ -619,7 +655,7 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
+      <h2 class="title">Cite us!</h2>
       <pre><code>
         @misc{cho2025visionlanguagemodelsunderstand,
           title={Can Vision Language Models Understand Mimed Actions?}, 
@@ -654,6 +690,26 @@ datalink: https://mime-understanding.s3.amazonaws.com/index.html
   </div>
 </footer>
 
+<script>
+function showMimeLeaderboardTab(idx) {
+  var tabs = document.querySelectorAll('.mime-tab');
+  var tables = document.querySelectorAll('.mime-leaderboard-table');
+  tabs.forEach((tab, i) => {
+    if (i === idx) {
+      tab.classList.add('active');
+    } else {
+      tab.classList.remove('active');
+    }
+  });
+  tables.forEach((table, i) => {
+    if (i === idx) {
+      table.classList.add('active');
+    } else {
+      table.classList.remove('active');
+    }
+  });
+}
+</script>
 
 </body>
 </html>
