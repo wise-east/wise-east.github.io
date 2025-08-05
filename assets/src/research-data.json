@@ -1,0 +1,174 @@
+{
+  "research": [
+
+    {
+        "id": "quest", 
+        "title": "Which Questions Improve Learning the Most? Utility Estimation of Questions with LM-based Simulations",
+        "authors": "Dong-Ho Lee, Hyundong J. Cho, Jonathan May, Jay Pujara",
+        "venue": "under review",
+        "paper_url": "https://arxiv.org/abs/2502.17383",
+        "project_url": null,
+        "thumbnail": "/assets/quest/overview.png",
+        "excerpt": "We develop an extrinsic metric for question utility contextualized to a downstream task with a framework called QUEST to overcome limitations of prior question quality metrics that are indirect and task-agnostic. QUEST uses a langauge model to simulate a learner that asks questions and receives answers while studying and takes a related exam with various subsets of QA pairs to estimate each question's direct contribution to learning outcomes. Models fine-tuned with high-utility questions identified by QUEST achieve simulated test scores by over 20% compared to competitive baselines."
+    },
+    {
+      "id": "mime",
+      "title": "Can Vision-Language Models Understand Mimed Actions?",
+      "authors": "Hyundong J. Cho, Spener Lin, Tejas Srinivasan, Michael Saxon, Deuksin Kwon, Natali T. Chavez, Jonathan May",
+      "venue": "ACL 2025 Findings",
+      "paper_url": "https://www.arxiv.org/abs/2506.21586",
+      "project_url": "/mime.html",
+      "thumbnail": "/assets/mime/intro.png",
+      "excerpt": "We propose Mime Identification Multimodal Evaluation (MIME), a novel video-based question answering benchmark comprising of 86 mimed actions, as a step towards developing a robust understanding of human actions as a pathway to enabling nonverbal communication understanding. We find that both open-weight and API-based vision-language models perform significantly worse than humans on MIME."
+    },
+    {
+      "id": "ticl",
+      "title": "Tuning-Free Personalized Alignment via Trial-Error-Explain In-Context Learning",
+      "authors": "Hyundong J. Cho, Karishma Sharma, Nicolaas Jedema, Leonardo F. R. Ribeiro, Alessandro Moschitti, Ravi Krishnan, Jonathan May",
+      "venue": "NAACL 2025 Findings",
+      "paper_url": "/ticl.html",
+      "project_url": "/ticl.html",
+      "thumbnail": "/assets/ticl/problem_example.png",
+      "excerpt": "We present a tuning-free method that personalizes language models for text generation tasks with fewer than 10 examples per user. TICL iteratively expands an in-context learning prompt via a trial-error-explain process, adding self-generated model-specific negative samples and explanations that provide fine-grained guidance towards a specific user's style. We show that the negative samples and explanations enable language models to learn stylistic context more effectively and overcome the bias towards structural and formal phrases observed in their zero-shot outputs and few-shot outputs."
+    },
+    {
+      "id": "ditto",
+      "title": "Aligning Language Models with Demonstrated Feedback",
+      "authors": "Omar Shaikh, Michelle Lam, Joey Hejna, Yijia Shao, Hyundong J. Cho, Michael Bernstein, Diyi Yang",
+      "venue": "ICLR 2025",
+      "paper_url": "https://arxiv.org/abs/2406.00888",
+      "project_url": null,
+      "thumbnail": "/assets/ditto.png",
+      "excerpt": "We show that it is possible to align an LLM to a specific setting by leveraging a very small number (<10) of demonstrations as feedback. Our method, Demonstration ITerated Task Optimization (DITTO), directly aligns language model outputs to a user's demonstrated behaviors. Derived using ideas from online imitation learning, DITTO cheaply generates online comparison data by treating users' demonstrations as preferred over output from the LLM and its intermediate checkpoints. Across our benchmarks and user study, we find that DITTO outperforms various competitive baselines."
+    },
+    {
+      "id": "speechllm",
+      "title": "Speechworthy Instruction-tuned Language Models",
+      "authors": "Hyundong J. Cho, Nicolaas Jedema, Leonardo F. R. Ribeiro, Karishma Sharma, Pedro Szekely, Alessandro Moschitti, Ruben Janssen, Jonathan May",
+      "venue": "EMNLP 2024",
+      "paper_url": "/speechllm.html",
+      "project_url": "/speechllm.html",
+      "thumbnail": "/assets/speechllm/motivating_example.png",
+      "excerpt": "Current LLMs are fine-tuned with data exclusively with a text interface, which does not capture human preferences for speech, and thus generate text that is not suitable for text-to-speech systems. We collect 20K human preference data where annotators listen to the paired responses, instead of reading them through a text interface. We use this data for reinforcement learning with human feedback to adapt an instruction-tuned language model to generate speech-suitable text."
+    },
+    {
+      "id": "boteval",
+      "title": "BotEval: Facilitating Interactive Human Evaluation",
+      "authors": "Hyundong J. Cho, Thamme Gowda, Yuyang Huang, Zixun Lu, Tianli Tong, Jonathan May",
+      "venue": "ACL 2024 SDT",
+      "paper_url": "/assets/boteval/boteval_acl2024.pdf",
+      "project_url": null,
+      "thumbnail": "/assets/boteval/boteval_thumbnail.png",
+      "excerpt": "We develop BotEval, an easily customizable, open-source, evaluation toolkit that focuses on enabling human-bot interactions as part of the evaluation process, as opposed to human evaluators evaluating a static input."
+    },
+    {
+      "id": "convmod",
+      "title": "Can Language Model Moderators Improve the Health of Online Discourse?",
+      "authors": "Hyundong J. Cho, Shuai Liu, Taiwei Shi, Darpan Jain, Basem Rizk, Yuyang Huang, Zixun Lu, Nuan Wen, Jonathan Gratch, Emilio Ferrera, Jonathan May",
+      "venue": "NAACL 2024",
+      "paper_url": "https://arxiv.org/abs/2311.10781",
+      "project_url": "/convmod/index.html",
+      "thumbnail": "/assets/convmod/conversational_moderation_example.png",
+      "excerpt": "Deleting comments and banning users are iron-fisted moderation tactics that can lead to a chilling effect on free speech. Instead, conversational moderation aims to guide users to more constructive behavior. We investigate whether language models can be effective conversational moderators and thus be effective tools for improving the health of online discourse."
+    },
+    {
+      "id": "dst_egqa",
+      "title": "Continual Dialogue State Tracking via Example-Guided Question Answering",
+      "authors": "Hyundong J. Cho, Andrea Madotto, Zhaojiang Lin, Khyathi Raghavi Chandu, Satwik Kottur, Jing Xu, Jonathan May, Chinnadhurai Sankar",
+      "venue": "EMNLP2023",
+      "paper_url": "https://arxiv.org/abs/2305.13721",
+      "project_url": "https://arxiv.org/abs/2305.13721",
+      "thumbnail": "/assets/dst_egqa/intro2.png",
+      "excerpt": "Estimating a user's goal in a dialogue can be done by asking natural language questions, and answering questions is a transferable skill that can be easily learned from examples. With this insight, we restructure dialogue state tracking (DST) to eliminate service-specific structured text and unify data from all services by decomposing each DST sample to a bundle of fine-grained example-guided question answering tasks. With a retriever trained to find examples that introduce similar updates to dialogue states, we find that our method can significantly boost continual learning performance, even for a model with just 60M parameters."
+    },
+    {
+      "id": "normvio",
+      "title": "Analyzing Norm Violations in Live-Stream Chat",
+      "authors": "Jihyung Moon, Dong-Ho Lee, Hyundong J. Cho, Woojeong Jin, Chan Young Park, Minwoo Kim, Jonathan May, Jay Pujara, Sungjoon Park",
+      "venue": "EMNLP2023",
+      "paper_url": "https://arxiv.org/abs/2305.10731",
+      "project_url": "https://arxiv.org/abs/2305.10731",
+      "thumbnail": "/assets/normvio_livestream.png",
+      "excerpt": "Toxic behavior in live-stream chat is a growing concern as live-streaming platforms such as Twitch and YouTube live are becoming increasingly popular. Previous detection methods are not effective for live-stream chat as each comment is only visible for a limited time and lacks a thread structure. To bridge this gap, we define norm violation categories in live-stream chats and annotate 4,583 moderated comments from Twitch and train live-stream chat-specific detection models."
+    },
+    {
+      "id": "recap",
+      "title": "RECAP: Retrieval-Enhanced Context-Aware Prefix Encoder for Personalized Dialogue Response Generation",
+      "authors": "Shuai Liu, Hyundong J. Cho, Marjorie Freedman, Xuezhe Ma, Jonathan May",
+      "venue": "ACL2023",
+      "paper_url": "https://aclanthology.org/2023.acl-long.468/",
+      "project_url": "https://aclanthology.org/2023.acl-long.468/",
+      "thumbnail": "/assets/recap.png",
+      "excerpt": "Endowing chatbots with a consistent persona is essential to an engaging conversation, yet it remains an unresolved challenge. In this work, we propose a new retrieval-enhanced approach for personalized response generation."
+    },
+    {
+      "id": "checkdst",
+      "title": "Know Thy Strengths: Comprehensive Dialogue State Tracking Diagnostics",
+      "authors": "Hyundong J. Cho, Chinnadhurai Sankar, Christopher Lin, Kaushik Ram Sadagopan, Shahin Shayandeh, Asli Celikyilmaz, Jonathan May, Ahmad Beirami",
+      "venue": "EMNLP2022 Findings",
+      "paper_url": "https://arxiv.org/abs/2112.08321",
+      "project_url": "/checkdst",
+      "thumbnail": "/assets/checkdst/checkdst.png",
+      "excerpt": "Humans are robust to understanding dialogue states in the presence of noise and ambiguity, but dialogue state tracking (DST) models are not. This analysis of DST robustness has been sparse and uncoordinated in previous work. Our standardized and comprehensive DST diagnoses toolkit, CheckDST, is a collection of robustness tests and failure mode analytics. With CheckDST, we discover that different classes of DST models have clear strengths and weaknesses, where generation models are more promising for handling language variety while classification models are more robust to unseen entities."
+    },
+    {
+      "id": "reflect",
+      "title": "Reflect, Not Reflex: Inference-Based Common Ground Improves Dialogue Response Quality",
+      "authors": "Pei Zhou, Hyundong J. Cho, Pegah Jandaghi, Dong-Ho Lee, Bill Yuchen Lin, Jay Pujara, Xiang Ren",
+      "venue": "EMNLP2022",
+      "paper_url": "https://arxiv.org/abs/2211.09267",
+      "project_url": "https://inklab.usc.edu/Reflect/",
+      "thumbnail": "/assets/reflect_not_reflex.png",
+      "excerpt": "We introduce Reflect, a dataset that annotates dialogues with explicit CG and solicits 9k diverse human-generated responses each following one common ground. Using Reflect, we showcase the limitations of current dialogue data and RG models: less than half of the responses in current data are rated as high quality and models trained using this data have even lower quality, while most Reflect responses are judged high quality. We also analyze whether CG can help models produce better-quality responses by using Reflect CG to guide RG models."
+    },
+    {
+      "id": "probing",
+      "title": "Probing Commonsense Explanation in Dialogue Response Generation",
+      "authors": "Pei Zhou, Pegah Jandaghi, Hyundong J. Cho, Bill Yuchen Lin, Jay Pujara, Xiang Ren",
+      "venue": "EMNLP2021 Findings",
+      "paper_url": "https://aclanthology.org/2021.findings-emnlp.349",
+      "project_url": "https://aclanthology.org/2021.findings-emnlp.349",
+      "thumbnail": "/assets/zhou_emnlp2021.png",
+      "excerpt": "We collect 6k annotated explanations justifying responses from four dialogue datasets and ask humans to verify them and propose two probing settings to evaluate response generation models' commonsense reasoning capabilities. Probing results show that response generation models fail to capture the logical relations between commonsense explanations and responses and fine-tuning on in-domain data and increasing model sizes do not lead to understanding of commonsense reasoning."
+    },
+    {
+      "id": "spolin",
+      "title": "Grounding Conversations with Improvised Dialogues",
+      "authors": "Hyundong J. Cho, Jonathan May",
+      "venue": "ACL2020",
+      "paper_url": "https://aclanthology.org/2020.acl-main.218/",
+      "project_url": "/spolin",
+      "demo_url": "https://spolin.isi.edu",
+      "thumbnail": "/assets/spolin/yesand_example2.png",
+      "excerpt": "Open-domain dialogue systems overlook an important phenomena that makes conversations engaging: the initiation of the next relevant contribution, which is the most proactive method of \"grounding\". We collect \"Yes, and\" type dialogue pairs that naturally embed such initations from an improv podcast and existing dialogue corpora to create the Spontaneanation Pairs Of Learnable ImprovisatioN (SPOLIN) dataset. Human evaluation shows that models fine-tuned with SPOLIN generate more engaging results.",
+      "press": [
+        {
+          "name": "Science Daily",
+          "url": "https://www.sciencedaily.com/releases/2020/07/200715095502.htm"
+        },
+        {
+          "name": "USC Viterbi",
+          "url": "https://viterbischool.usc.edu/news/2020/07/move-over-siri-usc-viterbi-researchers-develop-improv-based-chatbot/"
+        },
+        {
+          "name": "mindbounce",
+          "url": "https://www.mindbounce.com/445861/meet-the-chatbot-thats-learning-to-improvise/"
+        },
+        {
+          "name": "Tech With Gajesh",
+          "url": "https://techwithgajesh.com/spolinbot-the-new-avatar-of-chatbots/"
+        }
+      ]
+    },
+    {
+      "id": "viola",
+      "title": "Viola: A Topic Agnostic Generate-and-Rank Dialogue System",
+      "authors": "Hyundong J. Cho, Basel Shbita, Kartik Shenoy, Shuai Liu, Nikhil Patel, Hitesh Pindikanti, Jennifer Lee, Jonathan May",
+      "venue": "Alexa Prize Socialbot Grand Challenge 4 Proceedings",
+      "paper_url": "https://arxiv.org/abs/2108.11063",
+      "project_url": "https://developer.amazon.com/alexaprize/challenges/current-challenge/sgc4-proceedings",
+      "thumbnail": "/assets/viola.png",
+      "excerpt": "We present Viola, an open-domain dialogue system based on a simple generate-and-rank approach. Viola fetches a batch of response candidates from various neural dialogue models and template-based generators and chooses the final response with a poly-encoder ranker fine-tuned with annotated Alexa conversation data."
+    }
+  ]
+} 

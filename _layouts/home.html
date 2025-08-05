@@ -7,6 +7,7 @@ title: Justin Cho
 	{%- include head.html -%}
 	<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 	<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+	<script src="{{ '/assets/src/research-loader.js' | relative_url }}" defer></script>
 	<meta name="description" content="Hyundong Justin Cho is a PhD candidate at USC studying AI and Machine Learning.">
 	<meta name="keywords" content="Hyundong Justin Cho, machine learning, USC, university of southern california, computer science, CS, HKUST, hong kong university of science and technology, Meta, Amazon, natural language processing, alignment, conversational AI, responsible AI, human-AI interactions, contextualization">
 
@@ -73,11 +74,11 @@ title: Justin Cho
 				</div>
 
 				<div class="intro-text">
-					My research is in natural language processing and machine learning, and most of my research have been centered around improving AI models through enhanced contextualization and analyzing their role in human-AI interactions. I've always been mesmerized by likeable and superintelligent digital assistants in science fiction such as <a href="https://en.wikipedia.org/wiki/Her_(film)">Samantha in Her</a> and <a href="https://interstellarfilm.fandom.com/wiki/TARS"> TARS  in Interstellar</a>, and I'm excited to make them a reality.
+					I'm interested in <strong>human-AI context synchronization</strong>, identifying and modeling the necessary context shared between human and artificial intelligence regarding each other's knowledge and capabilities for successful interactions between them. I develop NLP methods and AI systems that identify and bridge gaps in context synchronization across nuanced contexts and various interaction modalities.
 				</div>
 
 				<div class="intro-text">
-					Previously, I did my undergraduate studies at Hong Kong University of Science and Technology with a major in Computer Science, where I first worked on NLP with <a href="https://pascale.home.ece.ust.hk/" target="_blank">Pascale Fung</a>. I have also interned at Amazon Alexa (now Amazon AGI), working with <a href="https://www.linkedin.com/in/nic-jedema-1ba0bbb1" target="_blank">Nicolaas Jedema</a>, <a href="https://disi.unitn.it/~moschitti/" target="_blank">Alessandro Moschitti</a>, and <a href="https://scholar.google.com/citations?user=U1A6iBMAAAAJ&hl=en" target="_blank">Pedro Szekely</a> (2023, 2024), at <a href="https://ai.facebook.com/research/" target="_blank">Meta AI</a> on <a href="https://sites.google.com/view/alborz-geramifard/home" target="_blank">Alborz Geramifard</a>'s Cognitive AI team with <a href="https://chinnadhurai.github.io/" target="_blank">Chinnadhurai Sankar</a> (2022) and with <a href="https://sites.google.com/view/beirami" target="_blank">Ahmad Beirami</a> (2021), <a href="https://www.stitchfix.com/" target="_blank">Stitch Fix</a> (2020), and at <a href="https://www.isi.edu/research_groups/nlg/home" target="_blank"> ISI's Natural Language Group</a> with <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a> (2019). 
+					Previously, I was an undergrad at Hong Kong University of Science and Technology (HKUST) with a major in Computer Science, where I first worked on NLP with <a href="https://pascale.home.ece.ust.hk/" target="_blank">Pascale Fung</a>. I have also interned at Amazon Alexa (now Amazon AGI), working with <a href="https://scholar.google.com/citations?user=IgklUtwAAAAJ&hl=en" target="_blank">Karishma Sharma</a>, <a href="https://www.linkedin.com/in/nic-jedema-1ba0bbb1" target="_blank">Nicolaas Jedema</a>, <a href="https://disi.unitn.it/~moschitti/" target="_blank">Alessandro Moschitti</a>, and <a href="https://scholar.google.com/citations?user=U1A6iBMAAAAJ&hl=en" target="_blank">Pedro Szekely</a> (2023, 2024), at <a href="https://ai.facebook.com/research/" target="_blank">Meta AI</a> on <a href="https://sites.google.com/view/alborz-geramifard/home" target="_blank">Alborz Geramifard</a>'s Conversational AI team with <a href="https://chinnadhurai.github.io/" target="_blank">Chinnadhurai Sankar</a> (2022) and with <a href="https://sites.google.com/view/beirami" target="_blank">Ahmad Beirami</a> (2021), <a href="https://www.stitchfix.com/" target="_blank">Stitch Fix</a> (2020), and at <a href="https://www.isi.edu/research_groups/nlg/home" target="_blank"> ISI's Natural Language Group</a> with <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a> (2019). 
 				</div>
 			</div>	
 
@@ -97,326 +98,21 @@ title: Justin Cho
 					Check <a href="https://scholar.google.com/citations?user=9YrOON8AAAAJ&hl=en" target="_blank">google scholar</a> for my full publication list.
 				</div>
 
-				<div class="research-items">
-
-					<div class="research-item">
-						<div class="pull-left thumbnail-wrapper">
-							<img src="{{ '/assets/mime/intro.png' | absolute_url }}" alt="mime-thumbnail" class="thumbnail">
-						</div>
-						<div class="description">
-							<div class="paper-title"> 
-								<a href="https://www.arxiv.org/abs/2506.21586" target="_blank">
-									Can Vision-Language Models Understand Mimed Actions?
-								</a>
-							</div>
-							<div class="authors">
-								<u><strong>Hyundong J. Cho</strong></u>, Spener Lin, Tejas Srinivasan, Michael Saxon, Deuksin Kwon, Natali T. Chavez, Jonathan May. <em>ACL 2025 Findings</em>
-								 <a href="{{ '/mime.html' | absolute_url }}"> [project page] </a>
-							</div>
-
-							<div class="excerpt">
-								We propose Mime Identification Multimodal Evaluation (MIME), a novel video-based question answering benchmark comprising of 86 mimed actions, as a step towards understanding nonverbal communication.
-								We find that both open-weight and API-based vision-language models perform significantly worse than humans on MIME, motivating the need for increased research for instilling more robust understanding of human gestures.
-							</div>
-						</div>
-					</div>
-
-
-					<div class="research-item">
-						<div class="pull-left thumbnail-wrapper">
-							<img src="{{ '/assets/ticl/problem_example.png' | absolute_url }}" alt="ticl-thumbnail" class="thumbnail">
-						</div>
-						<div class="description">
-							<div class="paper-title"> 
-								<a href="{{ '/ticl.html' | absolute_url }}" target="_blank">Tuning-Free Personalized Alignment via Trial-Error-Explain In-Context Learning</a>
-							</div>
-							<div class="authors">
-								<u><strong>Hyundong J. Cho</strong></u>, Karishma Sharma, Nicolaas Jedema, Leonardo F. R. Ribeiro, Alessandro Moschitti, Ravi Krishnan, Jonathan May. <em>NAACL 2025 Findings</em> <a href="{{ '/ticl.html' | absolute_url }}"> [project page] </a>
-							</div>
-	
-							<div class="excerpt">
-								We present a tuning-free method that personalizes language models for text generation tasks with fewer than 10 examples per user. TICL iteratively expands an in-context learning prompt via a trial-error-explain process, adding model-generated negative samples and explanations that provide fine-grained guidance towards a specific user's style. We show that the negative samples and explanations enable language models to learn stylistic context more effectively and overcome the bias towards structural and formal phrases observed in their zero-shot outputs and few-shot outputs.
-
-							</div>
-						</div>
-					</div>
-
-					<div class="research-item">
-						<div class="pull-left thumbnail-wrapper">
-							<img src="{{ '/assets/ditto.png' | absolute_url }}" alt="ticl-thumbnail" class="thumbnail">
-						</div>
-						<div class="description">
-							<div class="paper-title"> 
-								<a href="https://arxiv.org/abs/2406.00888" target="_blank">Aligning Language Models with Demonstrated Feedback</a>
-							</div>
-							<div class="authors">
-								Omar Shaikh, Michelle Lam, Joey Hejna, Yijia Shao, <u><strong>Hyundong J. Cho</strong></u>, Michael Bernstein, Diyi Yang <em>ICLR 2025</em> 
-								<!-- <a href="{{ '/ditto.html' | absolute_url }}"> [project page] </a> -->
-							</div>
-	
-							<div class="excerpt">
-								We show that it is possible to align an LLM to a specific setting by leveraging a very small number (&lt;10) of demonstrations as feedback. Our method, <strong>D</strong>emonstration <strong>IT</strong>erated <strong>Task</strong> <strong>O</strong>ptimization (DITTO), directly aligns language model outputs to a user's demonstrated behaviors. Derived using ideas from online imitation learning, DITTO cheaply generates online comparison data by treating users' demonstrations as preferred over output from the LLM and its intermediate checkpoints. Across our benchmarks and user study, we find that win-rates for DITTO outperform few-shot prompting, supervised fine-tuning, and other self-play methods by an average of 19% points. By using demonstrations as feedback directly, DITTO offers a novel method for effective customization of LLMs.
-							</div>
-						</div>
-					</div>
-
-
-					<div class="research-item">
-						<div class="pull-left thumbnail-wrapper">
-							<img src="{{ '/assets/speechllm/motivating_example.png' | absolute_url }}" alt="speechllm-thumbnail" class="thumbnail">
-						</div>
-						<div class="description">
-							<div class="paper-title"> 
-								<a href="{{ '/speechllm.html' | absolute_url }}" target="_blank">Speechworthy Instruction-tuned Language Models</a>
-							</div>
-							<div class="authors">
-								<u><strong>Hyundong J. Cho</strong></u>, Nicolaas Jedema, Leonardo F. R. Ribeiro, Karishma Sharma, Pedro Szekely, Alessandro Moschitti, Ruben Janssen, Jonathan May. <em>EMNLP 2024</em> <a href="{{ '/speechllm.html' | absolute_url }}"> [project page] </a>
-							</div>
-	
-							<div class="excerpt">
-								Current LLMs are fine-tuned with data exclusively with a text interface, which does not capture human preferences for speech, and thus generate text that is not suitable for text-to-speech systems.
-								We collect 20K human preference data where annotators <strong>listen</strong> to the paired responses, instead of reading them through a text interface. We use this data for reinforcement learning with human feedback to adapt an instruction-tuned language model to generate speech-suitable text. 
-								<!-- Our trained model, SpeechFalcon, generates responses that are more frequently preferred than the human-written responses from the original instruction dataset and the generated responses from the base model and its prompted counterpart. -->
-							</div>
-						</div>
-					</div>
-
-					<div class="research-item">
-						<div class="pull-left thumbnail-wrapper">
-							<img src="{{ '/assets/boteval/boteval_thumbnail.png' | absolute_url }}" alt="boteval-thumbnail" class="thumbnail">
-						</div>
-						<div class="description">
-							<div class="paper-title"> 
-								<a href="{{ '/assets/boteval/boteval_acl2024.pdf' | absolute_url }}">BotEval: Facilitating Interactive Human Evaluation</a>
-							</div>
-							<div class="authors">
-								<u><strong>Hyundong J. Cho</strong></u>, Thamme Gowda, Yuyang Huang, Zixun Lu, Tianli Tong, Jonathan May. <em> ACL 2024 SDT </em>
-								<!-- <a href="{{ '/boteval' | absolute_url }}"> [project page] </a> -->
-							</div>
-	
-							<div class="excerpt">
-								We develop BotEval, an easily customizable, open-source, evaluation toolkit that focuses on enabling human-bot interactions as part of the evaluation process, as opposed to human evaluators evaluating a static input. 
-							</div>
-						</div>
-					</div>
-
-
-					<div class="research-item">
-						<div class="pull-left thumbnail-wrapper">
-							<img src="{{ '/assets/convmod/conversational_moderation_example.png' | absolute_url }}" alt="convmod-thumbnail" class="thumbnail">
-						</div>
-						<div class="description">
-							<div class="paper-title"> 
-								<a href="https://arxiv.org/abs/2311.10781" target="_blank"> Can Language Model Moderators Improve the Health of Online Discourse?  </a>
-							</div>
-							<div class="authors">
-								<u><strong>Hyundong J. Cho</strong></u>, Shuai Liu, Taiwei Shi, Darpan Jain, Basem Rizk, Yuyang Huang, Zixun Lu, Nuan Wen, Jonathan Gratch, Emilio Ferrera, Jonathan May. <em>NAACL 2024</em>
-								<a href="{{ '/convmod/index.html' | absolute_url }}"> [project page] </a>
-							</div>
-
-							<div class="excerpt">
-								Deleting comments and banning users are iron-fisted moderation tactics that can lead to a chilling effect on free speech. Instead, conversational moderation aims to guide users to more constructive behavior. 
-								We investigate whether language models can be effective conversational moderators and thus be effective tools for improving the health of online discourse.
-								<!-- We establish a systematic definition of conversational moderation effectiveness through a multidisciplinary lens that incorporates insights from social science and propose a comprehensive evaluation framework that uses this definition to asses models' moderation capabilities independently of human intervention. We find that appropriately prompted models can provide specific and fair feedback on toxic behavior but struggle to influence users to increase their levels of respect and cooperation.  -->
-							</div>
-						</div>
-					</div>
-
-					<div class="research-item"  style="margin-bottom: 10px;">
-						<div class="pull-left thumbnail-wrapper">
-							<img src="{{ '/assets/dst_egqa/intro2.png' | absolute_url }}" alt="dstegqa-thumbnail" class="thumbnail">
-						</div>
-
-						<div class="description">
-							<div class="paper-title"> 
-								<a href="https://arxiv.org/abs/2305.13721" target="_blank"> Continual Dialogue State Tracking via Example-Guided Question Answering</a>	
-							</div>
-							<div class="authors">
-								<u><strong>Hyundong J. Cho</strong></u>, Andrea Madotto, Zhaojiang Lin, Khyathi Raghavi Chandu, Satwik Kottur, Jing Xu, Jonathan May, Chinnadhurai Sankar, <em>EMNLP2023</em> <a href="https://arxiv.org/abs/2305.13721" target="_blank"> [paper] </a> 
-							</div>
-
-							<div class="excerpt">
-								Estimating a user's goal in a dialogue can be done by asking natural language questions, and answering questions is a transferable skill that can be easily learned from examples. 
-								With this insight, we restructure dialogue state tracking (DST) to eliminate service-specific structured text and unify data from all services by decomposing each DST sample to a bundle of fine-grained example-guided question answering tasks. With a retriever trained to find examples that introduce similar updates to dialogue states, we find that our method can significantly boost continual learning performance, even for a model with just 60M parameters. 
-							</div>
-						</div>
-
-					</div>
-
-					<div class="research-item"  style="margin-bottom: 10px;">
-
-						<div class="pull-left thumbnail-wrapper">
-							<img src="{{ '/assets/normvio_livestream.png' | absolute_url }}" alt="normvio-thumbnail" class="thumbnail">
-						</div>
-
-						<div class="description">
-							<div class="paper-title"> 
-								<a href="https://arxiv.org/abs/2305.10731" target="_blank"> Analyzing Norm Violations in Live-Stream Chat</a>	
-							</div>
-							<div class="authors">
-								Jihyung Moon, Dong-Ho Lee, <u><strong>Hyundong J. Cho</strong></u>, Woojeong Jin, Chan Young Park, Minwoo Kim, Jonathan May, Jay Pujara, Sungjoon Park, <em>EMNLP2023</em> <a href="https://arxiv.org/abs/2305.10731" target="_blank"> [paper] </a> 
-							</div>
-
-							<div class="excerpt">
-								Toxic behavior in live-stream chat is a growing concern as live-streaming platforms such as Twitch and YouTube live are becoming increasingly popular. 
-								Previous detection methods are not effective for live-stream chat as each comment is only visible for a limited time and lacks a thread structure. To bridge this gap, we define norm violation categories in live-stream chats and annotate 4,583 moderated comments from Twitch and train live-stream chat-specific detection models.
-								<!-- We identify the informational context humans use in live-stream moderation, and train models leveraging context to identify norm violations. We find that selecting relevant contextual information can boost moderation performance by 35%. -->
-							</div>
-						</div>
-
-					</div>
-
-					<div class="research-item"  style="margin-bottom: 10px;">
-
-						<div class="pull-left thumbnail-wrapper">
-							<img src="{{ '/assets/recap.png' | absolute_url }}" alt="recap-thumbnail" class="thumbnail">
-						</div>
-
-						<div class="description">
-							<div class="paper-title"> 
-								<a href="https://aclanthology.org/2023.acl-long.468/" target="_blank"> RECAP: Retrieval-Enhanced Context-Aware Prefix Encoder for Personalized Dialogue Response Generation</a>	
-							</div>
-							<div class="authors">
-								Shuai Liu, <u><strong>Hyundong J. Cho</strong></u>, Marjorie Freedman, Xuezhe Ma, Jonathan May, <em>ACL2023</em> <a href="https://aclanthology.org/2023.acl-long.468/" target="_blank"> [paper] </a> 
-							</div>
-
-							<div class="excerpt">
-								Endowing chatbots with a consistent persona is essential to an engaging conversation, yet it remains an unresolved challenge. In this work, we propose a new retrieval-enhanced approach for personalized response generation. 
-								<!-- Specifically, we design a hierarchical transformer retriever trained on dialogue domain data to perform personalized retrieval and a context-aware prefix encoder that fuses the retrieved information to the decoder more effectively. Extensive experiments on a real-world dataset demonstrate the effectiveness of our model at generating more fluent and personalized responses. We quantitatively evaluate our model's performance under a suite of human and automatic metrics and find it to be superior compared to state-of-the-art baselines on English Reddit conversations. -->
-							</div>
-						</div>
-
-					</div>
-
-					<div class="research-item"  style="margin-bottom: 10px;">
-
-						<div class="pull-left thumbnail-wrapper">
-							<img src="{{ '/assets/checkdst/checkdst.png' | absolute_url }}" alt="checkdst-thumbnail" class="thumbnail">
-						</div>
-
-						<div class="description">
-							<div class="paper-title"> 
-								<a href="https://arxiv.org/abs/2112.08321" target="_blank"> Know Thy Strengths: Comprehensive Dialogue State Tracking Diagnostics</a>	
-							</div>
-							<div class="authors">
-								<u><strong>Hyundong J. Cho</strong></u>, Chinnadhurai Sankar, Christopher Lin, Kaushik Ram Sadagopan, Shahin Shayandeh, Asli Celikyilmaz, Jonathan May, Ahmad Beirami, <em>EMNLP2022 Findings</em> <a href="https://arxiv.org/abs/2112.08321" target="_blank"> [paper] </a> 
-								<a href="{{ '/checkdst' | absolute_url }}"> [project page] </a>
-							</div>
-
-							<div class="excerpt">
-								Humans are robust to understanding dialogue states in the presence of noise and ambiguity, but dialogue state tracking (DST) models are not. This analysis of DST robustness has been sparse and uncoordinated in previous work. Our standardized and comprehensive DST diagnoses toolkit, CheckDST, is a collection of robustness tests and failure mode analytics. With CheckDST, we discover that different classes of DST models have clear strengths and weaknesses, where generation models are more promising for handling language variety while classification models are more robust to unseen entities.
-							</div>
-						</div>
-
-					</div>
-
-					<div class="research-item">
-
-						<div class="pull-left thumbnail-wrapper">
-							<img src="{{ '/assets/reflect_not_reflex.png' | absolute_url }}" alt="reflect-thumbnail" class="thumbnail">
-						</div>
-
-						<div class="description">
-							<div class="paper-title"> 
-								<a href="https://arxiv.org/abs/2211.09267" target="_blank"> Reflect, Not Reflex: Inference-Based Common Ground Improves Dialogue Response Quality</a>	
-							</div>
-							<div class="authors">
-								Pei Zhou, <u><strong>Hyundong J. Cho</strong></u>, Pegah Jandaghi, Dong-Ho Lee, Bill Yuchen Lin, Jay Pujara, Xiang Ren. <em>EMNLP2022 </em> <a href="https://arxiv.org/abs/2211.09267" target="_blank"> [paper] </a> <a href="https://inklab.usc.edu/Reflect/" target="_blank"> [project page]</a>
-							</div>
-
-							<div class="excerpt">
-								We introduce Reflect, a dataset that annotates dialogues with explicit CG and solicits 9k diverse human-generated responses each following one common ground. Using Reflect, we showcase the limitations of current dialogue data and RG models: less than half of the responses in current data are rated as high quality and models trained using this data have even lower quality, while most Reflect responses are judged high quality. We also analyze whether CG can help models produce better-quality responses by using Reflect CG to guide RG models. </div>
-						</div>
-
-					</div>
-
-					<div class="research-item">
-
-
-						<div class="pull-left thumbnail-wrapper">
-							<img src="{{ '/assets/zhou_emnlp2021.png' | absolute_url }}" alt="probing-thumbnail" class="thumbnail">
-						</div>
-
-						<div class="description">
-							<div class="paper-title"> 
-								<a href="https://aclanthology.org/2021.findings-emnlp.349" target="_blank"> Probing Commonsense Explanation in Dialogue Response Generation </a>
-							</div>
-							<div class="authors">
-								Pei Zhou, Pegah Jandaghi, <u><strong>Hyundong J. Cho</strong></u>, Bill Yuchen Lin, Jay Pujara, Xiang Ren. <em>EMNLP2021 Findings</em> <a href="https://aclanthology.org/2021.findings-emnlp.349" target="_blank"> [paper] </a> 
-							</div>
-
-							<div class="excerpt">
-								We collect 6k annotated explanations justifying responses from four dialogue datasets and ask humans to verify them and propose two probing settings to evaluate response generation models' commonsense reasoning capabilities. Probing results show that response generation models fail to capture the logical relations between commonsense explanations and responses and fine-tuning on in-domain data and increasing model sizes do not lead to understanding of commonsense reasoning. 
-							</div>
-						</div>
-
-					</div>
-
-					<div class="research-item">
-						<div class="pull-left thumbnail-wrapper">
-							<img src="{{ '/assets/spolin/yesand_example2.png' | absolute_url }}" alt="spolin-thumbnail" class="thumbnail">
-						</div>
-
-						<div class="description">
-							<div class="paper-title"> 
-								<a href="https://aclanthology.org/2020.acl-main.218/"> Grounding Conversations with Improvised Dialogues </a>
-							</div>
-							<div class="authors">
-								<u><strong>Hyundong J. Cho</strong></u>, <a href="https://www.isi.edu/~jonmay/" target="_blank"> Jonathan May</a>. <em>ACL2020.</em>
-								<a href="https://aclanthology.org/2020.acl-main.218/" target="_blank"> [paper] </a> 
-								<a href="{{ '/spolin' | absolute_url }}"> [project page] </a> 
-								<a href="https://spolin.isi.edu" target="_blank"> [demo]</a>
-							</div>
-							<div class="press">
-								Press: 
-									<a href="https://www.sciencedaily.com/releases/2020/07/200715095502.htm" target="_blank">Science Daily</a>, 
-									<a href="https://viterbischool.usc.edu/news/2020/07/move-over-siri-usc-viterbi-researchers-develop-improv-based-chatbot/">USC Viterbi</a>, 
-									<a href="https://www.mindbounce.com/445861/meet-the-chatbot-thats-learning-to-improvise/">mindbounce</a>, 
-									<a href="https://techwithgajesh.com/spolinbot-the-new-avatar-of-chatbots/">Tech With Gajesh</a>
-							</div>
-
-							<div class="excerpt">
-								Open-domain dialogue systems overlook an important phenomena that makes conversations engaging: the initiation of the next relevant contribution, which is the most proactive method of "grounding". We collect "Yes, and" type dialogue pairs that naturally embed such initations from an improv podcast and existing dialogue corpora to create the Spontaneanation Pairs Of Learnable ImprovisatioN (<span class="spolin-text">SPOLIN</span>) dataset. Human evaluation shows that models fine-tuned with <span class="spolin-text">SPOLIN</span> generate more engaging results. 
-							</div>
-						</div>
-
-					</div>
+				<div class="research-items" id="research-items">
+					<!-- Research items will be loaded dynamically -->
 				</div>
 
 			</div>
-
-			<div id="other">
-				<h3> 🔍 Preprints / Others </h3>
-
-				<div class="research-item">
-
-					<div class="pull-left thumbnail-wrapper">
-						<img src="{{ '/assets/viola.png' | absolute_url }}" alt="viola-thumbnail" class="thumbnail">
-					</div>
-
-					<div class="description">
-						<div class="paper-title"> 
-							<a href="https://arxiv.org/abs/2108.11063" target="_blank"> Viola: A Topic Agnostic Generate-and-Rank Dialogue System  </a>
-						</div>
-						<div class="authors">
-							<u><strong>Hyundong J. Cho</strong></u>, Basel Shbita, Kartik Shenoy, Shuai Liu, Nikhil Patel, Hitesh Pindikanti, Jennifer Lee, Jonathan May. <a target="_blank" href="https://developer.amazon.com/alexaprize/challenges/current-challenge/sgc4-proceedings"> Alexa Prize Socialbot Grand Challenge 4 Proceedings</a>, 2021 
-						</div>
-
-						<div class="excerpt">
-							We present Viola, an open-domain dialogue system based on a simple generate-and-rank approach. Viola fetches a batch of response candidates from various neural dialogue models and template-based generators and chooses the final response with a poly-encoder ranker fine-tuned with annotated Alexa conversation data. 
-						</div>
-					</div>
-				</div>
-
-			</div>
-
 
 			<div id="news">
 				<h3> 📢 News </h3>
-				<div class="news-items">
+				<div class="news-items" id="news-items">
 					<ul>
 						<li>
 							2025/5: "Can Vision-Language Models Understand Mimed Actions?" (Findings) and "NewsInterview: a Dataset and a Playground to Evaluate LLMs' Ground Gap via Informational Interviews!" (Main) have been accepted to ACL 2025!
+						</li>
+						<li>
+							2025/2: I'm giving a talk at USC ISI on <a href="https://www.isi.edu/ai/events/5488/nl-seminar-contextualization-for-human-ai-interactions/" target="_blank">"Contextualization for Human-AI Interactions"</a> on February 27th, 2025!
 						</li>
 						<li>
 							2025/1: "Tuning-Free Personalized Alignment via Trial-Error-Explain In-Context Learning" has been accepted to NAACL 2025 Findings!
@@ -493,6 +189,10 @@ title: Justin Cho
 					</li>
 
 					<li>
+						Favorite quote: "The first principle is that you must not fool yourself, and you are the easiest person to fool." - Richard Feynman
+					</li>
+
+					<li>
 						Thanks to my dad being a diplomat, I have been blessed with growing up in many different countries: Moscow, Russia; Oslo, Norway; Vienna, Austria; Abu Dhabi, UAE; Hong Kong; Tehran, Iran; Seoul, South Korea. Unfortunately, I haven't lived long enough in most of these countries to master a new language other than Korean and English. My favorite country to live in was Austria, where I spent 5-7th grade. I loved being in central Europe, which was convenient for traveling to many nearby countries. 
 					</li>
 
@@ -501,7 +201,7 @@ title: Justin Cho
 					</li> -->
 
 					<li>
-						I'm a bit of a productivity geek. Ask me about knowledge management and productivity tips! I use <a href="https://logseq.com/" target="_blank">Logseq</a> for knowledge management and use tips from <a href="https://amzn.to/3SStsbM" target="_blank">How to Take Smart Notes</a>, which recommends the <a href="https://en.wikipedia.org/wiki/Zettelkasten" target="_blank"> Zettelkasten</a> method. I use <a href="https://getbrick.app/" target="_blank">Brick</a> for making my phone a dumb phone and <a href="https://chromewebstore.google.com/detail/screentime/ofmanejijbcohgebmdfacglmhemiifca?hl=en&pli=1" target="_blank">Screentime</a> and <a href="https://jomo.so/">Jomo</a> for blocking distractions on my laptop while working. 
+						I'm a bit of a productivity geek. Ask me about knowledge management and productivity tips and please share yours! I use <a href="https://logseq.com/" target="_blank">Logseq</a> for knowledge management and use tips from <a href="https://amzn.to/3SStsbM" target="_blank">How to Take Smart Notes</a>, which recommends the <a href="https://en.wikipedia.org/wiki/Zettelkasten" target="_blank"> Zettelkasten</a> method. I use <a href="https://getbrick.app/" target="_blank">Brick</a> for making my phone a dumb phone and <a href="https://chromewebstore.google.com/detail/screentime/ofmanejijbcohgebmdfacglmhemiifca?hl=en&pli=1" target="_blank">Screentime</a> and <a href="https://jomo.so/">Jomo</a> for blocking distractions on my laptop while working. 
 					</li>
 
 					<li>
